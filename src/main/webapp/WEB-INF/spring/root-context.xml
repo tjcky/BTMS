@@ -19,5 +19,11 @@
 		<property name="username" value="tjcky"></property>
 		<property name="password" value="qewr1324"></property>
 	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- mybatis-config.xml이 스프링이 동작할 때 같이 동작하도록 설정한다 -->
+		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
+	</bean>
 		
 </beans>
