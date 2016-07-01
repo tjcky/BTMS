@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.doragee.mapper.MemberMapper">
+	<select id="getTime" resultType="string">
+		SELECT now()
+	</select>
+	
+	<insert id="insertMember">
+		INSERT INTO tbl_member 
+		(
+			  userid
+			, userpw
+			, username
+			, email
+		) 
+		VALUES (
+			  #{userid}
+			, #{userpw}
+			, #{username}
+			, #{email}
+		)
+	</insert>
+	
+	<!-- Model 매핑 제대로 해줘야됨 -->
+<!-- 	<select id="selectMember" resultType="org.doragee.com.model.MemberModel">
+		SELECT * 
+		  FROM tbl_member
+		 WHERE userid = #{userid}		
+	</select>
+	
+	<select id="readWithPW" resultType="org.doragee.com.model.MemberModel">
+		SELECT *
+		  FROM tbl_member
+		 WHERE userid = #{userid} and userpw = #{userpw}
+	</select> -->
+</mapper>
