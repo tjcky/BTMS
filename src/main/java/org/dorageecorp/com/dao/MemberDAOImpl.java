@@ -12,7 +12,7 @@ public class MemberDAOImpl implements MemberDAO {
 	@Inject
 	private SqlSession sqlSession;
 
-	private static final String namespace = "org.doragee.mapper.MemberMapper";
+	private static final String namespace = "org.dorageecorp.mapper.MemberMapper";
 
 	@Override
 	public String getTime() {
