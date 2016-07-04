@@ -11,7 +11,7 @@
 			<div class="col-md-12">
 				<!-- general form elements -->
 				<div class="box">
-					<div class="box-header with-border">
+					<div class="box-header with-border" id="page">
 						<h3 class="box-title">HOME</h3>						
 					</div>
 				</div>

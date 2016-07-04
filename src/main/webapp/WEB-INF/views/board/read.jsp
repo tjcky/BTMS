@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@include file="../include/header.jsp"%>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 <!-- Main content -->
 <section class="content">
@@ -21,24 +21,24 @@
 
 				<div class="box-body">
 					<div class="form-group">
-						<label for="exampleInputEmail1">Title</label> 
+						<label for="exampleInputEmail1">제목</label> 
 						<input type="text" name='title' class="form-control" value="${boardModel.title}" readonly="readonly">
 					</div>
 					<div class="form-group">
-						<label for="exampleInputPassword1">Content</label>
+						<label for="exampleInputPassword1">내용</label>
 						<textarea class="form-control" name="content" rows="3" readonly="readonly">${boardModel.content}</textarea>
 					</div>
 					<div class="form-group">
-						<label for="exampleInputEmail1">Writer</label> 
+						<label for="exampleInputEmail1">작성자</label> 
 						<input type="text" name="writer" class="form-control" value="${boardModel.writer}" readonly="readonly">
 					</div>
 				</div>
 				<!-- /.box-body -->
 
 			  <div class="box-footer">
-			    <button type="submit" class="btn btn-warning" id="modifyBtn">Modify</button>
-			    <button type="submit" class="btn btn-danger" id="removeBtn">REMOVE</button>
-			    <button type="submit" class="btn btn-primary" id="goListBtn">GO LIST </button>
+			    <button class="btn btn-warning" id="modifyBtn" onclick="modifyBoard(${boardModel.bno})">수정</button>
+			    <button class="btn btn-danger" id="removeBtn" onclick="removeBoard(${boardModel.bno})">삭제</button>
+			    <button class="btn btn-primary" id="goListBtn" onclick="showBoardList()">목록으로</button>
 			  </div>
 			</div>
 			<!-- /.box -->
@@ -87,32 +87,4 @@
 		target.after(html);
 
 	}
-
-
-
 </script>
-
-
-<script>
-$(document).ready(function(){
-	var formObj = $("form[role='form']");
-	
-	$("#modifyBtn").on("click", function(){
-		formObj.attr("action", "/board/modify");
-		formObj.attr("method", "get");
-		formObj.submit();
-	});
-	
-	$("#removeBtn").on("click", function(){
-		formObj.attr("action", "/board/remove");
-		formObj.submit();
-	});
-	
-	$("#goListBtn").on("click", function(){
-		self.location = "/board/listAll";
-	});
-});
-</script>
-
-
-<%@include file="../include/footer.jsp"%>

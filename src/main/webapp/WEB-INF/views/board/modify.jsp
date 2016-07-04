@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-<%@include file="../include/header.jsp"%>
-
 <!-- Main content -->
 <section class="content">
 	<div class="row">
@@ -40,12 +37,12 @@
 					<!-- /.box-body -->
 				</form>
 				<div class="box-footer">
-					<button type="submit" class="btn btn-primary" id="modifySave">SAVE</button>
-					<button type="submit" class="btn btn-warning" id="modifyCancel">CANCEL</button>
+					<button class="btn btn-primary" id="modifySave" onclick="showBoardList()">저장</button>
+					<button class="btn btn-warning" id="modifyCancel" onclick="showBoardList()">취소</button>
 				</div>
 
 <script>
-$(document).ready(function() {
+/* $(document).ready(function() {
 	var formObj = $("form[role='form']");
 	
 	$("#modifySave").on("click", function(){
@@ -55,7 +52,7 @@ $(document).ready(function() {
 	$("#modifyCancel").on("click", function(){		
 		formObj.submit();
 	});
-});
+}); */
 </script>
 
 
@@ -72,5 +69,3 @@ $(document).ready(function() {
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
-<%@include file="../include/footer.jsp"%>

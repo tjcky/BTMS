@@ -27,8 +27,9 @@
     <![endif]-->
     
   </head>
-      <!-- jQuery 2.1.4 -->
-    <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+  <!-- jQuery 2.1.4 -->
+  <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+  <script src="/resources/javascript/main.js"></script>
     
   <body class="skin-blue sidebar-mini">
     <div class="wrapper">
@@ -331,7 +332,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="/board/listAll"><i class="fa fa-circle-o"></i>게시판</a></li>
+                <li class="active"><a href="javascript:showBoardList()"><i class="fa fa-circle-o"></i>게시판</a></li>
               </ul>
             </li>
 

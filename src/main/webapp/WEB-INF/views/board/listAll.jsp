@@ -4,8 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page session="false"%>
 
-<%@include file="../include/header.jsp"%>
-
+<script src="/resources/javascript/board/board.js"></script>
 <!-- Main content -->
 <section class="content">
 	<div class="row">
@@ -13,39 +12,32 @@
 
 		<div class="col-md-12">
 
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title">LIST PAGING</h3>
-				</div>
-				<div class="box-body">
-					<table class="table table-bordered">
+			<div class="box-body">
+				<table class="table table-bordered">
+					<tr>
+						<th style="width: 10px">BNO</th>
+						<th>TITLE</th>
+						<th>WRITER</th>
+						<th>REGDATE</th>
+						<th style="width: 40px">VIEWCNT</th>
+					</tr>
+
+					<c:forEach items="${list}" var="boardModel">
+
 						<tr>
-							<th style="width: 10px">BNO</th>
-							<th>TITLE</th>
-							<th>WRITER</th>
-							<th>REGDATE</th>
-							<th style="width: 40px">VIEWCNT</th>
+							<td>${boardModel.bno}</td>
+							<td><a href="javascript:readBoard('${boardModel.bno}')">${boardModel.title} </a></td>
+							<td>${boardModel.writer}</td>
+							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardModel.regdate}" /></td>
+							<td><span class="badge bg-red">${boardModel.viewcnt }</span></td>
 						</tr>
 
-						<c:forEach items="${list}" var="boardModel">
+					</c:forEach>
 
-							<tr>
-								<td>${boardModel.bno}</td>
-								<td><a href='/board/read?bno=${boardModel.bno}'>${boardModel.title} </a></td>
-								<td>${boardModel.writer}</td>
-								<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardModel.regdate}" /></td>
-								<td><span class="badge bg-red">${boardModel.viewcnt }</span></td>
-							</tr>
-
-						</c:forEach>
-
-					</table>
-				</div>
-				<!-- /.box-body -->
-
-
-
+				</table>
 			</div>
+			<!-- /.box-body -->
+
 		</div>
 		<!--/.col (left) -->
 
@@ -62,30 +54,3 @@
 		alert("처리가 완료되었습니다.");
 	}
 </script>
-
-<script>
-/* 	$(document).ready(
-			function() {
-
-				$('#searchBtn').on(
-						"click",
-						function(event) {
-
-							self.location = "list"
-									+ '${pageMaker.makeQuery(1)}'
-									+ "&searchType="
-									+ $("select option:selected").val()
-									+ "&keyword=" + $('#keywordInput').val();
-
-						});
-
-				$('#newBtn').on("click", function(evt) {
-
-					self.location = "register";
-
-				});
-
-			}); */
-</script>
-
-<%@include file="../include/footer.jsp"%>
