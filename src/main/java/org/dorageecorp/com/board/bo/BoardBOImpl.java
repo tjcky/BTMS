@@ -1,11 +1,11 @@
-package org.dorageecorp.com.bo;
+package org.dorageecorp.com.board.bo;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import org.dorageecorp.com.dao.BoardDAO;
-import org.dorageecorp.com.model.BoardModel;
+import org.dorageecorp.com.board.dao.BoardDAO;
+import org.dorageecorp.com.board.model.BoardModel;
 import org.springframework.stereotype.Service;
 
 @Service

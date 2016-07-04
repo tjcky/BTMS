@@ -20,7 +20,7 @@
 		)
 	</insert>
 	
-	<select id="read" resultType="org.dorageecorp.com.model.BoardModel">
+	<select id="read" resultType="org.dorageecorp.com.board.model.BoardModel">
 		SELECT bno
 			 , title
 			 , content
@@ -44,7 +44,7 @@
 		 WHERE bno = #{bno}
 	</delete>
 	
-	<select id="listAll" resultType="org.dorageecorp.com.model.BoardModel">
+	<select id="listAll" resultType="org.dorageecorp.com.board.model.BoardModel">
 		SELECT bno
 		     , title
 		     , content
@@ -57,7 +57,7 @@
 		     , regdate DESC		
 	</select>
 	
-	<select id="listPage" resultType="org.dorageecorp.com.model.BoardModel">
+	<select id="listPage" resultType="org.dorageecorp.com.board.model.BoardModel">
 		SELECT bno
 		 	 , title
 		 	 , content

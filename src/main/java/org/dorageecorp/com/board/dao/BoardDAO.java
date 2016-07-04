@@ -1,8 +1,8 @@
-package org.dorageecorp.com.dao;
+package org.dorageecorp.com.board.dao;
 
 import java.util.List;
 
-import org.dorageecorp.com.model.BoardModel;
+import org.dorageecorp.com.board.model.BoardModel;
 
 public interface BoardDAO {
 

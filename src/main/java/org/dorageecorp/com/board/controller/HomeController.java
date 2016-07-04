@@ -1,4 +1,4 @@
-package org.dorageecorp.com.controller;
+package org.dorageecorp.com.board.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

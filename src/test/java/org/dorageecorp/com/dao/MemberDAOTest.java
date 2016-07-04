@@ -2,8 +2,8 @@ package org.dorageecorp.com.dao;
 
 import javax.inject.Inject;
 
-import org.dorageecorp.com.dao.MemberDAO;
-import org.dorageecorp.com.model.MemberModel;
+import org.dorageecorp.com.board.dao.MemberDAO;
+import org.dorageecorp.com.board.model.MemberModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

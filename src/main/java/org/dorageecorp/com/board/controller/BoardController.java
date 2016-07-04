@@ -1,9 +1,9 @@
-package org.dorageecorp.com.controller;
+package org.dorageecorp.com.board.controller;
 
 import javax.inject.Inject;
 
-import org.dorageecorp.com.bo.BoardBO;
-import org.dorageecorp.com.model.BoardModel;
+import org.dorageecorp.com.board.bo.BoardBO;
+import org.dorageecorp.com.board.model.BoardModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

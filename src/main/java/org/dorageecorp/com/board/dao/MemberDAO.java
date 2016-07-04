@@ -1,6 +1,6 @@
-package org.dorageecorp.com.dao;
+package org.dorageecorp.com.board.dao;
 
-import org.dorageecorp.com.model.MemberModel;
+import org.dorageecorp.com.board.model.MemberModel;
 
 public interface MemberDAO {
 

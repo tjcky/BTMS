@@ -1,4 +1,4 @@
-package org.dorageecorp.com.model;
+package org.dorageecorp.com.board.model;
 
 import java.util.Date;
 

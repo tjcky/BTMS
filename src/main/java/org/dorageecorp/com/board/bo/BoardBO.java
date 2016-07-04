@@ -1,8 +1,8 @@
-package org.dorageecorp.com.bo;
+package org.dorageecorp.com.board.bo;
 
 import java.util.List;
 
-import org.dorageecorp.com.model.BoardModel;
+import org.dorageecorp.com.board.model.BoardModel;
 
 public interface BoardBO {
 

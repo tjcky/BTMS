@@ -1,11 +1,11 @@
-package org.dorageecorp.com.dao;
+package org.dorageecorp.com.board.dao;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
-import org.dorageecorp.com.model.BoardModel;
+import org.dorageecorp.com.board.model.BoardModel;
 import org.springframework.stereotype.Repository;
 
 @Repository
