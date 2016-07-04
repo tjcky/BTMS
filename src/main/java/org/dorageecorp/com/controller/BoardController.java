@@ -22,7 +22,7 @@ public class BoardController {
 	@Inject
 	private BoardBO bo;
 
-	@RequestMapping(value ="/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String registerPOST(BoardModel board, RedirectAttributes rttr) throws Exception {
 		logger.info(board.toString());
 
@@ -32,15 +32,40 @@ public class BoardController {
 
 		return "redirect:/board/listAll";
 	}
-	
-	@RequestMapping(value ="/listAll", method = RequestMethod.GET)
-	public void listAll(Model model) throws Exception{
+
+	@RequestMapping(value = "/listAll", method = RequestMethod.GET)
+	public void listAll(Model model) throws Exception {
 		logger.info("show all list...");
 		model.addAttribute("list", bo.listAll());
 	}
-	
-	@RequestMapping(value ="/read", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/read", method = RequestMethod.GET)
 	public void read(@RequestParam("bno") int bno, Model model) throws Exception {
 		model.addAttribute("boardModel", bo.read(bno));
+	}
+
+	@RequestMapping(value = "/remove", method = RequestMethod.GET)
+	public String remove(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception {
+		bo.remove(bno);
+
+		rttr.addFlashAttribute("msg", "success");
+		
+		return "redirect:/board/listAll";
+	}
+	
+	@RequestMapping(value = "/modify", method = RequestMethod.GET)
+	public void modifyGET(int bno, Model model) throws Exception {
+		model.addAttribute("boardModel", bo.read(bno));
+	}
+	
+	@RequestMapping(value = "/modify", method = RequestMethod.POST)
+	public String modifyPOST(BoardModel board, RedirectAttributes rttr) throws Exception {
+		logger.info("modify post");
+
+		bo.modify(board);
+
+		rttr.addFlashAttribute("msg", "success");
+
+		return "redirect:/board/listAll";
 	}
 }
