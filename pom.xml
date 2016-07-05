@@ -242,7 +242,7 @@
 			<id>alpha</id>
 			<properties>
 				<environment>alpha</environment>
-				<deploy.dir>${basedir}/../deploy</deploy.dir>
+				<deploy.dir>../deploy</deploy.dir>
 				<profile.id>alpha</profile.id>
 			</properties>
 		</profile>
