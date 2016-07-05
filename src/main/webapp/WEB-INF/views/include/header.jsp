@@ -333,7 +333,7 @@
               </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="javascript:showBoardList()"><i class="fa fa-circle-o"></i>게시판</a></li>
-                <li class="active"><a href="javascript:showActivityList()"><i class="fa fa-circle-o"></i>Excel</a></li>
+                <li class="active"><a href="javascript:showActivityList()"><i class="fa fa-circle-o"></i>활동 목록</a></li>
               </ul>
             </li>
 

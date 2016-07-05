@@ -13,7 +13,7 @@ function showBoardList() {
 
 function showExcelDetail() {
 	jQuery.ajax({
-		url			: "/excel/excelDetail",
+		url			: "/activity/excelDetail",
 	    type		: "GET",
 	    async		: "false",
 	    success		: function(req){
@@ -25,7 +25,7 @@ function showExcelDetail() {
 
 function showActivityList() {
 	jQuery.ajax({
-		url			: "/activityList",
+		url			: "/activity/activityList",
 		type		: "GET",
 		async		: "false",
 		success		: function(req)	{

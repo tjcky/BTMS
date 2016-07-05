@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.dorageecorp.mapper.ActivityMapper">
+	<select id="selectActivityList" resultType="org.dorageecorp.com.activity.model.ActivityModel">
+		SELECT atvt_pk		AS activityPk
+			 , no			AS activityNo
+			 , title		AS activityTitle
+			 , content		AS activityContent
+			 , status		AS activityStatus
+			 , crer_id		AS creatorId
+			 , crer_ymdt	AS createDate
+			 , modr_id		AS modifierId
+			 , modr_ymdt	AS modifiedDate
+		  FROM btms_atvt
+	     WHERE no <![CDATA[>]]> 0
+		 ORDER BY no DESC
+		 LIMIT 10		
+	</select>
+</mapper>
