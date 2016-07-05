@@ -20,9 +20,16 @@ public class ActivityDAOImplTest {
 	private ActivityDAO activityDAO;
 	
 	@Test
-	public void test() throws Exception {
+	public void testSelectActivityList() throws Exception {
 		List<ActivityModel> list = activityDAO.selectActivityList();
 		
 		assertFalse(CollectionUtils.isEmpty(list));
+	}
+	
+	@Test
+	public void testSelectActivityDetail() throws Exception {
+		ActivityModel model = activityDAO.selectActivityDetail(3);
+		
+		assertNotNull(model);
 	}
 }

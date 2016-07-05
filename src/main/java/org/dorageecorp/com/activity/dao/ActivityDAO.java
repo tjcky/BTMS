@@ -7,4 +7,6 @@ import org.dorageecorp.com.activity.model.ActivityModel;
 public interface ActivityDAO {
 	
 	public List<ActivityModel> selectActivityList() throws Exception;
+
+	public ActivityModel selectActivityDetail(int no);
 }

@@ -3,18 +3,48 @@
 
 <mapper namespace="org.dorageecorp.mapper.ActivityMapper">
 	<select id="selectActivityList" resultType="org.dorageecorp.com.activity.model.ActivityModel">
-		SELECT atvt_pk		AS activityPk
-			 , no			AS activityNo
-			 , title		AS activityTitle
-			 , content		AS activityContent
-			 , status		AS activityStatus
-			 , crer_id		AS creatorId
-			 , crer_ymdt	AS createDate
-			 , modr_id		AS modifierId
-			 , modr_ymdt	AS modifiedDate
+		SELECT atvt_pk									AS activityPk
+			 , no										AS activityNo
+			 , title									AS activityTitle
+			 , content									AS activityContent
+			 , (
+			 	SELECT comm_cd_nm
+			  	  FROM btms_comm_cd
+			  	 WHERE comm_cd = status
+			   )										AS activityStatus
+			 , (
+			 	SELECT username
+			 	  FROM btms_user
+			 	 WHERE user_id = crer_id
+			   )										AS creatorName
+			 , DATE_FORMAT(crer_ymdt, "%Y-%m-%d %H:%i")	AS createDate
+			 , modr_id									AS modifierId
+			 , DATE_FORMAT(modr_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
 		  FROM btms_atvt
 	     WHERE no <![CDATA[>]]> 0
 		 ORDER BY no DESC
 		 LIMIT 10		
+	</select>
+	
+	<select id="selectActivityDetail" resultType="org.dorageecorp.com.activity.model.ActivityModel">
+		SELECT atvt_pk									AS activityPk
+			 , no										AS activityNo
+			 , title									AS activityTitle
+			 , content									AS activityContent
+			 , (
+			 	SELECT comm_cd_nm
+			  	  FROM btms_comm_cd
+			  	 WHERE comm_cd = status
+			   )										AS activityStatus
+			 , (
+			 	SELECT username
+			 	  FROM btms_user
+			 	 WHERE user_id = crer_id
+			   )										AS creatorName
+			 , DATE_FORMAT(crer_ymdt, "%Y-%m-%d %H:%i")	AS createDate
+			 , modr_id									AS modifierId
+			 , DATE_FORMAT(modr_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
+		  FROM btms_atvt
+	     WHERE no = #{no}
 	</select>
 </mapper>

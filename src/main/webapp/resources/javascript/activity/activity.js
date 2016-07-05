@@ -1,6 +1,6 @@
-function test(bno) {
-/*	jQuery.ajax({
-	    url			: "/board/read?bno=" + bno,
+function readActivity(no) {
+	jQuery.ajax({
+	    url			: "/activity/activityDetail?no=" + no,
 	    type		: 'GET',
 	    async		: 'false',
 	    dataType	: 'html',
@@ -8,5 +8,5 @@ function test(bno) {
 	    				jQuery("#page").html(req);
 	    			  }
 	
-	});*/
+	});
 }

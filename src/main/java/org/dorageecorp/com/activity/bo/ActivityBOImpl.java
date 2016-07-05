@@ -15,7 +15,12 @@ public class ActivityBOImpl implements ActivityBO {
 	private ActivityDAO activityDAO;
 
 	@Override
-	public List<ActivityModel> activityList() throws Exception {
+	public List<ActivityModel> getActivityList() throws Exception {
 		return activityDAO.selectActivityList();
+	}
+
+	@Override
+	public ActivityModel getActivityDetail(int no) {
+		return activityDAO.selectActivityDetail(no);
 	}
 }

@@ -19,4 +19,9 @@ public class ActivityDAOImpl implements ActivityDAO {
 	public List<ActivityModel> selectActivityList() throws Exception {
 		return session.selectList(namespace + ".selectActivityList");
 	}
+
+	@Override
+	public ActivityModel selectActivityDetail(int no) {
+		return session.selectOne(namespace + ".selectActivityDetail", no);
+	}
 }

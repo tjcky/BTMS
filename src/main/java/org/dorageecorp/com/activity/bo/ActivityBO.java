@@ -6,5 +6,7 @@ import org.dorageecorp.com.activity.model.ActivityModel;
 
 public interface ActivityBO {
 	
-	public List<ActivityModel> activityList() throws Exception;
+	public List<ActivityModel> getActivityList() throws Exception;
+
+	public ActivityModel getActivityDetail(int no);
 }

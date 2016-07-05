@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>BTMS Project</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -40,7 +40,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Zerock</b> PROJECT</span>
+          <span class="logo-lg"><b>BTMS</b> PROJECT</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -332,8 +332,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="javascript:showBoardList()"><i class="fa fa-circle-o"></i>게시판</a></li>
-                <li class="active"><a href="javascript:showActivityList()"><i class="fa fa-circle-o"></i>활동 목록</a></li>
+                <li class="active"><a href="javascript:showBoardList()"><i class="fa fa-circle-o"></i>공지사항</a></li>
+                <li class="active"><a href="javascript:showActivityList()"><i class="fa fa-circle-o"></i>활동목록</a></li>
               </ul>
             </li>
 

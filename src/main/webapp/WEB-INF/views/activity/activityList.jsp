@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+<script src="/resources/javascript/activity/activity.js"></script>
 <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -28,10 +26,10 @@
 		    				<c:forEach items="${activityList}" var="activityModel">
 		    				<tr>
 		    					<td>${activityModel.activityNo } </td>
-		    					<td>${activityModel.creatorId } </td>
+		    					<td>${activityModel.creatorName } </td>
 		    					<td>${activityModel.createDate } </td>
 		    					<td>${activityModel.activityStatus } </td>
-		    					<td>${activityModel.activityTitle } </td>
+		    					<td><a href="javascript:readActivity('${activityModel.activityNo }')" >${activityModel.activityTitle }</a></td>
 		    					<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
 							    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>		    					
 		    				</tr>

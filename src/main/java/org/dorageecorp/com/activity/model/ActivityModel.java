@@ -10,6 +10,7 @@ public class ActivityModel {
 	private String activityContent;
 	private String activityStatus;
 	private String creatorId;
+	private String creatorName;
 	private String createDate;
 	private String modifierId;
 	private String modifiedDate;
