@@ -43,4 +43,9 @@ public class ExcelController {
 		
 		return mav;
 	}
+	
+	@RequestMapping(value = "/activityList", method = RequestMethod.GET)
+	public String activityList() {
+		return "excel/activityList";
+	}
 }

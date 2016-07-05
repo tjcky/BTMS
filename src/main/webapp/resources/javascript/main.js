@@ -12,18 +12,24 @@ function showBoardList() {
 }
 
 function showExcelDetail() {
-	console.log('excel');
-	
 	jQuery.ajax({
-	    url			: "/excel/excelDetail",
+		url			: "/excel/excelDetail",
 	    type		: "GET",
 	    async		: "false",
 	    success		: function(req){
-	    				console.log('before');
 	    				jQuery("#page").html(req);
-
-	    				console.log('after');
 	    			  }
 	
+	});
+}
+
+function showActivityList() {
+	jQuery.ajax({
+		url			: "/activityList",
+		type		: "GET",
+		async		: "false",
+		success		: function(req)	{
+						jQuery("#page").html(req);
+		}
 	});
 }
