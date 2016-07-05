@@ -225,4 +225,14 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+    	<profile>
+			<id>alpha</id>
+			<properties>
+				<environment>alpha</environment>
+				<deploy.dir>${basedir}/../deploy</deploy.dir>
+				<profile.id>alpha</profile.id>
+			</properties>
+		</profile>
+    </profiles>
 </project>
