@@ -15,62 +15,39 @@
 
 		bindDumpButton();
 	});
-	
+
+	var bindData = new Array(getColumnHeaders('${columnNames}').length);
+	initialGrid();
+	showContent('${columnData}');
+		
 	function afterDomloaded() {
 		var container = document.getElementById('example');
 		var hot = new Handsontable(container, {
-			data : callBack('${boardList}'),
-			dataSchema : model,
-			colHeaders : [ 'Bno', 'Title', 'Content' ],
-			columns : [ 
-			    {data : property('bno')}, 
-			    {data : property('title')}, 
-			    {data : property('content')} 
-			],
+			data : bindData,
+			colHeaders : getColumnHeaders('${columnNames}'), 
 			minSpareRows : 1
 		});		
-}
-
-	function callBack(msg) {
-		var obj = JSON.parse(msg);
-		var result = obj.list;
-		var data = [];
-		for (var index = 0; index < result.length; index++) {
-			data[index] = model({
-				bno : result[index].bno,
-				title : result[index].title,
-				content : result[index].content
-			});
-		}
-		return data;
-	}
-
-	function model(opts) {
-		var _pub = {};
-		var _priv = {
-			"bno" : undefined,
-			"title" : undefined,
-			"content" : undefined
-		};
-		for ( var i in opts) {
-			if (opts.hasOwnProperty(i)) {
-				_priv[i] = opts[i];
-			}
-		}
-		_pub.attr = function(attr, val) {
-			if (typeof val === 'undefined') {
-				return _priv[attr];
-			}
-			_priv[attr] = val;
-			return _pub;
-		};
-		return _pub;
 	}
 	
-	function property(attr) {
-		return function(row, value) {
-			return row.attr(attr, value);
-		}
+	function initialGrid() {
+    	for(var index = 0; index < bindData.length; index++){
+    		bindData[index] = new Array(bindData.length);
+      	}
+    }
+	
+    function showContent(msg) {
+    	var list = JSON.parse(msg).list;
+    	var num = 0;
+    	for (var row = 0; row < bindData.length; row++){
+      		for (var col = 0; col < bindData[row].length; col++){
+      			bindData[row][col] = list[num++];      			
+        	}
+      	}    	
+    }
+	
+	function getColumnHeaders(msg) {
+		var columnNames = JSON.parse(msg);
+		return columnNames.list;
 	}
 	
 	function bindDumpButton() {
@@ -118,7 +95,7 @@
 				}
  			];	
  						
-			$.ajax({				
+/* 			$.ajax({				
 				url: '/excelSave',
 				type: 'POST',
 				dataType: 'text',
@@ -129,7 +106,7 @@
 		  		error: function(xhr) {
 		  			
 		  		}
-		  	});
+		  	}); */
 			
 		});
 	}

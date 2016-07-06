@@ -1,13 +1,19 @@
 package org.dorageecorp.com.dao;
 
+import static org.junit.Assert.assertFalse;
+
+import java.util.List;
+
 import javax.inject.Inject;
 
+import org.dorageecorp.com.activity.dao.ActivityDAO;
 import org.dorageecorp.com.board.dao.BoardDAO;
 import org.dorageecorp.com.board.model.BoardModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.CollectionUtils;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/**/*.xml" })
@@ -19,8 +25,8 @@ public class BoardDAOTest {
 	@Test
 	public void testCreate() throws Exception {
 		BoardModel model = new BoardModel();
-		model.setTitle("»õ·Î¿î ±ÛÀ» ³Ö½À´Ï´Ù");
-		model.setContent("»õ·Î¿î ±ÛÀ» ³Ö½À´Ï´Ù");
+		model.setTitle("ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½");
+		model.setContent("ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½");
 		model.setWriter("user00");
 
 		dao.create(model);
@@ -35,8 +41,8 @@ public class BoardDAOTest {
 	public void testUpdate() throws Exception {
 		BoardModel model = new BoardModel();
 		model.setBno(1);
-		model.setTitle("¼öÁ¤µÈ ±ÛÀÔ´Ï´Ù");
-		model.setContent("¼öÁ¤ Å×½ºÆ®");
+		model.setTitle("asdfsdfsdf");
+		model.setContent("asdfsdfsdf");
 
 		dao.update(model);
 	}

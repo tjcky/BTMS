@@ -32,4 +32,18 @@ public class ActivityDAOImplTest {
 		
 		assertNotNull(model);
 	}
+	
+	@Test
+	public void testSelectColumnNames() throws Exception {
+		List<String> list = activityDAO.selectColumnNames();
+		
+		assertFalse(CollectionUtils.isEmpty(list));
+	}
+	
+	@Test
+	public void testSelectColumnData() throws Exception {
+		List<String> list = activityDAO.selectColumnData();
+		
+		assertFalse(CollectionUtils.isEmpty(list));
+	}
 }

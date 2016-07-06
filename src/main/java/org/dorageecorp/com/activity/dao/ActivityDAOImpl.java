@@ -24,4 +24,14 @@ public class ActivityDAOImpl implements ActivityDAO {
 	public ActivityModel selectActivityDetail(int no) {
 		return session.selectOne(namespace + ".selectActivityDetail", no);
 	}
+
+	@Override
+	public List<String> selectColumnNames() {
+		return session.selectList(namespace + ".selectColumnNames");
+	}
+
+	@Override
+	public List<String> selectColumnData() {
+		return session.selectList(namespace + ".selectColumnData");
+	}
 }

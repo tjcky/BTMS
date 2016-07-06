@@ -16,6 +16,7 @@ function showExcelDetail() {
 		url			: "/activity/excelDetail",
 	    type		: "GET",
 	    async		: "false",
+	    dataType	: "html",
 	    success		: function(req){
 	    				jQuery("#page").html(req);
 	    			  }
@@ -28,6 +29,7 @@ function showActivityList() {
 		url			: "/activity/activityList",
 		type		: "GET",
 		async		: "false",
+		dataType	: "html",
 		success		: function(req)	{
 						jQuery("#page").html(req);
 		}

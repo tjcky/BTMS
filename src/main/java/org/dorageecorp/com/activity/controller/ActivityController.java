@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
 @RequestMapping("/activity/*")
 public class ActivityController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(ActivityController.class);
-	
+
+	private static final Logger logger = LoggerFactory
+			.getLogger(ActivityController.class);
+
 	@Inject
 	private ActivityBO activityBO;
 
 	@RequestMapping(value = "/activityList", method = RequestMethod.GET)
 	public ModelAndView activityList() {
 		ModelAndView mav = new ModelAndView("/activity/activityList");
-		
+
 		List<ActivityModel> activityList = null;
 
 		try {
@@ -40,13 +40,13 @@ public class ActivityController {
 
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/activityDetail", method = RequestMethod.GET)
 	public ModelAndView openActivityDetail(@RequestParam("no") int no) {
 		ModelAndView mav = new ModelAndView("/activity/activityDetail");
-		
+
 		ActivityModel activityModel = null;
-		
+
 		try {
 			activityModel = activityBO.getActivityDetail(no);
 			mav.addObject("activityModel", activityModel);
@@ -55,5 +55,25 @@ public class ActivityController {
 		}
 
 		return mav;
-	}	
+	}
+
+	@RequestMapping(value = "/openJobDetail", method = RequestMethod.GET)
+	public ModelAndView openJobDetail() {
+		ModelAndView mav = new ModelAndView("/activity/jobDetail");
+
+		String columnNames = null;
+		String columnData = null;
+
+		try {
+			columnNames = activityBO.getColumnNames();
+			columnData = activityBO.getColumnDats();
+		} catch (Exception e) {
+			logger.error("test", e);
+		}
+
+		mav.addObject("columnNames", columnNames);
+		mav.addObject("columnData", columnData);
+
+		return mav;
+	}
 }

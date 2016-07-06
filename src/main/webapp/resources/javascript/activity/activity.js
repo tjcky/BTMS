@@ -10,3 +10,16 @@ function readActivity(no) {
 	
 	});
 }
+
+function openJobDetail() {
+	jQuery.ajax({
+	    url			: "/activity/openJobDetail?",
+	    type		: 'GET',
+	    async		: 'false',
+	    dataType	: 'html',
+	    success		: function(req){
+	    				jQuery("#page").html(req);
+	    			  }
+	
+	});
+}

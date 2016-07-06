@@ -9,18 +9,18 @@
 			 , content									AS activityContent
 			 , (
 			 	SELECT comm_cd_nm
-			  	  FROM btms_comm_cd
+			  	  FROM b_comm_cd
 			  	 WHERE comm_cd = status
 			   )										AS activityStatus
 			 , (
 			 	SELECT username
-			 	  FROM btms_user
+			 	  FROM b_user
 			 	 WHERE user_id = crer_id
 			   )										AS creatorName
-			 , DATE_FORMAT(crer_ymdt, "%Y-%m-%d %H:%i")	AS createDate
+			 , DATE_FORMAT(cre_ymdt, "%Y-%m-%d %H:%i")	AS createDate
 			 , modr_id									AS modifierId
-			 , DATE_FORMAT(modr_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
-		  FROM btms_atvt
+			 , DATE_FORMAT(mod_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
+		  FROM b_atvt
 	     WHERE no <![CDATA[>]]> 0
 		 ORDER BY no DESC
 		 LIMIT 10		
@@ -33,18 +33,32 @@
 			 , content									AS activityContent
 			 , (
 			 	SELECT comm_cd_nm
-			  	  FROM btms_comm_cd
+			  	  FROM b_comm_cd
 			  	 WHERE comm_cd = status
 			   )										AS activityStatus
 			 , (
 			 	SELECT username
-			 	  FROM btms_user
+			 	  FROM b_user
 			 	 WHERE user_id = crer_id
 			   )										AS creatorName
-			 , DATE_FORMAT(crer_ymdt, "%Y-%m-%d %H:%i")	AS createDate
+			 , DATE_FORMAT(cre_ymdt, "%Y-%m-%d %H:%i")	AS createDate
 			 , modr_id									AS modifierId
-			 , DATE_FORMAT(modr_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
-		  FROM btms_atvt
+			 , DATE_FORMAT(mod_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
+		  FROM b_atvt
 	     WHERE no = #{no}
+	</select>
+	
+	<select id="selectColumnNames" resultType="java.lang.String">
+		SELECT title
+		  FROM b_job_dtl
+		 WHERE job_mst_pk = 'job_mst_pk_0001'
+		 ORDER BY col_order ASC;
+	</select>
+	
+	<select id="selectColumnData" resultType="java.lang.String">
+		SELECT content
+	 	  FROM b_job_cont
+		 ORDER BY row_order ASC
+		 	 , col_order ASC;
 	</select>
 </mapper>
