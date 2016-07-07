@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.dorageecorp</groupId>
-	<artifactId>com</artifactId>
-	<name>BTMS</name>
+	<artifactId>btms</artifactId>
+	<!--<name>BTMS</name> -->
 	<packaging>war</packaging>
-	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<version>1</version>
 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>4.1.7.RELEASE</org.springframework-version>
@@ -187,18 +187,7 @@
 		
 	</dependencies>
 
-    <build>
-		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-		<testSourceDirectory>src/test/java</testSourceDirectory>
-		<outputDirectory>target/classes</outputDirectory>
-		<testOutputDirectory>test-target/classes</testOutputDirectory>
-		<directory>../deploy</directory>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-			</resource>
-		</resources>
-		
+    <build>	
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
@@ -236,15 +225,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
-    <profiles>
-    	<profile>
-			<id>alpha</id>
-			<properties>
-				<environment>alpha</environment>
-				<deploy.dir>deploy</deploy.dir>
-				<profile.id>alpha</profile.id>
-			</properties>
-		</profile>
-    </profiles>
+    </build>    
 </project>

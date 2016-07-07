@@ -49,16 +49,19 @@
 	</select>
 	
 	<select id="selectColumnNames" resultType="java.lang.String">
-		SELECT title
+		SELECT content
 		  FROM b_job_dtl
 		 WHERE job_mst_pk = 'job_mst_pk_0001'
+		   AND job_mst_seq = 1
+		   AND header_yn = 'Y'
 		 ORDER BY col_order ASC;
 	</select>
 	
 	<select id="selectColumnData" resultType="java.lang.String">
 		SELECT content
-	 	  FROM b_job_cont
-		 ORDER BY row_order ASC
-		 	 , col_order ASC;
+		  FROM b_job_dtl
+		 WHERE header_yn = 'N'
+		 ORDER BY row_order
+		 	 , col_order
 	</select>
 </mapper>

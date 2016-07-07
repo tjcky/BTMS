@@ -1,20 +1,16 @@
 package org.dorageecorp.com.dao;
 
-import static org.junit.Assert.assertFalse;
-
-import java.util.List;
-
 import javax.inject.Inject;
 
-import org.dorageecorp.com.activity.dao.ActivityDAO;
 import org.dorageecorp.com.board.dao.BoardDAO;
 import org.dorageecorp.com.board.model.BoardModel;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.CollectionUtils;
 
+@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/**/*.xml" })
 public class BoardDAOTest {

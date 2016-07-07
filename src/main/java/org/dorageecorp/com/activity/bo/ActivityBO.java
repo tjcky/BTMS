@@ -12,5 +12,5 @@ public interface ActivityBO {
 
 	public String getColumnNames();
 
-	public String getColumnDats();
+	public String getColumnData();
 }

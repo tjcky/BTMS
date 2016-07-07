@@ -116,9 +116,7 @@
 
 <body>
 
-	<div id="example">
-		<button name="save" id="save">Save</button>
+	<div id="example">		
 	</div>
-
 </body>
 </html>

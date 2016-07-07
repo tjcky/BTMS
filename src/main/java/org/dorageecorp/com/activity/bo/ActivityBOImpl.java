@@ -39,7 +39,7 @@ public class ActivityBOImpl implements ActivityBO {
 	}
 
 	@Override
-	public String getColumnDats() {
+	public String getColumnData() {
 		Map<String, Object> columnDataMap = new HashMap<String, Object>();
 
 		List<String> columnData = activityDAO.selectColumnData();

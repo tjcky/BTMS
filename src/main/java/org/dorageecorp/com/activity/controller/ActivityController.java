@@ -66,7 +66,7 @@ public class ActivityController {
 
 		try {
 			columnNames = activityBO.getColumnNames();
-			columnData = activityBO.getColumnDats();
+			columnData = activityBO.getColumnData();
 		} catch (Exception e) {
 			logger.error("test", e);
 		}
