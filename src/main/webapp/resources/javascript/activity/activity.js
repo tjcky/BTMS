@@ -17,8 +17,8 @@ function openJobDetail() {
 	    type		: 'GET',
 	    async		: 'false',
 	    dataType	: 'html',
-	    success		: function(req){
-	    				jQuery("#page").html(req);
+	    success		: function(req) {	    	
+	    				jQuery("#page").html(req);	    				
 	    			  }
 	
 	});

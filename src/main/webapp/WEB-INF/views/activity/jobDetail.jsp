@@ -10,7 +10,7 @@
 <link rel="stylesheet" media="screen" href="/resources/hansonTable/dist/handsontable.full.css" />
 
 <script type="text/javascript">
-	jQuery(function() {
+	jQuery(function() {		
 		afterDomloaded();
 
 		bindDumpButton();
