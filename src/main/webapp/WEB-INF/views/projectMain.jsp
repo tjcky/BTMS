@@ -75,7 +75,7 @@
                         <li><a href="graph_morris.html">환경 별</a></li>
                     </ul>
                 </li>
-                <li class="special_link">
+                <li>
                     <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">프로젝트 관리</span></a>
                 </li>
             </ul>
@@ -106,7 +106,7 @@
 		        		<div class="col-lg-12">		
 					        <div class="ibox float-e-margins">
 						        <div class="ibox-title">
-						            <h5>자유게시판 </h5>
+						            <h5>전체 테스트 활동 </h5>
 						            <div class="ibox-tools">
 						                <a class="collapse-link">
 						                    <i class="fa fa-chevron-up"></i>
@@ -123,40 +123,46 @@
 						                    <tr>
 						                        <th>#</th>
 						                        <th>제목 </th>
-						                        <th>작성자 </th>
-						                        <th>작성일 </th>
+						                        <th>QA </th>
+						                        <th>상태 </th>
+						                        <th>환경 </th>
 						                    </tr>
 						                    </thead>
 						                    <tbody>
 						                    <tr>
 						                        <td>5</td>
-						                        <td>정적 테스트 이야기</td>
+						                        <td>뮤직 정기배포 6월 1주차</td>
 						                        <td>권영</td>
-						                        <td>오늘</td>
+						                        <td>진행중</td>
+						                        <td>IE 10외 5개</td>
 						                    </tr>
 						                    <tr>
 						                        <td>4</td>
-						                        <td>부트스트랩 고수가 되는 방법.txt</td>
+						                        <td>뮤직 정기배포 5월 3주차</td>
 						                        <td>이동섭</td>
-						                        <td>오늘</td>
+						                        <td>완료</td>
+						                        <td>IE 9외 4개</td>
 						                    </tr>
 						                    <tr>
 						                        <td>3</td>
-						                        <td>고객시스템개발팀</td>
-						                        <td>이선영</td>
-						                        <td>어제</td>
+						                        <td>뮤직 정기배포 5월 2주차</td>
+						                        <td>전평재</td>
+						                        <td>완료</td>
+						                        <td>Android 4.x외 5개</td>
 						                    </tr>
 						                    <tr>
 						                        <td>2</td>
-						                        <td>MySQL 이야기</td>
-						                        <td>김경연</td>
-						                        <td>그제</td>
+						                        <td>뮤직 정기배포 5월 1주차</td>
+						                        <td>이선영</td>
+						                        <td>진행중</td>
+						                        <td>iPhone 6.x외 3개</td>
 						                    </tr>
 						                    <tr>
 						                        <td>1</td>
-						                        <td>테스트 시작</td>
-						                        <td>전평재</td>
-						                        <td>2016.06.23</td>
+						                        <td>뮤직 정기배포 4월 2주차</td>
+						                        <td>조문기</td>
+						                        <td>진행전</td>
+						                        <td>Safari 9.x외 4개</td>
 						                    </tr>
 						                    </tbody>
 						                </table>
@@ -171,7 +177,7 @@
 		        		<div class="col-lg-12">
 					        <div class="ibox float-e-margins">
 						        <div class="ibox-title">
-						            <h5>전체 프로젝트 목록 </h5>
+						            <h5>최근 사용중인 작업 템플릿 </h5>
 						            <div class="ibox-tools">
 						                <a class="collapse-link">
 						                    <i class="fa fa-chevron-up"></i>
@@ -187,58 +193,58 @@
 						                    <thead>
 						                    <tr>
 						                        <th>#</th>
-						                        <th>프로젝트 ID </th>
-						                        <th>프로젝트명 </th>
-						                        <th>관리자</th>
+						                        <th>템플릿 명 </th>
+						                        <th>버전 명 </th>
+						                        <th>작성자</th>
 						                    </tr>
 						                    </thead>
 						                    <tbody>
 						                    <tr>
 						                        <td>8</td>
-						                        <td>NAVERCLOUD</td>
-						                        <td>네이버 클라우드</td>
+						                        <td>뮤직플레이어</td>
+						                        <td>2016년 6월 2주</td>
 						                        <td>조문기</td>
 						                    </tr>
 						                    <tr>
 						                        <td>7</td>
-						                        <td>NAVERPAY</td>
-						                        <td>뇌입어 페이</td>
+						                        <td>뮤직플레이어</td>
+						                        <td>2016년 6월 1주</td>
 						                        <td>김경연</td>
 						                    </tr>
 						                    <tr>
 						                        <td>6</td>
-						                        <td>NAVERCS</td>
-						                        <td>네이버 고객센터</td>
+						                        <td>마이뮤직</td>
+						                        <td>2016년 6월 2주</td>
 						                        <td>박성훈</td>
 						                    </tr>
 						                    <tr>
 						                        <td>5</td>
-						                        <td>KCMSUS</td>
-						                        <td>검색광고 서스테이닝</td>
+						                        <td>마이뮤직</td>
+						                        <td>2016년 6월 1주</td>
 						                        <td>권영</td>
 						                    </tr>
 						                    <tr>
 						                        <td>4</td>
-						                        <td>MUSIC</td>
-						                        <td>네이버 뮤직</td>
+						                        <td>뮤직플레이어</td>
+						                        <td>2016년 5월 3주</td>
 						                        <td>이동섭</td>
 						                    </tr>
 						                    <tr>
 						                        <td>3</td>
-						                        <td>WEBTOON</td>
-						                        <td>네이버 웹툰</td>
+						                        <td>뮤직플레이어</td>
+						                        <td>2016년 5월 2주</td>
 						                        <td>이선영</td>
 						                    </tr>
 						                    <tr>
 						                        <td>2</td>
-						                        <td>SEARCHAD</td>
-						                        <td>검색광고 리뉴얼</td>
+						                        <td>뮤지션 리그</td>
+						                        <td>2016년 5월 1주</td>
 						                        <td>전평재</td>
 						                    </tr>
 						                    <tr>
 						                        <td>1</td>
-						                        <td>NAVERMAP</td>
-						                        <td>네이버 지도</td>
+						                        <td>뮤지션 리그</td>
+						                        <td>2016년 4월 1주</td>
 						                        <td>권영</td>
 						                    </tr>
 						                    </tbody>
@@ -254,7 +260,7 @@
 			        	<div class="col-lg-12">
 			        						        <div class="ibox float-e-margins">
 					        <div class="ibox-title">
-					            <h5>담당 프로젝트 목록 </h5>
+					            <h5>프로젝트 사용자 </h5>
 					            <div class="ibox-tools">
 					                <a class="collapse-link">
 					                    <i class="fa fa-chevron-up"></i>
@@ -270,26 +276,33 @@
 					                    <thead>
 					                    <tr>
 					                        <th>#</th>
-					                        <th>프로젝트 ID </th>
-					                        <th>프로젝트명 </th>
-					                        <th>관리자</th>
-					                        <th>롤</th>
+					                        <th>이름 </th>
+					                        <th>역할 </th>
+					                        <th>등록자</th>					                        
+					                        <th>진행중 활동 수 </th>
 					                    </tr>
 					                    </thead>
 					                    <tbody>
 					                    <tr>
-					                        <td>2</td>
-					                        <td>KCMSUS</td>
-					                        <td>검색광고 서스테이닝</td>
+					                        <td>3</td>
 					                        <td>권영</td>
 					                        <td>QA</td>
+					                        <td>권영</td>					                        
+					                        <td>5</td>
+					                    </tr>
+					                    <tr>
+					                        <td>2</td>
+					                        <td>이동섭</td>
+					                        <td>TE</td>
+					                        <td>권영</td>
+					                        <td>2</td>
 					                    </tr>
 					                    <tr>
 					                        <td>1</td>
-					                        <td>NAVERMAP</td>
-					                        <td>네이버 지도</td>
-					                        <td>권영</td>
+					                        <td>전평재</td>
 					                        <td>TE</td>
+					                        <td>권영</td>
+					                        <td>10</td>
 					                    </tr>
 					                    </tbody>
 					                </table>
@@ -304,83 +317,181 @@
 		        <div class="col-lg-6">
 			        <div class="row">
 				        <div class="ibox float-e-margins">
-					        <div class="ibox-title">
-					            <h5>전체 프로젝트 목록 </h5>
-					            <div class="ibox-tools">
-					                <a class="collapse-link">
-					                    <i class="fa fa-chevron-up"></i>
-					                </a>
-					                <a class="close-link">
-					                    <i class="fa fa-times"></i>
-					                </a>
-					            </div>
-					        </div>
-					        <div class="ibox-content">			
-					            <div class="table-responsive">
-					                <table class="table table-striped">
-					                    <thead>
-					                    <tr>
-					                        <th>#</th>
-					                        <th>프로젝트 ID </th>
-					                        <th>프로젝트명 </th>
-					                        <th>관리자</th>
-					                    </tr>
-					                    </thead>
-					                    <tbody>
-					                    <tr>
-					                        <td>8</td>
-					                        <td>NAVERCLOUD</td>
-					                        <td>네이버 클라우드</td>
-					                        <td>조문기</td>
-					                    </tr>
-					                    <tr>
-					                        <td>7</td>
-					                        <td>NAVERPAY</td>
-					                        <td>뇌입어 페이</td>
-					                        <td>김경연</td>
-					                    </tr>
-					                    <tr>
-					                        <td>6</td>
-					                        <td>NAVERCS</td>
-					                        <td>네이버 고객센터</td>
-					                        <td>박성훈</td>
-					                    </tr>
-					                    <tr>
-					                        <td>5</td>
-					                        <td>KCMSUS</td>
-					                        <td>검색광고 서스테이닝</td>
-					                        <td>권영</td>
-					                    </tr>
-					                    <tr>
-					                        <td>4</td>
-					                        <td>MUSIC</td>
-					                        <td>네이버 뮤직</td>
-					                        <td>이동섭</td>
-					                    </tr>
-					                    <tr>
-					                        <td>3</td>
-					                        <td>WEBTOON</td>
-					                        <td>네이버 웹툰</td>
-					                        <td>이선영</td>
-					                    </tr>
-					                    <tr>
-					                        <td>2</td>
-					                        <td>SEARCHAD</td>
-					                        <td>검색광고 리뉴얼</td>
-					                        <td>전평재</td>
-					                    </tr>
-					                    <tr>
-					                        <td>1</td>
-					                        <td>NAVERMAP</td>
-					                        <td>네이버 지도</td>
-					                        <td>권영</td>
-					                    </tr>
-					                    </tbody>
-					                </table>
-					            </div>
-					
-					        </div>
-				        </div>
+                        <div class="ibox-title">
+                            <h5>활동 스트림</h5>                            
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="ibox-content inspinia-timeline">
+                        	<div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        6:00 am
+                                        <br/>
+                                        <small class="text-navy">2 hour ago</small>
+                                    </div>
+                                    <div class="col-xs-7 content no-top-border">
+                                        <p class="m-b-xs"><strong>권영</strong></p>
+                                        <p>뮤직플레이어 > 2016년 7월 1주차 > 24개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        7:00 am
+                                        <br/>
+                                        <small class="text-navy">3 hour ago</small>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>이동섭</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 2주차 > 132개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        11:00 am
+                                        <br/>
+                                        <small class="text-navy">21 hour ago</small>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>이선영</strong></p>
+                                        <p>뮤직플레이어 > 2016년 7월 1주차 > 124개 수행</p>
+                                        <p>환경 : iPhone 5.x</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        6:00 am
+                                        <br/>
+                                        <small class="text-navy">2 hour ago</small>
+                                    </div>
+                                    <div class="col-xs-7 content no-top-border">
+                                        <p class="m-b-xs"><strong>권영</strong></p>
+                                        <p>뮤직플레이어 > 2016년 7월 1주차 > 24개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        7:00 am
+                                        <br/>
+                                        <small class="text-navy">3 hour ago</small>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>이동섭</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 2주차 > 132개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="row">
+                                    <div class="col-xs-3 date">
+                                        <i class="fa fa-file-text"></i>
+                                        8:00 am
+                                        <br/>
+                                    </div>
+                                    <div class="col-xs-7 content">
+                                        <p class="m-b-xs"><strong>전평재</strong></p>
+                                        <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+                                        <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
 			        </div>
 
 		        </div>
@@ -391,11 +502,6 @@
         </div>
 
 
-        <div class="footer">            
-            <div>
-                <strong>Copyright</strong> Doragee Company &copy; 2014-2015
-            </div>
-        </div>
 	</div>
 
     <!-- Mainly scripts -->
