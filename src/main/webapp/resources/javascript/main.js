@@ -1,37 +1,34 @@
-function showBoardList() {
-	jQuery.ajax({
-	    url			: "/board/listAll",
-	    type		: "GET",
-	    async		: "false",
-	    dataType	: "html",
-	    success		: function(req){
-	    				jQuery("#page").html(req);
-	    			  }
-	
-	});
+function goToMain() {
+	url = "/main";
+	location.href = url;
 }
 
-function showExcelDetail() {
-	jQuery.ajax({
-		url			: "/activity/excelDetail",
-	    type		: "GET",
-	    async		: "false",
-	    dataType	: "html",
-	    success		: function(req){
-	    				jQuery("#page").html(req);
-	    			  }
-	
-	});
+function goToService() {
+	url = "/kcmsus";
+	location.href = url;
 }
 
-function showActivityList() {
-	jQuery.ajax({
-		url			: "/activity/activityList",
-		type		: "GET",
-		async		: "false",
-		dataType	: "html",
-		success		: function(req)	{
-						jQuery("#page").html(req);
-		}
-	});
+function goToActivitySchedule() {
+	url = "/kcmsus/activitySchedule";
+	location.href = url;
+}
+
+function goToActivityList() {
+	url = "/kcmsus/activityList";
+	location.href = url;
+}
+
+function goToJobTemplateList() {
+	url = "/kcmsus/jobTemplateList";
+	location.href = url;
+}
+
+function goToJobDetail() {
+	url = "/kcmsus/jobDetail";
+	location.href = url;
+}
+
+function goToJobVersionList() {
+	url = "/kcmsus/jobVersionList";
+	location.href = url;
 }

@@ -62,7 +62,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://10.113.182.210:8080/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList();" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -83,7 +83,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -91,7 +91,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 4주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -99,7 +99,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 3주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -126,7 +126,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://10.113.182.210:8080/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList();" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -147,7 +147,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -155,7 +155,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 4주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -163,7 +163,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 3주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -190,7 +190,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://10.113.182.210:8080/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList();" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -211,7 +211,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -219,7 +219,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 4주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -227,7 +227,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 3주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -254,7 +254,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://10.113.182.210:8080/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList();" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -275,7 +275,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -283,7 +283,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 4주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -291,7 +291,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 3주</a></td>
+					                                    <td><a href="javascript:goToJobDetail()">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>

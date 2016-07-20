@@ -60,6 +60,7 @@
 	
 	    <!-- ChartJS-->
 	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
+	    <script src="/resources/javascript/main.js"></script>
 	    <decorator:head />
 	</head> 
 
@@ -88,7 +89,7 @@
 		                <li class="active">
 		                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level">
-		                        <li class="active"><a href="http://10.113.182.210:8080/kcmsus">프로젝트 바로가기<span class="label label-primary pull-right">NEW</span></a></li>
+		                        <li class="active"><a href="javascript:goToService()">프로젝트 바로가기<span class="label label-primary pull-right">NEW</span></a></li>
 		                    </ul>
 		                </li>                
                         <li>
