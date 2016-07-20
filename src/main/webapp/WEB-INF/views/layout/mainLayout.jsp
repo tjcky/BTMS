@@ -72,9 +72,8 @@
 			        </nav>
 		    	</div>
 				
-				<div class="wrapper wrapper-content">
-					<decorator:body />
-				</div>
+				<decorator:body />
+				
 			</div>
 		</div>
 		 

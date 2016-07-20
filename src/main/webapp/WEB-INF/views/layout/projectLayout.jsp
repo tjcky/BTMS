@@ -45,7 +45,7 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
+	                    <a href="http://localhost:8080/kcmsus"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>
@@ -59,7 +59,7 @@
 	                <li>
 	                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">테스트 활동</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="#">전체 활동 목록</a></li>
+	                        <li><a href="http://localhost:8080/kcmsus/activityList">전체 활동 목록</a></li>
 	                        <li><a href="#">할당된 활동 목록</a></li>
 	                    </ul>
 	                </li>
@@ -100,9 +100,9 @@
 	        </nav>
 	     </div>
 				
-				<div class="wrapper wrapper-content">
-					<decorator:body />
-				</div>
+				
+				<decorator:body />
+				
 			</div>
 		</div>
 		 

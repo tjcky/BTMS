@@ -1,103 +1,275 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+
 <head>
-<script src="/resources/javascript/activity/activity.js"></script>
-<link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>프로젝트 전체 활동 목록</title>
 </head>
+
 <body>
-	<div class="container">
-		<div class="row">	        
-	        <div class="col-md-12">
-	        	<h4>활동 목록</h4>
-		        <div class="table-responsive">	                
-		            <table id="mytable" class="table table-bordred table-striped">
-		            	<thead>
-		            		<th>번호</th>
-		                   	<th>등록자</th>
-		                    <th>등록일</th>
-		                    <th>상태</th>
-		                    <th>활동명</th>		                    
-		                    <th>수정</th>
-		                    <th>삭제</th>
-		                </thead>
-		    			<tbody>	
-		    				<c:forEach items="${activityList}" var="activityModel">
-		    				<tr>
-		    					<td>${activityModel.activityNo } </td>
-		    					<td>${activityModel.creatorName } </td>
-		    					<td>${activityModel.createDate } </td>
-		    					<td>${activityModel.activityStatus } </td>
-		    					<td><a href="javascript:readActivity('${activityModel.activityNo }')" >${activityModel.activityTitle }</a></td>
-		    					<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-							    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>		    					
-		    				</tr>
-		    				</c:forEach>
-		    			</tbody>
-		        
-					</table>
-		
-					<div class="clearfix"></div>
-					<ul class="pagination pull-right">
-						<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-					</ul>		                
-		        </div>	            
-		    </div>
-		</div>
-	</div>	
-	
-	<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-		<div class="modal-dialog">
-		    <div class="modal-content">
-		    	<div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-			        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
-		      	</div>
-		       	<div class="modal-body">
-			        <div class="form-group">
-			        	<input class="form-control " type="text" placeholder="Mohsin">
-			        </div>
-			        <div class="form-group">		        
-			        	<input class="form-control " type="text" placeholder="Irshad">
-			        </div>
-			        <div class="form-group">
-			        	<textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
-			        </div>
-		      	</div>
-		        <div class="modal-footer ">
-		        	<button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
-		      	</div>
-			</div>
-	    <!-- /.modal-content --> 
-		</div>
-	    <!-- /.modal-dialog --> 
-	</div>
-	    
-	<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-		<div class="modal-dialog">
-		    <div class="modal-content">
-		        <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-			        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
-				</div>
-		        <div class="modal-body">		       
-		       		<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>		       
-		      	</div>
-		        <div class="modal-footer ">
-			        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-			        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-		      	</div>
-		    </div>
-	    <!-- /.modal-content --> 
-		</div>
-	  <!-- /.modal-dialog --> 
-	</div>
+        <div class="wrapper wrapper-content  animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>검색광고 전체 활동 목록</h5>
+                            <div class="ibox-tools">
+                                <a href="" class="btn btn-primary btn-xs">+ 활동추가</a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="m-b-lg">
+                                <div class="m-t-md">
+                                    <strong>총 21개의 활동</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="table-responsive">
+                            <table class="table table-hover issue-tracker">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">진행중</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-23
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 7월 3주차 정기배포 테스트 
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	권영
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>                                    
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> IE 10</button>
+                                        <button class="btn btn-white btn-xs"> IE 11</button>
+                                        <button class="btn btn-white btn-xs"> Chrome</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">진행중</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-22
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 7월 2주차 정기배포 테스트 
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	이동섭
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> IE 10</button>
+                                        <button class="btn btn-white btn-xs"> IE 11</button>
+                                        <button class="btn btn-white btn-xs"> Chrome</button>
+                                        <button class="btn btn-white btn-xs"> Safari</button>
+                                        <button class="btn btn-white btn-xs"> 외 4개</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">진행중</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-21
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 7월 1주차 정기배포 테스트 
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	김경연
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> IE 10</button>
+                                        <button class="btn btn-white btn-xs"> IE 11</button>
+                                        <button class="btn btn-white btn-xs"> Chrome</button>
+                                        <button class="btn btn-white btn-xs"> 외 8개</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-primary">진행중</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-20
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 6월 4주차 정기배포 테스트 
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	전평재
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> IE 10</button>
+                                        <button class="btn btn-white btn-xs"> IE 11</button>
+                                        <button class="btn btn-white btn-xs"> Safari</button>
+                                        <button class="btn btn-white btn-xs"> Firefox</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-warning">진행전</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-19
+                                        </a>
+
+                                        <small>
+                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	김정희
+                                    </td>
+                                    <td>
+                                        28.11.2015 05:10 pm
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> 갤럭시 S7</button>
+                                        <button class="btn btn-white btn-xs"> 블루베리 4</button>
+                                        <button class="btn btn-white btn-xs"> 갤럭시 S4</button>
+                                        <button class="btn btn-white btn-xs"> 갤럭시 노트 4</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-warning">진행전</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-18
+                                        </a>
+
+                                        <small>
+                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	조문기
+                                    </td>
+                                    <td>
+                                        28.11.2015 05:10 pm
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> 갤럭시 S7</button>
+                                        <button class="btn btn-white btn-xs"> 블루베리 4</button>
+                                        <button class="btn btn-white btn-xs"> 갤럭시 S4</button>
+                                        <button class="btn btn-white btn-xs"> 갤럭시 노트 4</button>
+                                        <button class="btn btn-white btn-xs"> 외 5개</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-warning">진행전</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-17
+                                        </a>
+
+                                        <small>
+                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        </small>
+                                    </td>
+                                    <td>
+                                        	이선영
+                                    </td>
+                                    <td>
+                                        28.11.2015 05:10 pm
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> 갤럭시 S7</button>
+                                        <button class="btn btn-white btn-xs"> 블루베리 4</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-danger">완료</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-16
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 아이폰 5월 3주차 정기배포 긴급배포
+                                        </small>
+                                    </td>
+                                    <td>
+										권영
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> 아이폰 6S</button>
+                                        <button class="btn btn-white btn-xs"> 아이폰 6</button>
+                                        <button class="btn btn-white btn-xs"> 아이폰 7</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="label label-danger">완료</span>
+                                    </td>
+                                    <td class="issue-info">
+                                        <a href="#">
+                                            kcmsus-act-15
+                                        </a>
+
+                                        <small>
+											네이버 뮤직 아이폰 5월 2주차 정기배포 긴급배포
+                                        </small>
+                                    </td>
+                                    <td>
+										이동섭
+                                    </td>
+                                    <td>
+                                        12.02.2015 10:00 am
+                                    </td>
+                                    <td class="text-right">
+                                        <button class="btn btn-white btn-xs"> 아이폰 6S</button>
+                                        <button class="btn btn-white btn-xs"> 아이폰 6</button>
+                                        <button class="btn btn-white btn-xs"> 아이폰 7</button>
+                                        <button class="btn btn-white btn-xs"> 외 3개</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div> 
 </body>
 </html>
