@@ -88,11 +88,12 @@
 		                <li class="active">
 		                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level">
-		                        <li><a href="http://localhost/kcmsus">자유게시판<span class="label label-primary pull-right">NEW</span></a></li>
-		                        <li class="active"><a href="#">전체 프로젝트 목록</a></li>
-		                        <li><a href="#">담당 프로젝트 목록</a></li>
+		                        <li class="active"><a href="http://localhost/kcmsus">프로젝트 바로가기<span class="label label-primary pull-right">NEW</span></a></li>
 		                    </ul>
 		                </li>                
+                        <li>
+		                    <a href="#"><i class="fa fa-database"></i> <span class="nav-label">프로젝트 관리</span></a>
+		                </li>
 		            </ul>
 		        </div>
 		    </nav>

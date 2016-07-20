@@ -76,8 +76,8 @@
 	                        </span>
 	                        <a href="http://localhost/main">
 	                            <span class="clear"> 
-	                            	<span class="block m-t-xs"> <strong class="font-bold">Doragee Williams</strong></span> 
-	                            	<span class="text-muted text-xs block">BTMS Developer</span> 
+	                            	<span class="block m-t-xs"> <strong class="font-bold">BTMS HOME</strong></span>
+ 
 	                            </span> 
 	                        </a>
 	                    </div>
