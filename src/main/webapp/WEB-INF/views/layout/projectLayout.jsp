@@ -60,7 +60,6 @@
 	
 	    <!-- ChartJS-->
 	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
-	    <script src="/resources/javascript/main.js"></script>
 	    <decorator:head /> 
 	</head> 
 
@@ -75,7 +74,7 @@
 	                    	<span>
 	                            <img alt="image" class="img-circle" src="/resources/bootstrap/img/profile_small.jpg" />
 	                        </span>
-	                        <a href="/main">
+	                        <a href="http://10.113.182.210:8080/main">
 	                            <span class="clear"> 
 	                            	<span class="block m-t-xs"> <strong class="font-bold">BTMS HOME</strong></span>
  
@@ -87,12 +86,12 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="/kcmsus"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
+	                    <a href="http://10.113.182.210:8080/kcmsus"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="/kcmsus/activitySchedule">활동별 일정</a></li>
+	                        <li><a href="http://10.113.182.210:8080/kcmsus/activitySchedule">활동별 일정</a></li>
 	                        <li><a href="#">작업별 일정</a></li>
 	                        <li><a href="#">테스터별 일정</a></li>
 	                    </ul>
@@ -101,14 +100,14 @@
 	                <li>
 	                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">테스트 활동</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="/kcmsus/activityList">전체 활동 목록</a></li>
+	                        <li><a href="http://10.113.182.210:8080/kcmsus/activityList">전체 활동 목록</a></li>
 	                        <li><a href="#">할당된 활동 목록</a></li>
 	                    </ul>
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">작업 템플릿</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="/kcmsus/jobTemplateList">작업 템플릿 목록</a></li>
+	                        <li><a href="http://10.113.182.210:8080/kcmsus/jobTemplateList">작업 템플릿 목록</a></li>
 	                        <li><a href="#">작업 템플릿 추가</a></li>
 	                    </ul>
 	                </li>
