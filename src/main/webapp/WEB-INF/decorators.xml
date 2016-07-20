@@ -19,6 +19,7 @@
 	
 	<decorator name="projectLayout" page="layout/projectLayout.jsp">
 		<pattern>/kcmsus</pattern>
+		<pattern>/kcmsus/activitySchedule</pattern>
 		<pattern>/kcmsus/**</pattern>		
 	</decorator>
 

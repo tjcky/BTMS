@@ -20,6 +20,60 @@
 	
 	    <link href="/resources/bootstrap/css/animate.css" rel="stylesheet">
 	    <link href="/resources/bootstrap/css/style.css" rel="stylesheet">
+	    <link href="/resources/bootstrap/css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+	    
+	    <!-- Mainly scripts -->	    
+	    <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script>
+	    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	
+	    <!-- Flot -->
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.spline.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.resize.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.pie.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.symbol.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/flot/curvedLines.js"></script>
+	
+	    <!-- Peity -->
+	    <script src="/resources/bootstrap/js/plugins/peity/jquery.peity.min.js"></script>
+	    <script src="/resources/bootstrap/js/demo/peity-demo.js"></script>
+	
+	    <!-- Custom and plugin javascript -->
+	    <script src="/resources/bootstrap/js/inspinia.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
+	
+	    <!-- jQuery UI -->
+	    <script src="/resources/bootstrap/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+	
+	    <!-- Jvectormap -->
+	    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	
+	    <!-- Sparkline -->
+	    <script src="/resources/bootstrap/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+	
+	    <!-- Sparkline demo data  -->
+	    <script src="/resources/bootstrap/js/demo/sparkline-demo.js"></script>
+	
+	    <!-- ChartJS-->
+	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
+	    
+	    <!-- Custom and plugin javascript -->
+		<script src="/resources/bootstrap/js/inspinia.js"></script>
+		<script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
+		
+		<!-- jQuery UI custom -->
+		<script src="/resources/bootstrap/js/jquery-ui.custom.min.js"></script>
+		
+		<!-- iCheck -->
+		<script src="/resources/bootstrap/js/plugins/iCheck/icheck.min.js"></script>
+		
+		<!-- Full Calendar -->
+		<script src="/resources/bootstrap/js/plugins/fullcalendar/moment.min.js"></script>
+		<script src="/resources/bootstrap/js/plugins/fullcalendar/fullcalendar.min.js"></script>
 	</head> 
 
 	<body>
@@ -50,7 +104,7 @@
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="#">활동별 일정</a></li>
+	                        <li><a href="http://localhost:8080/kcmsus/activitySchedule">활동별 일정</a></li>
 	                        <li><a href="#">작업별 일정</a></li>
 	                        <li><a href="#">테스터별 일정</a></li>
 	                    </ul>
@@ -106,44 +160,7 @@
 			</div>
 		</div>
 		 
-    <!-- Mainly scripts -->
-    <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script>
-    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="/resources/bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- Flot -->
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.spline.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.symbol.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/curvedLines.js"></script>
-
-    <!-- Peity -->
-    <script src="/resources/bootstrap/js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="/resources/bootstrap/js/demo/peity-demo.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="/resources/bootstrap/js/inspinia.js"></script>
-    <script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
-
-    <!-- jQuery UI -->
-    <script src="/resources/bootstrap/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-    <!-- Jvectormap -->
-    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-
-    <!-- Sparkline -->
-    <script src="/resources/bootstrap/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- Sparkline demo data  -->
-    <script src="/resources/bootstrap/js/demo/sparkline-demo.js"></script>
-
-    <!-- ChartJS-->
-    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
 
     <script>
         $(document).ready(function() {

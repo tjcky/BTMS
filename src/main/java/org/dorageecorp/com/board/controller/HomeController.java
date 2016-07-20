@@ -4,8 +4,6 @@ import java.util.Locale;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,11 +29,18 @@ public class HomeController {
 		return "projectMain";
 	}
 	
-	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
-	public String calendar(Locale locale, Model model) {
-		log.info("calendar 진입");
+	@RequestMapping(value = "/kcmsus/activitySchedule", method = RequestMethod.GET)
+	public String activitySchedule(Locale locale, Model model) {
+		log.info("활동 스케쥴 진입");
 		
-		return "calendar";
+		return "schedule/activitySchedule";
+	}
+	
+	@RequestMapping(value = "/kcmsus/calendar", method = RequestMethod.GET)
+	public String calendar(Locale locale, Model model) {
+		log.info("test 달력 진입");
+		
+		return "schedule/calendar";
 	}
 	
 	@RequestMapping(value = "/kcmsus/activityList", method = RequestMethod.GET)
