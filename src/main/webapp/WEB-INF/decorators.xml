@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE decorators>
+<!--  
+                 데코레이터 파일들이 있는 디폴트 디렉토리를 선택 
+--> 
+<decorators defaultdir="/WEB-INF/views">
+    <excludes>
+    <!-- exclude 패턴은 아래와 같이 -->
+<!--	
+        <pattern>**/json/**</pattern>
+        <pattern>/fileInfo/*.nhn</pattern>
+        <pattern>/mail/*.nhn</pattern>
+        <pattern>/search/ajax/**</pattern>
+        <pattern>/error/**</pattern> -->
+    </excludes>   
+	<decorator name="mainlayout" page="layout/mainLayout.jsp">
+		<pattern>/main</pattern>		
+	</decorator>
+	
+	<decorator name="projectLayout" page="layout/projectLayout.jsp">
+		<pattern>/kcmsus</pattern>		
+	</decorator>
+
+</decorators>

@@ -30,4 +30,18 @@ public class HomeController {
 		
 		return "projectMain";
 	}
+	
+	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
+	public String calendar(Locale locale, Model model) {
+		logger.info("calendar 진입");
+		
+		return "calendar";
+	}
+	
+	@RequestMapping(value = "/home.do", method = RequestMethod.GET)
+    public String home1(Locale locale, Model model) {
+        logger.info("Welcome home! The client locale is {}.", locale);
+        
+        return "home1";
+    }
 }

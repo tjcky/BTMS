@@ -3,410 +3,204 @@
 <html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BTMS v 0.1</title>
-
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/resources/bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet">
-
-    <!-- Morris -->
-    <link href="/resources/bootstrap/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-
-    <link href="/resources/bootstrap/css/animate.css" rel="stylesheet">
-    <link href="/resources/bootstrap/css/style.css" rel="stylesheet">
-
+    <title>BTMS v 0.2</title>
 </head>
 
 <body>
-    <div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-        <!-- <div class="sidebar-collapse"> -->
-        <div>
-            <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
-                    <div class="dropdown profile-element"> 
-                    	<span>
-                            <img alt="image" class="img-circle" src="/resources/bootstrap/img/profile_small.jpg" />
-                        </span>
-                        <a>
-                            <span class="clear"> 
-                            	<span class="block m-t-xs"> <strong class="font-bold">Doragee Williams</strong></span> 
-                            	<span class="text-muted text-xs block">BTMS Developer</span> 
-                            </span> 
-                        </a>
-                    </div>
-                    <div class="logo-element">
-                        IN+
-                    </div>
-                </li>
-                <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a href="dashboard_5.html">자유게시판<span class="label label-primary pull-right">NEW</span></a></li>
-                        <li class="active"><a href="dashboard_4_1.html">전체 프로젝트 목록</a></li>
-                        <li><a href="dashboard_3.html">담당 프로젝트 목록</a></li>
-                    </ul>
-                </li>                
-            </ul>
-        </div>
-    </nav>
-
-        <div id="page-wrapper" class="gray-bg">
-        <div class="row border-bottom">
-        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-        </div>
-            <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <a href="login.html">
-                        <i class="fa fa-sign-out"></i> Log out
-                    </a>
-                </li>
-            </ul>
-        </nav>
+	<div class="row">
+        <div class="col-lg-6">
+	        <div class="ibox float-e-margins">
+		        <div class="ibox-title">
+		            <h5>자유게시판 </h5>
+		            <div class="ibox-tools">
+		                <a class="collapse-link">
+		                    <i class="fa fa-chevron-up"></i>
+		                </a>
+		                <a class="close-link">
+		                    <i class="fa fa-times"></i>
+		                </a>
+		            </div>
+		        </div>
+		        <div class="ibox-content">			
+		            <div class="table-responsive">
+		                <table class="table table-striped">
+		                    <thead>
+		                    <tr>
+		                        <th>#</th>
+		                        <th>제목 </th>
+		                        <th>작성자 </th>
+		                        <th>작성일 </th>
+		                    </tr>
+		                    </thead>
+		                    <tbody>
+		                    <tr>
+		                        <td>5</td>
+		                        <td>정적 테스트 이야기</td>
+		                        <td>권영</td>
+		                        <td>오늘</td>
+		                    </tr>
+		                    <tr>
+		                        <td>4</td>
+		                        <td>부트스트랩 고수가 되는 방법.txt</td>
+		                        <td>이동섭</td>
+		                        <td>오늘</td>
+		                    </tr>
+		                    <tr>
+		                        <td>3</td>
+		                        <td>고객시스템개발팀</td>
+		                        <td>이선영</td>
+		                        <td>어제</td>
+		                    </tr>
+		                    <tr>
+		                        <td>2</td>
+		                        <td>MySQL 이야기</td>
+		                        <td>김경연</td>
+		                        <td>그제</td>
+		                    </tr>
+		                    <tr>
+		                        <td>1</td>
+		                        <td>테스트 시작</td>
+		                        <td>전평재</td>
+		                        <td>2016.06.23</td>
+		                    </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		
+		        </div>
+	        </div>
         </div>
         
-        <div class="wrapper wrapper-content">
-
-			<div class="row">
-		        <div class="col-lg-6">
-			        <div class="ibox float-e-margins">
-				        <div class="ibox-title">
-				            <h5>자유게시판 </h5>
-				            <div class="ibox-tools">
-				                <a class="collapse-link">
-				                    <i class="fa fa-chevron-up"></i>
-				                </a>
-				                <a class="close-link">
-				                    <i class="fa fa-times"></i>
-				                </a>
-				            </div>
-				        </div>
-				        <div class="ibox-content">			
-				            <div class="table-responsive">
-				                <table class="table table-striped">
-				                    <thead>
-				                    <tr>
-				                        <th>#</th>
-				                        <th>제목 </th>
-				                        <th>작성자 </th>
-				                        <th>작성일 </th>
-				                    </tr>
-				                    </thead>
-				                    <tbody>
-				                    <tr>
-				                        <td>5</td>
-				                        <td>정적 테스트 이야기</td>
-				                        <td>권영</td>
-				                        <td>오늘</td>
-				                    </tr>
-				                    <tr>
-				                        <td>4</td>
-				                        <td>부트스트랩 고수가 되는 방법.txt</td>
-				                        <td>이동섭</td>
-				                        <td>오늘</td>
-				                    </tr>
-				                    <tr>
-				                        <td>3</td>
-				                        <td>고객시스템개발팀</td>
-				                        <td>이선영</td>
-				                        <td>어제</td>
-				                    </tr>
-				                    <tr>
-				                        <td>2</td>
-				                        <td>MySQL 이야기</td>
-				                        <td>김경연</td>
-				                        <td>그제</td>
-				                    </tr>
-				                    <tr>
-				                        <td>1</td>
-				                        <td>테스트 시작</td>
-				                        <td>전평재</td>
-				                        <td>2016.06.23</td>
-				                    </tr>
-				                    </tbody>
-				                </table>
-				            </div>
-				
-				        </div>
+        <div class="col-lg-6">
+	        <div class="row">
+		        <div class="ibox float-e-margins">
+			        <div class="ibox-title">
+			            <h5>전체 프로젝트 목록 </h5>
+			            <div class="ibox-tools">
+			                <a class="collapse-link">
+			                    <i class="fa fa-chevron-up"></i>
+			                </a>
+			                <a class="close-link">
+			                    <i class="fa fa-times"></i>
+			                </a>
+			            </div>
+			        </div>
+			        <div class="ibox-content">			
+			            <div class="table-responsive">
+			                <table class="table table-striped">
+			                    <thead>
+			                    <tr>
+			                        <th>#</th>
+			                        <th>프로젝트 ID </th>
+			                        <th>프로젝트명 </th>
+			                        <th>관리자</th>
+			                    </tr>
+			                    </thead>
+			                    <tbody>
+			                    <tr>
+			                        <td>8</td>
+			                        <td>NAVERCLOUD</td>
+			                        <td>네이버 클라우드</td>
+			                        <td>조문기</td>
+			                    </tr>
+			                    <tr>
+			                        <td>7</td>
+			                        <td>NAVERPAY</td>
+			                        <td>뇌입어 페이</td>
+			                        <td>김경연</td>
+			                    </tr>
+			                    <tr>
+			                        <td>6</td>
+			                        <td>NAVERCS</td>
+			                        <td>네이버 고객센터</td>
+			                        <td>박성훈</td>
+			                    </tr>
+			                    <tr>
+			                        <td>5</td>
+			                        <td>KCMSUS</td>
+			                        <td>검색광고 서스테이닝</td>
+			                        <td>권영</td>
+			                    </tr>
+			                    <tr>
+			                        <td>4</td>
+			                        <td>MUSIC</td>
+			                        <td>네이버 뮤직</td>
+			                        <td>이동섭</td>
+			                    </tr>
+			                    <tr>
+			                        <td>3</td>
+			                        <td>WEBTOON</td>
+			                        <td>네이버 웹툰</td>
+			                        <td>이선영</td>
+			                    </tr>
+			                    <tr>
+			                        <td>2</td>
+			                        <td>SEARCHAD</td>
+			                        <td>검색광고 리뉴얼</td>
+			                        <td>전평재</td>
+			                    </tr>
+			                    <tr>
+			                        <td>1</td>
+			                        <td>NAVERMAP</td>
+			                        <td>네이버 지도</td>
+			                        <td>권영</td>
+			                    </tr>
+			                    </tbody>
+			                </table>
+			            </div>
+			
 			        </div>
 		        </div>
-		        
-		        <div class="col-lg-6">
-			        <div class="row">
-				        <div class="ibox float-e-margins">
-					        <div class="ibox-title">
-					            <h5>전체 프로젝트 목록 </h5>
-					            <div class="ibox-tools">
-					                <a class="collapse-link">
-					                    <i class="fa fa-chevron-up"></i>
-					                </a>
-					                <a class="close-link">
-					                    <i class="fa fa-times"></i>
-					                </a>
-					            </div>
-					        </div>
-					        <div class="ibox-content">			
-					            <div class="table-responsive">
-					                <table class="table table-striped">
-					                    <thead>
-					                    <tr>
-					                        <th>#</th>
-					                        <th>프로젝트 ID </th>
-					                        <th>프로젝트명 </th>
-					                        <th>관리자</th>
-					                    </tr>
-					                    </thead>
-					                    <tbody>
-					                    <tr>
-					                        <td>8</td>
-					                        <td>NAVERCLOUD</td>
-					                        <td>네이버 클라우드</td>
-					                        <td>조문기</td>
-					                    </tr>
-					                    <tr>
-					                        <td>7</td>
-					                        <td>NAVERPAY</td>
-					                        <td>뇌입어 페이</td>
-					                        <td>김경연</td>
-					                    </tr>
-					                    <tr>
-					                        <td>6</td>
-					                        <td>NAVERCS</td>
-					                        <td>네이버 고객센터</td>
-					                        <td>박성훈</td>
-					                    </tr>
-					                    <tr>
-					                        <td>5</td>
-					                        <td>KCMSUS</td>
-					                        <td>검색광고 서스테이닝</td>
-					                        <td>권영</td>
-					                    </tr>
-					                    <tr>
-					                        <td>4</td>
-					                        <td>MUSIC</td>
-					                        <td>네이버 뮤직</td>
-					                        <td>이동섭</td>
-					                    </tr>
-					                    <tr>
-					                        <td>3</td>
-					                        <td>WEBTOON</td>
-					                        <td>네이버 웹툰</td>
-					                        <td>이선영</td>
-					                    </tr>
-					                    <tr>
-					                        <td>2</td>
-					                        <td>SEARCHAD</td>
-					                        <td>검색광고 리뉴얼</td>
-					                        <td>전평재</td>
-					                    </tr>
-					                    <tr>
-					                        <td>1</td>
-					                        <td>NAVERMAP</td>
-					                        <td>네이버 지도</td>
-					                        <td>권영</td>
-					                    </tr>
-					                    </tbody>
-					                </table>
-					            </div>
-					
-					        </div>
-				        </div>
+	        </div>
+        
+	        <div class="row">
+		        <div class="ibox float-e-margins">
+			        <div class="ibox-title">
+			            <h5>담당 프로젝트 목록 </h5>
+			            <div class="ibox-tools">
+			                <a class="collapse-link">
+			                    <i class="fa fa-chevron-up"></i>
+			                </a>
+			                <a class="close-link">
+			                    <i class="fa fa-times"></i>
+			                </a>
+			            </div>
 			        </div>
-		        
-			        <div class="row">
-				        <div class="ibox float-e-margins">
-					        <div class="ibox-title">
-					            <h5>담당 프로젝트 목록 </h5>
-					            <div class="ibox-tools">
-					                <a class="collapse-link">
-					                    <i class="fa fa-chevron-up"></i>
-					                </a>
-					                <a class="close-link">
-					                    <i class="fa fa-times"></i>
-					                </a>
-					            </div>
-					        </div>
-					        <div class="ibox-content">			
-					            <div class="table-responsive">
-					                <table class="table table-striped">
-					                    <thead>
-					                    <tr>
-					                        <th>#</th>
-					                        <th>프로젝트 ID </th>
-					                        <th>프로젝트명 </th>
-					                        <th>관리자</th>
-					                        <th>롤</th>
-					                    </tr>
-					                    </thead>
-					                    <tbody>
-					                    <tr>
-					                        <td>2</td>
-					                        <td>KCMSUS</td>
-					                        <td>검색광고 서스테이닝</td>
-					                        <td>권영</td>
-					                        <td>QA</td>
-					                    </tr>
-					                    <tr>
-					                        <td>1</td>
-					                        <td>NAVERMAP</td>
-					                        <td>네이버 지도</td>
-					                        <td>권영</td>
-					                        <td>TE</td>
-					                    </tr>
-					                    </tbody>
-					                </table>
-					            </div>
-					
-					        </div>
-				        </div>
+			        <div class="ibox-content">			
+			            <div class="table-responsive">
+			                <table class="table table-striped">
+			                    <thead>
+			                    <tr>
+			                        <th>#</th>
+			                        <th>프로젝트 ID </th>
+			                        <th>프로젝트명 </th>
+			                        <th>관리자</th>
+			                        <th>롤</th>
+			                    </tr>
+			                    </thead>
+			                    <tbody>
+			                    <tr>
+			                        <td>2</td>
+			                        <td>KCMSUS</td>
+			                        <td>검색광고 서스테이닝</td>
+			                        <td>권영</td>
+			                        <td>QA</td>
+			                    </tr>
+			                    <tr>
+			                        <td>1</td>
+			                        <td>NAVERMAP</td>
+			                        <td>네이버 지도</td>
+			                        <td>권영</td>
+			                        <td>TE</td>
+			                    </tr>
+			                    </tbody>
+			                </table>
+			            </div>
+			
 			        </div>
 		        </div>
 	        </div>
         </div>
-
-
-        </div>
-
-
-        <div class="footer">            
-            <div>
-                <strong>Copyright</strong> Doragee Company &copy; 2014-2015
-            </div>
-        </div>
-	</div>
-
-    <!-- Mainly scripts -->
-    <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script>
-    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="/resources/bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Flot -->
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.spline.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/jquery.flot.symbol.js"></script>
-    <script src="/resources/bootstrap/js/plugins/flot/curvedLines.js"></script>
-
-    <!-- Peity -->
-    <script src="/resources/bootstrap/js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="/resources/bootstrap/js/demo/peity-demo.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="/resources/bootstrap/js/inspinia.js"></script>
-    <script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
-
-    <!-- jQuery UI -->
-    <script src="/resources/bootstrap/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-    <!-- Jvectormap -->
-    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="/resources/bootstrap/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-
-    <!-- Sparkline -->
-    <script src="/resources/bootstrap/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-    <!-- Sparkline demo data  -->
-    <script src="/resources/bootstrap/js/demo/sparkline-demo.js"></script>
-
-    <!-- ChartJS-->
-    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-
-            var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
-            var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
-
-            var data1 = [
-                { label: "Data 1", data: d1, color: '#17a084'},
-                { label: "Data 2", data: d2, color: '#127e68' }
-            ];
-            $.plot($("#flot-chart1"), data1, {
-                xaxis: {
-                    tickDecimals: 0
-                },
-                series: {
-                    lines: {
-                        show: true,
-                        fill: true,
-                        fillColor: {
-                            colors: [{
-                                opacity: 1
-                            }, {
-                                opacity: 1
-                            }]
-                        },
-                    },
-                    points: {
-                        width: 0.1,
-                        show: false
-                    },
-                },
-                grid: {
-                    show: false,
-                    borderWidth: 0
-                },
-                legend: {
-                    show: false,
-                }
-            });
-
-            var lineData = {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
-                datasets: [
-                    {
-                        label: "Example dataset",
-                        fillColor: "rgba(220,220,220,0.5)",
-                        strokeColor: "rgba(220,220,220,1)",
-                        pointColor: "rgba(220,220,220,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(220,220,220,1)",
-                        data: [65, 59, 40, 51, 36, 25, 40]
-                    },
-                    {
-                        label: "Example dataset",
-                        fillColor: "rgba(26,179,148,0.5)",
-                        strokeColor: "rgba(26,179,148,0.7)",
-                        pointColor: "rgba(26,179,148,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(26,179,148,1)",
-                        data: [48, 48, 60, 39, 56, 37, 30]
-                    }
-                ]
-            };
-
-            var lineOptions = {
-                scaleShowGridLines: true,
-                scaleGridLineColor: "rgba(0,0,0,.05)",
-                scaleGridLineWidth: 1,
-                bezierCurve: true,
-                bezierCurveTension: 0.4,
-                pointDot: true,
-                pointDotRadius: 4,
-                pointDotStrokeWidth: 1,
-                pointHitDetectionRadius: 20,
-                datasetStroke: true,
-                datasetStrokeWidth: 2,
-                datasetFill: true,
-                responsive: true,
-            };
-
-
-            var ctx = document.getElementById("lineChart").getContext("2d");
-            var myNewChart = new Chart(ctx).Line(lineData, lineOptions);
-
-        });
-    </script>
+       </div>    
 </body>
 </html>
