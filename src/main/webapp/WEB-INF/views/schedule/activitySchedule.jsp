@@ -1,12 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>전체 활동 일정</title>
-</head>
-
-<body>
+    
+    <!-- Custom and plugin javascript -->
+	<script src="/resources/bootstrap/js/inspinia.js"></script>
+	<script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
+	
+	<!-- jQuery UI custom -->
+	<script src="/resources/bootstrap/js/jquery-ui.custom.min.js"></script>
+	
+	<!-- iCheck -->
+	<script src="/resources/bootstrap/js/plugins/iCheck/icheck.min.js"></script>
+	
+	<!-- Full Calendar -->
+	<script src="/resources/bootstrap/js/plugins/fullcalendar/moment.min.js"></script>
+	<script src="/resources/bootstrap/js/plugins/fullcalendar/fullcalendar.min.js"></script>
 		<script>
 	    $(document).ready(function() {	
 	            $('.i-checks').iCheck({
@@ -91,6 +103,10 @@
 	    });
 	
 	</script>
+</head>
+
+<body>
+
 	<div class="wrapper wrapper-content">
 	    <div class="row animated fadeInDown">
 	        <div class="col-lg-9">
