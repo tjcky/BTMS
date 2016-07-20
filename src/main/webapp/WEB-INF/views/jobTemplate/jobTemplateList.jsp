@@ -61,8 +61,8 @@
 													<div class="col-md-6">
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
-														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" style="margin-left:200px;">전체보기</button>
+														</span>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://localhost/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -126,7 +126,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://localhost/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -190,7 +190,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://localhost/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -254,7 +254,7 @@
 														<span class="pull-right clickable">
 															<i class="glyphicon glyphicon-chevron-up"></i>
 														</span>	
-														<button type="button" class="btn btn-w-m btn-sm btn-warning" style="margin-left:200px;">전체보기</button>
+														<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="location.href='http://localhost/kcmsus/jobVersionList';" style="margin-left:200px;">전체보기</button>
 														<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 													</div>													
 
@@ -309,9 +309,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div> 
- 
 </body>
 </html>

@@ -56,4 +56,11 @@ public class HomeController {
         
         return "jobTemplate/jobTemplateList";
     }
+	
+	@RequestMapping(value = "/kcmsus/jobVersionList", method = RequestMethod.GET)
+    public String jobVersionList(Locale locale, Model model) {
+        log.info("Job 버전 목록 진입", locale);
+        
+        return "jobTemplate/jobVersionList";
+    }
 }
