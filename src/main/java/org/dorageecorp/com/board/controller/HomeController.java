@@ -49,4 +49,11 @@ public class HomeController {
         
         return "activity/activityList";
     }
+	
+	@RequestMapping(value = "/kcmsus/jobTemplateList", method = RequestMethod.GET)
+    public String jobTemplateList(Locale locale, Model model) {
+        log.info("Job 템플릿 목록 진입", locale);
+        
+        return "jobTemplate/jobTemplateList";
+    }
 }

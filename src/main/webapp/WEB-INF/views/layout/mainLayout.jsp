@@ -88,7 +88,7 @@
 		                <li class="active">
 		                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level">
-		                        <li><a href="http://localhost:8080/kcmsus">자유게시판<span class="label label-primary pull-right">NEW</span></a></li>
+		                        <li><a href="http://localhost/kcmsus">자유게시판<span class="label label-primary pull-right">NEW</span></a></li>
 		                        <li class="active"><a href="#">전체 프로젝트 목록</a></li>
 		                        <li><a href="#">담당 프로젝트 목록</a></li>
 		                    </ul>

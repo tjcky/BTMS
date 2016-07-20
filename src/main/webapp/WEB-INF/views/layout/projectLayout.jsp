@@ -74,7 +74,7 @@
 	                    	<span>
 	                            <img alt="image" class="img-circle" src="/resources/bootstrap/img/profile_small.jpg" />
 	                        </span>
-	                        <a href="http://localhost:8080/main">
+	                        <a href="http://localhost/main">
 	                            <span class="clear"> 
 	                            	<span class="block m-t-xs"> <strong class="font-bold">Doragee Williams</strong></span> 
 	                            	<span class="text-muted text-xs block">BTMS Developer</span> 
@@ -86,12 +86,12 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="http://localhost:8080/kcmsus"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
+	                    <a href="http://localhost/kcmsus"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="http://localhost:8080/kcmsus/activitySchedule">활동별 일정</a></li>
+	                        <li><a href="http://localhost/kcmsus/activitySchedule">활동별 일정</a></li>
 	                        <li><a href="#">작업별 일정</a></li>
 	                        <li><a href="#">테스터별 일정</a></li>
 	                    </ul>
@@ -100,14 +100,14 @@
 	                <li>
 	                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">테스트 활동</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="http://localhost:8080/kcmsus/activityList">전체 활동 목록</a></li>
+	                        <li><a href="http://localhost/kcmsus/activityList">전체 활동 목록</a></li>
 	                        <li><a href="#">할당된 활동 목록</a></li>
 	                    </ul>
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">작업 템플릿</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="#">작업 템플릿 목록</a></li>
+	                        <li><a href="http://localhost/kcmsus/jobTemplateList">작업 템플릿 목록</a></li>
 	                        <li><a href="#">작업 템플릿 추가</a></li>
 	                    </ul>
 	                </li>

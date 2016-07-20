@@ -19,7 +19,7 @@
 	<!-- Full Calendar -->
 	<script src="/resources/bootstrap/js/plugins/fullcalendar/moment.min.js"></script>
 	<script src="/resources/bootstrap/js/plugins/fullcalendar/fullcalendar.min.js"></script>
-		<script>
+	<script>
 	    $(document).ready(function() {	
 	            $('.i-checks').iCheck({
 	                checkboxClass: 'icheckbox_square-green',
