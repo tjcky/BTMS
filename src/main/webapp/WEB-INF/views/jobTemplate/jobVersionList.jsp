@@ -45,7 +45,7 @@
 									    <tbody>									    
 										    <tr>
 											    <td>5</td>
-											    <td><a href="http://10.113.182.210/kcmsus/jobDetail">2016년 7월 1주</a></td>
+											    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
 											    <td>152</td>
 											    <td>진행중</td>
 											    <td>권영</td>
@@ -57,7 +57,7 @@
 										    </tr>
 										    <tr>
 											    <td>4</td>
-											    <td><a href="http://10.113.182.210/kcmsus/jobDetail">2016년 6월 5주</a></td>
+											    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 5주</a></td>
 											    <td>252</td>
 											    <td>진행중</td>
 											    <td>이동섭</td>
@@ -69,7 +69,7 @@
 										    </tr>
 										    <tr>
 											    <td>3</td>
-											    <td><a href="http://10.113.182.210/kcmsus/jobDetail">2016년 6월 3주</a></td>
+											    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 3주</a></td>
 											    <td>112</td>
 											    <td>완료</td>
 											    <td>이선영</td>
@@ -81,7 +81,7 @@
 										    </tr>
 										    <tr>
 											    <td>2</td>
-											    <td><a href="http://10.113.182.210/kcmsus/jobDetail">2016년 6월 2주</a></td>
+											    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 6월 2주</a></td>
 											    <td>232</td>
 											    <td>완료</td>
 											    <td>김정희</td>
@@ -93,7 +93,7 @@
 										    </tr>
 										    <tr>
 											    <td>1</td>
-											    <td><a href="http://10.113.182.210/kcmsus/jobDetail">2016년 7월 1주</a></td>
+											    <td><a href="http://10.113.182.210:8080/kcmsus/jobDetail">2016년 7월 1주</a></td>
 											    <td>152</td>
 											    <td>진행중</td>
 											    <td>권영</td>
