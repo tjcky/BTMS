@@ -83,7 +83,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td>2016년 7월 1주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -91,7 +91,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td>2016년 6월 4주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -99,7 +99,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td>2016년 6월 3주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -132,7 +132,7 @@
 
 												</div>
 											</div>
-																						<div class="panel-body">
+											<div class="panel-body">
 					                            <table class="table table-bordered">
 					                                <thead>
 					                                <tr>
@@ -147,7 +147,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td>2016년 7월 1주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -155,7 +155,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td>2016년 6월 4주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -163,7 +163,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td>2016년 6월 3주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -196,7 +196,7 @@
 
 												</div>
 											</div>
-																						<div class="panel-body">
+											<div class="panel-body">
 					                            <table class="table table-bordered">
 					                                <thead>
 					                                <tr>
@@ -211,7 +211,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td>2016년 7월 1주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -219,7 +219,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td>2016년 6월 4주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -227,7 +227,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td>2016년 6월 3주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
@@ -260,7 +260,7 @@
 
 												</div>
 											</div>
-																						<div class="panel-body">
+											<div class="panel-body">
 					                            <table class="table table-bordered">
 					                                <thead>
 					                                <tr>
@@ -275,7 +275,7 @@
 					                                <tbody>
 					                                <tr>
 					                                    <td>3</td>
-					                                    <td>2016년 7월 1주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 7월 1주</a></td>
 					                                    <td>152</td>
 					                                    <td>진행중</td>
 					                                    <td>권영</td>
@@ -283,7 +283,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>2</td>
-					                                    <td>2016년 6월 4주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 4주</a></td>
 					                                    <td>252</td>
 					                                    <td>완료</td>
 					                                    <td>이동섭</td>
@@ -291,7 +291,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>1</td>
-					                                    <td>2016년 6월 3주</td>
+					                                    <td><a href="http://localhost/kcmsus/jobDetail">2016년 6월 3주</a></td>
 					                                    <td>352</td>
 					                                    <td>진행중</td>
 					                                    <td>전평재</td>
