@@ -2,12 +2,16 @@ package org.dorageecorp.com.board.controller;
 
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 import lombok.extern.slf4j.Slf4j;
 
+import org.dorageecorp.com.activity.bo.ActivityBO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Test
@@ -15,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @Slf4j
 public class HomeController {
+	@Inject
+	private ActivityBO activityBO;
+	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		log.info("main 진입");
@@ -63,4 +70,24 @@ public class HomeController {
         
         return "jobTemplate/jobVersionList";
     }
+	
+	@RequestMapping(value = "/kcmsus/jobDetail", method = RequestMethod.GET)
+	public ModelAndView openJobDetail() {
+		ModelAndView mav = new ModelAndView("/jobTemplate/jobDetail");
+
+		String columnNames = null;
+		String columnData = null;
+
+		try {
+			columnNames = activityBO.getColumnNames();
+			columnData = activityBO.getColumnData();
+		} catch (Exception e) {
+			log.error("test", e);
+		}
+
+		mav.addObject("columnNames", columnNames);
+		mav.addObject("columnData", columnData);
+
+		return mav;
+	}
 }
