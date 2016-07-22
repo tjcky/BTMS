@@ -1,43 +1,27 @@
-redirect = "http://10.113.182.210:8080";
-
 function goToMain() {
-	url = "/main";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/main";
 }
 
 function goToService() {
-	url = "/kcmsus";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus";
 }
 
 function goToActivitySchedule() {
-	url = "/kcmsus/activitySchedule";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus/activitySchedule";
 }
 
 function goToActivityList() {
-	url = "/kcmsus/activityList";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus/activityList";
 }
 
 function goToJobTemplateList() {
-	url = "/kcmsus/jobTemplateList";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus/jobTemplateList";
 }
 
 function goToJobDetail() {
-	url = "/kcmsus/jobDetail";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus/jobDetail";
 }
 
 function goToJobVersionList() {
-	url = "/kcmsus/jobVersionList";
-	/*location.href = url;*/
-	window.location.href = redirect + url;
+	window.location.href = "/kcmsus/jobVersionList";
 }
