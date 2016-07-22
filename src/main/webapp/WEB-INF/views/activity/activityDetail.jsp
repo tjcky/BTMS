@@ -4,51 +4,430 @@
 
 <head>
     <title>활동 상세 페이지</title>
-
+    
+    <!-- SUMMERNOTE -->
+    <script src="/resources/bootstrap/js/plugins/summernote/summernote.min.js"></script>
+	<link href="/resources/bootstrap/css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="/resources/bootstrap/css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
 </head>
 
 <body>
+    <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote();
+            
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+                simpleLoad(btn, false)
+            });
+
+       });
+       var edit = function() {
+            $('.click2edit').summernote({focus: true});
+       };
+       
+       var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+       };
+
+       function simpleLoad(btn, state) {
+           if (state) {
+               btn.children().addClass('fa-spin');
+               btn.contents().last().replaceWith(" Loading");
+           } else {
+               setTimeout(function () {
+                   btn.children().removeClass('fa-spin');
+                   btn.contents().last().replaceWith(" Refresh");
+               }, 2000);
+           }
+       }
+    </script>
 	<div class="wrapper wrapper-content  animated fadeInRight">
         <div class="row">
-			<div class="col-lg-12">
-                <div class="ibox">
-                	<div class="ibox-title">
-                        <h5>작업 템플릿 목록</h5>
-                        <div class="ibox-tools">
-                            <a href="" class="btn btn-primary btn-xs">+ 작업추가</a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-                    	<div class="m-b-lg">
-                            <div class="m-t-md">
-                                <strong>총 4개의 뮤직플레이어 템플릿</strong>
-                            </div>
-
-                        </div>
-                    </div>
+			<div class="col-lg-8">
+				<div class="row">
+	                <div class="ibox">
+	                	<div class="ibox-title">
+	                		<div style="margin-left:15px">
+	                        	<h5>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건</h5>
+	                        	<div class="ibox-tools">
+		                            <a href="" class="btn btn-primary btn-xs">편집</a>
+		                            <a href="" class="btn btn-primary btn-xs">할당</a>
+		                            <a href="" class="btn btn-primary btn-xs">작업흐름</a>
+					                <a class="collapse-link">
+					                    <i class="fa fa-chevron-up"></i>
+					                </a>
+					            </div>		                        
+	                        </div>
+	                    </div>
+	                    <div class="ibox-content">
+		                    	<div class="form-horizontal">
+		                            <div class="row">
+		                            	<div class="col-lg-6">
+		                            		<div class="row">
+												<div class="form-group">
+													<label class="col-lg-2 control-label">
+														중요도
+													</label>
+													<div class="col-lg-7">
+														<p class="form-control-static">Major</p>
+													</div>
+					                            </div>
+												<div class="form-group">
+													<label class="col-lg-2 control-label">
+														플랫폼
+													</label>
+													<div class="col-lg-8">
+														<p class="form-control-static">WEB, iOS, Android</p>
+													</div>
+					                            </div>
+												<div class="form-group">
+													<label class="col-lg-2 control-label">
+														상태
+													</label>
+													<div class="col-lg-8">
+														<p class="form-control-static">진행중</p>
+													</div>
+					                            </div>
+				                        	</div>    
+			                            </div>
+		                            	<div class="col-lg-6">
+		                            		<div class="row">
+												<div class="form-group">
+													<label class="col-lg-3 control-label">
+														배포 구분
+													</label>
+													<div class="col-lg-9">
+														<p class="form-control-static">정기</p>
+													</div>
+					                            </div>
+												<div class="form-group">
+													<label class="col-lg-3 control-label">
+														테스트 환경
+													</label>
+													<div class="col-lg-9">
+														<p class="form-control-static">IE 11 외 4개</p>
+													</div>
+					                            </div>												
+				                        	</div>    
+			                            </div>
+		                            </div>
+	                            </div>
+	                    </div>
+	            	</div>
+	            	
+	                <div class="ibox">
+	                	<div class="ibox-title">
+	                        <h5>테스트 현황</h5>
+			                <div class="ibox-tools">
+				                <a class="collapse-link">
+				                    <i class="fa fa-chevron-up"></i>
+				                </a>
+				            </div>
+	                    </div>
+	                    <div class="ibox-content">
+	                    	<div class="m-b-lg">
+	                            <div class="m-t-md">
+	                                <strong>XXX</strong>
+	                            </div>	
+	                        </div>
+	                    </div>
+	            	</div>
+	            	
+	                <div class="ibox">
+	                	<div class="row">
+	                		<div class="col-lg-12">
+				                <div class="ibox float-e-margins">
+				                    <div class="ibox-title">
+				                        <h5>설명</h5>
+				                        <div class="ibox-tools">
+					                        <button id="edit" class="btn btn-primary btn-xs m-l-sm" onclick="edit()" type="button">Edit</button>
+		                            		<button id="save" class="btn btn-primary  btn-xs" onclick="save()" type="button">Save</button>
+				                            <a class="collapse-link">
+				                                <i class="fa fa-chevron-up"></i>
+				                            </a>
+				                        </div>
+				                    </div>
+				                    <div class="ibox-content no-padding">
+				
+				                        <div class="summernote wrapper p-md">
+				                            <h3>뮤직서스 7월 2주</h3>
+				                           	오류 2건 외 <strong> 정산로그 관련 BTS</strong> 수정건 테스트 진행				                            
+				                            <br/>
+				                            <br/>
+				                            <ul>
+				                                <li>[MUSICOP-1423] 마이뮤직에서 곡 저장 오류</li>
+				                                <li>[MUSICOP-1431] 뮤직플레이어에서 재생 오류</li>
+				                            </ul>
+				                        </div>				
+				                    </div>
+				                </div>
+				        	</div>
+			        	</div>
+	            	</div>
+	            	
+	                <div class="ibox">
+	                	<div class="ibox-title">
+	                        <h5>작업</h5>
+			                <div class="ibox-tools">
+				                <a class="collapse-link">
+				                    <i class="fa fa-chevron-up"></i>
+				                </a>
+				            </div>
+	                    </div>
+	                    <div class="ibox-content">
+	                    	<div class="m-b-lg">
+	                            <div class="m-t-md">
+	                                <strong>XXX</strong>
+	                            </div>	
+	                        </div>
+	                    </div>
+	            	</div>
             	</div>
-        	</div>
-        </div>
-        <div class="row">
-			<div class="col-lg-12">
-                <div class="ibox">
-                	<div class="ibox-title">
-                        <h5>작업 템플릿 목록</h5>
-                        <div class="ibox-tools">
-                            <a href="" class="btn btn-primary btn-xs">+ 작업추가</a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-                    	<div class="m-b-lg">
-                            <div class="m-t-md">
-                                <strong>총 4개의 뮤직플레이어 템플릿</strong>
-                            </div>
+        	</div>       
 
-                        </div>
-                    </div>
-            	</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-12">
+		                <div class="ibox">
+		                	<div class="ibox-title">
+		                        <h5>사람</h5>
+		                    </div>
+		                    <div class="ibox-content">
+		                    	<div class="form-horizontal">
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											담당 QA
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">권영</p>
+										</div>
+		                            </div>
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											등록자
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">이동섭</p>
+										</div>
+		                            </div>
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											TESTER
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">이동섭, 권영, 이선영</p>
+										</div>
+		                            </div>
+	                            </div>
+		                    </div>
+		            	</div>
+					</div>
+	            </div>
+	            
+				<div class="row">
+					<div class="col-lg-12">
+		                <div class="ibox">
+		                	<div class="ibox-title">
+		                        <h5>날짜</h5>
+		                    </div>
+		                    <div class="ibox-content">
+		                    	<div class="form-horizontal">
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											등록일
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">2015-02-25 15:48</p>
+										</div>
+		                            </div>
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											변경일
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">2016-06-01 11:53</p>
+										</div>
+		                            </div>
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											테스트 완료일
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">2015-06-25 12:16</p>
+										</div>
+		                            </div>
+									<div class="form-group">
+										<label class="col-lg-3 control-label">
+											종료 예정일
+										</label>
+										<div class="col-lg-9">
+											<p class="form-control-static">2015-06-25 12:16</p>
+										</div>
+		                            </div>
+	                            </div>
+		                    </div>
+		            	</div>
+					</div>
+	            </div>
+	            
+	            <div class="row">
+	            	<div class="col-lg-12">
+						<div class="ibox">
+		                	<div class="ibox-title">
+		                        <h5>활동</h5>
+				                <div class="ibox-tools">
+					                <a class="collapse-link">
+					                    <i class="fa fa-chevron-up"></i>
+					                </a>
+					            </div>
+		                    </div>
+		                    <div class="ibox-content">
+	                            <div class="row m-t-sm">
+	                                <div class="col-lg-12">
+	                                <div class="panel blank-panel">
+	                                <div class="panel-heading">
+	                                    <div class="panel-options">
+	                                        <ul class="nav nav-tabs">
+	                                            <li class="active"><a href="#tab-1" data-toggle="tab">댓글</a></li>
+	                                            <li class=""><a href="#tab-2" data-toggle="tab">작업 기록</a></li>
+	                                        </ul>
+	                                    </div>
+	                                </div>
+	
+	                                <div class="panel-body">
+	
+	                                <div class="tab-content">
+		                                <div class="tab-pane active" id="tab-1">
+		                                    <div class="feed-activity-list">
+		                                        <div class="feed-element">
+		                                            <div class="media-body ">
+		                                                <small class="pull-right">2h ago</small>
+		                                                <strong>권영</strong> 님이 댓글을 추가했습니다.<br>
+		                                                <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
+		                                                <div class="well">
+		                                                	테스트 완료되시면 메신저로 메세지좀 남겨주세요.
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="feed-element">
+		                                            <div class="media-body ">
+		                                                <small class="pull-right">3h ago</small>
+		                                                <strong>이동섭</strong> 님이 댓글을 수정하였습니다. <br>
+		                                                <small class="text-muted">2 days ago at 8:30am</small>
+		                                                <div class="well">
+		                                                	뮤직 플레이어에서 TC 몇 개가 누락된 부분이 있어서 수정해 뒀어요.
+		                                                </div>
+		                                            </div>
+		                                        </div>	                                        
+		                                        <div class="feed-element">
+		                                            <div class="media-body ">
+		                                                <small class="pull-right">14h ago</small>
+		                                                <strong>김정희</strong> 님이 댓글을 추가하였습니다. <br>
+		                                                <small class="text-muted">2 days ago at 8:30am</small>
+		                                                <div class="well">
+		                                                	저한테 할당된 작업이 보이지 않아요. 추가 부탁드려요
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="feed-element">
+		                                            <div class="media-body ">
+		                                                <small class="pull-right">26h ago</small>
+		                                                <strong>이선영</strong> 님이 댓글을 수정하였습니다. <br>
+		                                                <small class="text-muted">2 days ago at 8:30am</small>
+		                                                <div class="well">
+		                                                	안해
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                    </div>		
+		                                </div>
+		                                
+		                                <div class="tab-pane" id="tab-2">		
+		                                    <table class="table table-striped">
+		                                        <thead>
+			                                        <tr>
+			                                            <th>사람</th>
+			                                            <th>구분</th>
+			                                            <th>시간</th>
+			                                            <th>내용</th>
+			                                        </tr>
+			                                    </thead>
+			                                    <tbody>
+			                                        <tr>
+			                                            <td>
+															권영
+			                                            </td>
+			                                            <td>
+															TC 작성
+			                                            </td>
+			                                            <td>
+			                                                4 hour
+			                                            </td>
+			                                            <td>
+				                                            <p class="small">
+				                                                [뮤직플레이어] 템플릿 142 개
+				                                            </p>
+			                                            </td>			
+			                                        </tr>
+			                                        <tr>
+			                                            <td>
+															이동섭
+			                                            </td>
+			                                            <td>
+															TC 수행
+			                                            </td>
+			                                            <td>
+			                                                6.5 hour
+			                                            </td>
+			                                            <td>
+				                                            <p class="small">
+				                                                [뮤직플레이어] 242 개 
+				                                            </p>
+			                                            </td>			
+			                                        </tr>
+			                                        <tr>
+			                                            <td>
+															이선영
+			                                            </td>
+			                                            <td>
+															TC 수행
+			                                            </td>
+			                                            <td>
+			                                                0.5 hour
+			                                            </td>
+			                                            <td>
+				                                            <p class="small">
+				                                                [뮤직플레이어] 2 개 
+				                                            </p>
+			                                            </td>		
+			                                        </tr>
+		                                        </tbody>
+		                                    </table>
+		
+		                                </div>
+	                                </div>
+	
+	                                </div>
+	
+	                                </div>
+	                                </div>
+	                            </div>
+                            </div>
+		            	</div>
+	            	</div>
+	            </div>
         	</div>
-        </div>
+		</div>
     </div>  
 </body>
 </html>
