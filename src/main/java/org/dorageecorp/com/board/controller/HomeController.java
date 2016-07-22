@@ -57,6 +57,13 @@ public class HomeController {
         return "activity/activityList";
     }
 	
+	@RequestMapping(value = "/kcmsus/activityDetail", method = RequestMethod.GET)
+    public String activityDetail(Locale locale, Model model) {
+        log.info("활동 상세 페이지 진입", locale);
+        
+        return "activity/activityDetail";
+    }
+	
 	@RequestMapping(value = "/kcmsus/jobTemplateList", method = RequestMethod.GET)
     public String jobTemplateList(Locale locale, Model model) {
         log.info("Job 템플릿 목록 진입", locale);

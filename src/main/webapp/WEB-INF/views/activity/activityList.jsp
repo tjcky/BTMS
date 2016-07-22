@@ -33,7 +33,7 @@
                                         <span class="label label-primary">진행중</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-23
                                         </a>
 
@@ -58,7 +58,7 @@
                                         <span class="label label-primary">진행중</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-22
                                         </a>
 
@@ -85,7 +85,7 @@
                                         <span class="label label-primary">진행중</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-21
                                         </a>
 
@@ -111,7 +111,7 @@
                                         <span class="label label-primary">진행중</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-20
                                         </a>
 
@@ -137,7 +137,7 @@
                                         <span class="label label-warning">진행전</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-19
                                         </a>
 
@@ -163,7 +163,7 @@
                                         <span class="label label-warning">진행전</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-18
                                         </a>
 
@@ -190,7 +190,7 @@
                                         <span class="label label-warning">진행전</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-17
                                         </a>
 
@@ -214,7 +214,7 @@
                                         <span class="label label-danger">완료</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-16
                                         </a>
 
@@ -239,7 +239,7 @@
                                         <span class="label label-danger">완료</span>
                                     </td>
                                     <td class="issue-info">
-                                        <a href="#">
+                                        <a href="javascript:goToActivityDetail()">
                                             kcmsus-act-15
                                         </a>
 

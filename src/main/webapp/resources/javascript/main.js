@@ -14,6 +14,10 @@ function goToActivityList() {
 	window.location.href = "/kcmsus/activityList";
 }
 
+function goToActivityDetail() {
+	window.location.href = "/kcmsus/activityDetail";
+}
+
 function goToJobTemplateList() {
 	window.location.href = "/kcmsus/jobTemplateList";
 }
