@@ -68,19 +68,19 @@ public class HomeController {
     public String jobTemplateList(Locale locale, Model model) {
         log.info("Job 템플릿 목록 진입", locale);
         
-        return "jobTemplate/jobTemplateList";
+        return "job/jobTemplateList";
     }
 	
 	@RequestMapping(value = "/kcmsus/jobVersionList", method = RequestMethod.GET)
     public String jobVersionList(Locale locale, Model model) {
         log.info("Job 버전 목록 진입", locale);
         
-        return "jobTemplate/jobVersionList";
+        return "job/jobVersionList";
     }
 	
 	@RequestMapping(value = "/kcmsus/jobDetail", method = RequestMethod.GET)
 	public ModelAndView openJobDetail() {
-		ModelAndView mav = new ModelAndView("/jobTemplate/jobDetail");
+		ModelAndView mav = new ModelAndView("/job/jobDetail");
 
 		String columnNames = null;
 		String columnData = null;
@@ -97,4 +97,11 @@ public class HomeController {
 
 		return mav;
 	}
+	
+	@RequestMapping(value = "/kcmsus/jobExecution", method = RequestMethod.GET)
+    public String jobExecution(Locale locale, Model model) {
+        log.info("Job 수행 페이지 진입", locale);
+        
+        return "job/jobExecution";
+    }
 }
