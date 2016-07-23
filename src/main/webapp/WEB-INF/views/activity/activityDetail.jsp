@@ -147,7 +147,7 @@
 			                                    <th>NR</th>
 			                                    <th>Total</th>
 			                                    <th>진행률</th>
-			                                    <th>Pass률</th>
+			                                    <th>성공률</th>
 			                                </tr>
 		                                </thead>
 		                                <tbody>
