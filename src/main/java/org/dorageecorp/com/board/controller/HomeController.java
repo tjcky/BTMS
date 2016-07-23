@@ -82,7 +82,7 @@ public class HomeController {
 	public ModelAndView openJobDetail() {
 		ModelAndView mav = new ModelAndView("/job/jobDetail");
 
-		String columnNames = null;
+/*		String columnNames = null;
 		String columnData = null;
 
 		try {
@@ -93,7 +93,7 @@ public class HomeController {
 		}
 
 		mav.addObject("columnNames", columnNames);
-		mav.addObject("columnData", columnData);
+		mav.addObject("columnData", columnData);*/
 
 		return mav;
 	}
