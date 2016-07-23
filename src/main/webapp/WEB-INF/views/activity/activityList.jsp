@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <div class="ibox">
                         <div class="ibox-title">
-                            <h5>검색광고 전체 활동 목록</h5>
+                            <h5>네이버 뮤직 전체 활동 목록</h5>
                             <div class="ibox-tools">
                                 <a href="" class="btn btn-primary btn-xs">+ 활동추가</a>
                             </div>
@@ -34,12 +34,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-23
+                                            kcmsus-act-23 / 네이버 뮤직 7월 3주차 정기배포 테스트 
                                         </a>
-
-                                        <small>
-											네이버 뮤직 7월 3주차 정기배포 테스트 
-                                        </small>
                                     </td>
                                     <td>
                                         	권영
@@ -59,12 +55,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-22
+                                            kcmsus-act-22 / 네이버 뮤직 7월 2주차 정기배포 테스트 
                                         </a>
-
-                                        <small>
-											네이버 뮤직 7월 2주차 정기배포 테스트 
-                                        </small>
                                     </td>
                                     <td>
                                         	이동섭
@@ -86,12 +78,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-21
+                                            kcmsus-act-21 / 네이버 뮤직 7월 1주차 정기배포 테스트 
                                         </a>
-
-                                        <small>
-											네이버 뮤직 7월 1주차 정기배포 테스트 
-                                        </small>
                                     </td>
                                     <td>
                                         	김경연
@@ -112,12 +100,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-20
+                                            kcmsus-act-20 / 네이버 뮤직 6월 4주차 정기배포 테스트 
                                         </a>
-
-                                        <small>
-											네이버 뮤직 6월 4주차 정기배포 테스트 
-                                        </small>
                                     </td>
                                     <td>
                                         	전평재
@@ -138,12 +122,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-19
+                                            kcmsus-act-19 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
                                         </a>
-
-                                        <small>
-                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
-                                        </small>
                                     </td>
                                     <td>
                                         	김정희
@@ -164,12 +144,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-18
+                                            kcmsus-act-18 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
                                         </a>
-
-                                        <small>
-                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
-                                        </small>
                                     </td>
                                     <td>
                                         	조문기
@@ -191,12 +167,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-17
+                                            kcmsus-act-17 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
                                         </a>
-
-                                        <small>
-                                            	네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
-                                        </small>
                                     </td>
                                     <td>
                                         	이선영
@@ -215,12 +187,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-16
+                                            kcmsus-act-16 / 네이버 뮤직 아이폰 5월 3주차 긴급배포
                                         </a>
-
-                                        <small>
-											네이버 뮤직 아이폰 5월 3주차 정기배포 긴급배포
-                                        </small>
                                     </td>
                                     <td>
 										권영
@@ -240,12 +208,8 @@
                                     </td>
                                     <td class="issue-info">
                                         <a href="javascript:goToActivityDetail()">
-                                            kcmsus-act-15
+                                            kcmsus-act-15 / 네이버 뮤직 아이폰 5월 2주차 긴급배포
                                         </a>
-
-                                        <small>
-											네이버 뮤직 아이폰 5월 2주차 정기배포 긴급배포
-                                        </small>
                                     </td>
                                     <td>
 										이동섭
