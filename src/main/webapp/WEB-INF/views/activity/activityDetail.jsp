@@ -261,7 +261,7 @@
 			                	<div class="ibox-title">
 			                        <h5>뮤직플레이어</h5>			                        
 					                <div class="ibox-tools">
-			                            <a href="" class="btn btn-primary btn-xs">해당작업 전체결과</a>
+			                            <a href="javascript:goToJobExecutionResult()" class="btn btn-primary btn-xs">해당작업 전체결과</a>
 			                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
 						                <a class="collapse-link">
 						                    <i class="fa fa-chevron-up"></i>
@@ -283,7 +283,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -295,7 +295,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>
@@ -311,7 +311,7 @@
 			                	<div class="ibox-title">
 			                        <h5>마이뮤직</h5>			                        
 					                <div class="ibox-tools">
-			                            <a href="" class="btn btn-primary btn-xs">해당작업 전체결과</a>
+			                            <a href="javascript:goToJobExecutionResult()" class="btn btn-primary btn-xs">해당작업 전체결과</a>
 			                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
 						                <a class="collapse-link">
 						                    <i class="fa fa-chevron-up"></i>
@@ -333,7 +333,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -345,7 +345,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Android 4.x, Android 6.x</td>
@@ -357,7 +357,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>iPhone 6S, iPhone 5S</td>
@@ -369,7 +369,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>
@@ -384,7 +384,7 @@
 			                	<div class="ibox-title">
 			                        <h5>정산로그</h5>			                        
 					                <div class="ibox-tools">
-			                            <a href="" class="btn btn-primary btn-xs">해당작업 전체결과</a>
+			                            <a href="javascript:goToJobExecutionResult()" class="btn btn-primary btn-xs">해당작업 전체결과</a>
 			                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
 						                <a class="collapse-link">
 						                    <i class="fa fa-chevron-up"></i>
@@ -406,7 +406,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -418,7 +418,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
+					                                    <td><a href="javascript:goToJobExecutionDetail()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>

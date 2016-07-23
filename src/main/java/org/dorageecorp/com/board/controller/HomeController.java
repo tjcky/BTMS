@@ -98,10 +98,17 @@ public class HomeController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/kcmsus/jobExecution", method = RequestMethod.GET)
+	@RequestMapping(value = "/kcmsus/jobExecutionDetail", method = RequestMethod.GET)
     public String jobExecution(Locale locale, Model model) {
         log.info("Job 수행 페이지 진입", locale);
         
-        return "job/jobExecution";
+        return "job/jobExecutionDetail";
+    }
+	
+	@RequestMapping(value = "/kcmsus/jobExecutionResult", method = RequestMethod.GET)
+    public String jobExecutionResult(Locale locale, Model model) {
+        log.info("Job 수행 결과 페이지 진입", locale);
+        
+        return "job/jobExecutionResult";
     }
 }
