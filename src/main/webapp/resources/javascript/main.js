@@ -29,3 +29,7 @@ function goToJobDetail() {
 function goToJobVersionList() {
 	window.location.href = "/kcmsus/jobVersionList";
 }
+
+function goToJobExecution() {
+	window.location.href = "/kcmsus/jobExecution";
+}

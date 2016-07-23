@@ -77,7 +77,7 @@
 		                        </span>
 		                        <a>
 		                            <span class="clear"> 
-		                            	<span class="block m-t-xs"> <strong class="font-bold">Doragee Williams</strong></span> 
+		                            	<span class="block m-t-xs"> <strong class="font-bold">Doragee</strong></span> 
 		                            	<span class="text-muted text-xs block">BTMS Developer</span> 
 		                            </span> 
 		                        </a>
@@ -89,7 +89,7 @@
 		                <li class="active">
 		                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level">
-		                        <li class="active"><a href="javascript:goToService()">프로젝트 바로가기<span class="label label-primary pull-right">NEW</span></a></li>
+		                        <li class="active"><a href="javascript:goToService()">테스트 프로젝트<span class="label label-primary pull-right">NEW</span></a></li>
 		                    </ul>
 		                </li>                
                         <li>

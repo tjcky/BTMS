@@ -275,7 +275,7 @@
 				                                <tbody>
 					                                <tr>
 					                                    <td>IE 11, IE 10, Chrome</td>
-					                                    <td>나로호</td>
+					                                    <td>이선영</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -283,7 +283,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -295,7 +295,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>
@@ -333,7 +333,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -345,7 +345,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Android 4.x, Android 6.x</td>
@@ -357,7 +357,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>iPhone 6S, iPhone 5S</td>
@@ -369,7 +369,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>
@@ -406,7 +406,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
@@ -418,7 +418,7 @@
 					                                    <td>NR:15</td>
 					                                    <td>T:294</td>
 					                                    <td>95% 진행</td>
-					                                    <td>상세보기</td>
+					                                    <td><a href="javascript:goToJobExecution()">상세보기</a></td>
 					                                </tr>
 				                                </tbody>
 				                            </table>
