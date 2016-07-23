@@ -249,6 +249,7 @@
 	                	<div class="ibox-title">
 	                        <h5>작업</h5>
 			                <div class="ibox-tools">
+			                	<a href="" class="btn btn-primary btn-xs">+작업추가</a>
 				                <a class="collapse-link">
 				                    <i class="fa fa-chevron-up"></i>
 				                </a>
@@ -505,10 +506,10 @@
 		                            </div>
 									<div class="form-group">
 										<label class="col-lg-3 control-label">
-											테스트 완료일
+											테스트 기간
 										</label>
 										<div class="col-lg-9">
-											<p class="form-control-static">2015-06-25 12:16</p>
+											<p class="form-control-static">2015-06-25 ~ 2015-07-01</p>
 										</div>
 		                            </div>
 									<div class="form-group">
@@ -516,7 +517,7 @@
 											종료 예정일
 										</label>
 										<div class="col-lg-9">
-											<p class="form-control-static">2015-06-25 12:16</p>
+											<p class="form-control-static">2015-07-02</p>
 										</div>
 		                            </div>
 	                            </div>
