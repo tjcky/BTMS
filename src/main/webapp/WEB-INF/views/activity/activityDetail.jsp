@@ -87,58 +87,58 @@
 	                    </div>
 	                    
 	                    <div class="ibox-content">
-		                    	<div class="form-horizontal">
-		                            <div class="row">
-		                            	<div class="col-lg-6">
-		                            		<div class="row">
-												<div class="form-group">
-													<label class="col-lg-2 control-label">
-														중요도
-													</label>
-													<div class="col-lg-7">
-														<p class="form-control-static">Major</p>
-													</div>
-					                            </div>
-												<div class="form-group">
-													<label class="col-lg-2 control-label">
-														플랫폼
-													</label>
-													<div class="col-lg-8">
-														<p class="form-control-static">WEB, iOS, Android</p>
-													</div>
-					                            </div>
-												<div class="form-group">
-													<label class="col-lg-2 control-label">
-														상태
-													</label>
-													<div class="col-lg-8">
-														<p class="form-control-static">진행중</p>
-													</div>
-					                            </div>
-				                        	</div>    
-			                            </div>
-		                            	<div class="col-lg-6">
-		                            		<div class="row">
-												<div class="form-group">
-													<label class="col-lg-3 control-label">
-														배포 구분
-													</label>
-													<div class="col-lg-9">
-														<p class="form-control-static">정기</p>
-													</div>
-					                            </div>
-												<div class="form-group">
-													<label class="col-lg-3 control-label">
-														테스트 환경
-													</label>
-													<div class="col-lg-9">
-														<p class="form-control-static">IE 11 외 4개</p>
-													</div>
-					                            </div>												
-				                        	</div>    
-			                            </div>
+	                    	<div class="form-horizontal">
+	                            <div class="row">
+	                            	<div class="col-lg-6">
+	                            		<div class="row">
+											<div class="form-group">
+												<label class="col-lg-2 control-label">
+													중요도
+												</label>
+												<div class="col-lg-7">
+													<p class="form-control-static">Major</p>
+												</div>
+				                            </div>
+											<div class="form-group">
+												<label class="col-lg-2 control-label">
+													플랫폼
+												</label>
+												<div class="col-lg-8">
+													<p class="form-control-static">WEB, iOS, Android</p>
+												</div>
+				                            </div>
+											<div class="form-group">
+												<label class="col-lg-2 control-label">
+													상태
+												</label>
+												<div class="col-lg-8">
+													<p class="form-control-static">진행중</p>
+												</div>
+				                            </div>
+			                        	</div>    
+		                            </div>
+	                            	<div class="col-lg-6">
+	                            		<div class="row">
+											<div class="form-group">
+												<label class="col-lg-3 control-label">
+													배포 구분
+												</label>
+												<div class="col-lg-9">
+													<p class="form-control-static">정기</p>
+												</div>
+				                            </div>
+											<div class="form-group">
+												<label class="col-lg-3 control-label">
+													테스트 환경
+												</label>
+												<div class="col-lg-9">
+													<p class="form-control-static">IE 11 외 4개</p>
+												</div>
+				                            </div>												
+			                        	</div>    
 		                            </div>
 	                            </div>
+                            </div>
 	                    </div>
 	            	</div>
 	            	
@@ -160,19 +160,21 @@
 		                            <table class="table table-bordered">
 		                                <thead>
 			                                <tr>
+			                                	<th>TESTER</th>
 			                                    <th>환경\결과</th>
-			                                    <th>P</th>
-			                                    <th>F</th>
-			                                    <th>B</th>
-			                                    <th>NI</th>
-			                                    <th>NR</th>
-			                                    <th>Total</th>
+			                                    <th>성공(P)</th>
+			                                    <th>실패(F)</th>
+			                                    <th>블록(B)</th>
+			                                    <th>수행전(NI)</th>
+			                                    <th>미수행(NR)</th>
+			                                    <th>총합</th>
 			                                    <th>진행률</th>
 			                                    <th>성공률</th>
 			                                </tr>
 		                                </thead>
 		                                <tbody>
 			                                <tr>
+			                                	<td>권영</td>
 			                                    <td>IE 11</td>
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -184,6 +186,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
+			                                	<td>권영</td>
 			                                    <td>IE 10</td>
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -195,6 +198,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
+			                                	<td>이동섭</td>
 			                                	<td>Chrome</td>				                                    
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -206,6 +210,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
+			                                	<td>박성훈</td>
 			                                    <td>Safari</td>
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -217,6 +222,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
+			                                	<td>전평재</td>
 			                                	<td>FireFox</td>				                                    
 			                                    <td>193</td>
 			                                    <td>23</td>
