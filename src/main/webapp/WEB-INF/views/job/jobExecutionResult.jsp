@@ -79,6 +79,28 @@
 </head>
 
 <body>
+	<div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>{템플릿명} :: {템플릿 버전명}</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <span>네이버 뮤직</span>
+                </li>
+                <li>
+                    <span>테스트 활동</span>
+                </li>
+                <li>
+                    <span>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건</span>
+                </li>
+                <li class="active">
+                    <strong>작업 전체환경 테스트결과</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+            			
+        </div>
+    </div>
 	<div class="wrapper wrapper-content  animated fadeInRight">
         <div class="row">
 			<div class="col-lg-12">

@@ -106,7 +106,22 @@
 </head>
 
 <body>
-
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>네이버 뮤직 :: 활동별 일정 </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <span>네이버 뮤직</span>
+                </li>
+                <li class="active">
+                    <strong>테스트 일정</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+            			
+        </div>
+    </div>
 	<div class="wrapper wrapper-content">
 	    <div class="row animated fadeInDown">
 	        <div class="col-lg-9">
@@ -117,9 +132,9 @@
 	                        <a class="collapse-link">
 	                            <i class="fa fa-chevron-up"></i>
 	                        </a>
-	                        <a class="close-link">
-	                            <i class="fa fa-times"></i>
-	                        </a>
+	                        <a href="#">
+				                <i class="fa fa-rotate-left"></i>
+				            </a>
 	                    </div>
 	                </div>
 	                <div class="ibox-content">

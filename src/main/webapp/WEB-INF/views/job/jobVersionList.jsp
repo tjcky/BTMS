@@ -8,12 +8,30 @@
 </head>
 
 <body>
+	<div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>네이버 뮤직 :: {마이 뮤직} 버전 목록</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <span>네이버 뮤직</span>
+                </li>
+                <li>
+                    <span>전체 작업 템플릿</span>
+                </li>
+                <li class="active">
+                    <strong>템플릿 버전 목록</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+            			
+        </div>
+    </div>
 	<div class="wrapper wrapper-content  animated fadeInRight">
         <div class="row">
 			<div class="col-lg-12">
                 <div class="ibox">
                 	<div class="ibox-title">
-                        <h5>작업 템플릿 목록</h5>
                         <div class="ibox-tools">
                             <a href="" class="btn btn-primary btn-xs">+ 버전추가</a>
                         </div>

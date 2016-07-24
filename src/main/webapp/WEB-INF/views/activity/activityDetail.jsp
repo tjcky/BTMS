@@ -51,23 +51,41 @@
            }
        }
     </script>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건 </h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">네이버 뮤직</a>
+                </li>
+                <li>
+                    <a>테스트 활동</a>
+                </li>
+                <li class="active">
+                    <strong>활동 상세</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+            			
+        </div>
+    </div>
 	<div class="wrapper wrapper-content  animated fadeInRight">
         <div class="row">
 			<div class="col-lg-8">
 				<div class="row">
-	                <div class="ibox">
+	                <div class="ibox">	                
 	                	<div class="ibox-title">
 	                		<div style="margin-left:15px">
-	                        	<h5>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건</h5>
-	                        	<div class="ibox-tools">
-		                            <a href="" class="btn btn-primary btn-xs">편집</a>
-		                            <a href="" class="btn btn-primary btn-xs">할당</a>		                            
+	                        	<h5>항목</h5>
+	                        	<div class="ibox-tools">		                            		                            
 					                <a class="collapse-link">
 					                    <i class="fa fa-chevron-up"></i>
 					                </a>
 					            </div>		                        
 	                        </div>
 	                    </div>
+	                    
 	                    <div class="ibox-content">
 		                    	<div class="form-horizontal">
 		                            <div class="row">
@@ -130,6 +148,9 @@
 			                <div class="ibox-tools">
 				                <a class="collapse-link">
 				                    <i class="fa fa-chevron-up"></i>
+				                </a>
+				                <a href="#">
+				                    <i class="fa fa-rotate-left"></i>
 				                </a>
 				            </div>
 	                    </div>
@@ -252,6 +273,9 @@
 			                	<a href="" class="btn btn-primary btn-xs">+작업추가</a>
 				                <a class="collapse-link">
 				                    <i class="fa fa-chevron-up"></i>
+				                </a>
+				                <a href="#">
+				                    <i class="fa fa-rotate-left"></i>
 				                </a>
 				            </div>
 	                    </div>
@@ -534,6 +558,9 @@
 				                <div class="ibox-tools">
 					                <a class="collapse-link">
 					                    <i class="fa fa-chevron-up"></i>
+					                </a>
+					                <a href="#">
+					                    <i class="fa fa-rotate-left"></i>
 					                </a>
 					            </div>
 		                    </div>
