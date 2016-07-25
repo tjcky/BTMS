@@ -204,8 +204,30 @@
 					</div>
 	           	</div>
 			</div>
-			
-			<div class="col-lg-4">
+		
+		</div>
+
+        <div class="row">
+			<div class="col-lg-12">
+                <div class="ibox">
+                	<div class="ibox-title">
+		                <div class="ibox-tools">
+                            <a href="/kcmsus/activityDetail" class="btn btn-primary btn-xs">활동상세</a>
+                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
+                            <a href="" class="btn btn-primary btn-xs">수정</a>			                
+			            </div>
+                    </div>
+                    <div class="ibox-content">
+                    	<div class="m-b-lg">
+                            <div id="example1"></div>
+                        </div>
+                    </div>
+            	</div>
+        	</div>
+        </div>
+
+        <div class="row">
+        	<div class="col-lg-12">
 	            <div class="row">
 	            	<div class="col-lg-12">
 						<div class="ibox">
@@ -351,25 +373,6 @@
 		            	</div>
 	            	</div>
 	            </div>
-			</div>
-		</div>
-
-        <div class="row">
-			<div class="col-lg-12">
-                <div class="ibox">
-                	<div class="ibox-title">
-		                <div class="ibox-tools">
-                            <a href="/kcmsus/activityDetail" class="btn btn-primary btn-xs">활동상세</a>
-                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
-                            <a href="" class="btn btn-primary btn-xs">수정</a>			                
-			            </div>
-                    </div>
-                    <div class="ibox-content">
-                    	<div class="m-b-lg">
-                            <div id="example1"></div>
-                        </div>
-                    </div>
-            	</div>
         	</div>
         </div>
     </div>  
