@@ -89,7 +89,10 @@
 		                <li class="active">
 		                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">요약</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level">
-		                        <li class="active"><a href="javascript:goToService()">테스트 프로젝트<span class="label label-primary pull-right">NEW</span></a></li>
+		                        <li class="active"><a href="javascript:goToService()">참여중인 프로젝트<span class="label label-primary pull-right">NEW</span></a></li>
+		                    </ul>
+		                    <ul class="nav nav-second-level">
+		                        <li class="active"><a href="javascript:goToService()">참여중인 활동</a></li>
 		                    </ul>
 		                </li>                
                         <li>
