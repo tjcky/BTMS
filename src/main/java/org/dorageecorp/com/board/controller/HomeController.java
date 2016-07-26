@@ -22,13 +22,6 @@ public class HomeController {
 	@Inject
 	private ActivityBO activityBO;
 	
-	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		log.info("main 진입");
-		
-		return "main";
-	}
-	
 	@RequestMapping(value = "/kcmsus", method = RequestMethod.GET)
 	public String kcmsus(Locale locale, Model model) {
 		log.info("프로젝트 home 진입");

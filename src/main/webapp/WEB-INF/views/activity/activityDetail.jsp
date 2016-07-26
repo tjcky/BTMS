@@ -544,7 +544,7 @@
 		                            </div>
 									<div class="form-group">
 										<label class="col-lg-3 control-label">
-											종료 예정일
+											완료 예정일
 										</label>
 										<div class="col-lg-9">
 											<p class="form-control-static">2015-07-02</p>

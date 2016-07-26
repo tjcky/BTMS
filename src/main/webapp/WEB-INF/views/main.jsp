@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>BTMS v 0.2</title>
+    <title>BTMS Main</title>
 </head>
 
 <body>
@@ -98,54 +99,14 @@
 			                    </tr>
 			                    </thead>
 			                    <tbody>
-			                    <tr>
-			                        <td>8</td>
-			                        <td>NAVERCLOUD</td>
-			                        <td>네이버 클라우드</td>
-			                        <td>조문기</td>
-			                    </tr>
-			                    <tr>
-			                        <td>7</td>
-			                        <td>NAVERPAY</td>
-			                        <td>뇌입어 페이</td>
-			                        <td>김경연</td>
-			                    </tr>
-			                    <tr>
-			                        <td>6</td>
-			                        <td>NAVERCS</td>
-			                        <td>네이버 고객센터</td>
-			                        <td>박성훈</td>
-			                    </tr>
-			                    <tr>
-			                        <td>5</td>
-			                        <td>KCMSUS</td>
-			                        <td>검색광고 서스테이닝</td>
-			                        <td>권영</td>
-			                    </tr>
-			                    <tr>
-			                        <td>4</td>
-			                        <td>MUSIC</td>
-			                        <td>네이버 뮤직</td>
-			                        <td>이동섭</td>
-			                    </tr>
-			                    <tr>
-			                        <td>3</td>
-			                        <td>WEBTOON</td>
-			                        <td>네이버 웹툰</td>
-			                        <td>이선영</td>
-			                    </tr>
-			                    <tr>
-			                        <td>2</td>
-			                        <td>SEARCHAD</td>
-			                        <td>검색광고 리뉴얼</td>
-			                        <td>전평재</td>
-			                    </tr>
-			                    <tr>
-			                        <td>1</td>
-			                        <td>NAVERMAP</td>
-			                        <td>네이버 지도</td>
-			                        <td>권영</td>
-			                    </tr>
+				                    <c:forEach var="project" items="${totalProject}">
+					                    <tr>
+					                        <td>${project.sequence} </td>
+					                        <td>${project.addressId}</td>
+					                        <td>${project.name} </td>
+					                        <td>${project.managerName} </td>
+					                    </tr>
+				                	</c:forEach>
 			                    </tbody>
 			                </table>
 			            </div>
@@ -180,24 +141,18 @@
 			                    </tr>
 			                    </thead>
 			                    <tbody>
-			                    <tr>
-			                        <td>2</td>
-			                        <td>KCMSUS</td>
-			                        <td>검색광고 서스테이닝</td>
-			                        <td>권영</td>
-			                        <td>QA</td>
-			                    </tr>
-			                    <tr>
-			                        <td>1</td>
-			                        <td>NAVERMAP</td>
-			                        <td>네이버 지도</td>
-			                        <td>권영</td>
-			                        <td>TE</td>
-			                    </tr>
+				                    <c:forEach var="project" items="${myProject}">
+					                    <tr>
+					                        <td>${project.sequence} </td>
+					                        <td>${project.addressId}</td>
+					                        <td>${project.name} </td>
+					                        <td>${project.managerName} </td>
+					                        <td>${project.myRole} </td>
+					                    </tr>
+				                	</c:forEach>
 			                    </tbody>
 			                </table>
-			            </div>
-			
+			            </div>			
 			        </div>
 		        </div>
 	        </div>
