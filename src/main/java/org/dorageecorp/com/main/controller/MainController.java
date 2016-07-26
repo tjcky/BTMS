@@ -30,7 +30,6 @@ public class MainController {
 
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView main() {
-		log.debug("진입ㅋ");
 		ModelAndView mav = new ModelAndView("main");
 
 		try {
