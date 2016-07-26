@@ -9,18 +9,18 @@
 			 , content									AS activityContent
 			 , (
 			 	SELECT comm_cd_nm
-			  	  FROM b_comm_cd
+			  	  FROM t_comm_cd
 			  	 WHERE comm_cd = status
 			   )										AS activityStatus
 			 , (
 			 	SELECT username
-			 	  FROM b_user
+			 	  FROM t_user
 			 	 WHERE user_id = crer_id
 			   )										AS creatorName
 			 , DATE_FORMAT(cre_ymdt, "%Y-%m-%d %H:%i")	AS createDate
 			 , modr_id									AS modifierId
 			 , DATE_FORMAT(mod_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
-		  FROM b_atvt
+		  FROM t_atvt
 	     WHERE no <![CDATA[>]]> 0
 		 ORDER BY no DESC
 		 LIMIT 10		
@@ -33,24 +33,24 @@
 			 , content									AS activityContent
 			 , (
 			 	SELECT comm_cd_nm
-			  	  FROM b_comm_cd
+			  	  FROM t_comm_cd
 			  	 WHERE comm_cd = status
 			   )										AS activityStatus
 			 , (
 			 	SELECT username
-			 	  FROM b_user
+			 	  FROM t_user
 			 	 WHERE user_id = crer_id
 			   )										AS creatorName
 			 , DATE_FORMAT(cre_ymdt, "%Y-%m-%d %H:%i")	AS createDate
 			 , modr_id									AS modifierId
 			 , DATE_FORMAT(mod_ymdt, "%Y-%m-%d %H:%i")	AS modifiedDate
-		  FROM b_atvt
+		  FROM t_atvt
 	     WHERE no = #{no}
 	</select>
 	
 	<select id="selectColumnNames" resultType="java.lang.String">
 		SELECT content
-		  FROM b_job_dtl
+		  FROM t_job_dtl
 		 WHERE job_mst_pk = 'job_mst_pk_0001'
 		   AND job_mst_seq = 1
 		   AND header_yn = 'Y'
@@ -59,7 +59,7 @@
 	
 	<select id="selectColumnData" resultType="java.lang.String">
 		SELECT content
-		  FROM b_job_dtl
+		  FROM t_job_dtl
 		 WHERE header_yn = 'N'
 		 ORDER BY row_order
 		 	 , col_order
