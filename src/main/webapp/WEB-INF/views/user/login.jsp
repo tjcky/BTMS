@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Login</title>
+    <title>BTMS | Login</title>
 
     <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -25,12 +25,12 @@
 
             </div>
             <h3>Welcome to BTMS</h3>
-            <form class="m-t" role="form" action="index.html">
+            <form class="m-t" id="loginForm" role="form" action="/trylogin" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ID" required="">
+                    <input type="text" name="id" class="form-control" placeholder="ID" required="">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">로그인</button>
                 
