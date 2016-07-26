@@ -5,6 +5,8 @@
 --> 
 <decorators defaultdir="/WEB-INF/views">
     <excludes>
+    	<pattern>/login</pattern>
+    	<pattern>/login</pattern>
     <!-- exclude 패턴은 아래와 같이 -->
 <!--	
         <pattern>**/json/**</pattern>
@@ -14,7 +16,8 @@
         <pattern>/error/**</pattern> -->
     </excludes>   
 	<decorator name="mainlayout" page="layout/mainLayout.jsp">
-		<pattern>/main</pattern>		
+		<pattern>/main</pattern>
+		<pattern>/login</pattern>		
 	</decorator>
 	
 	<decorator name="projectLayout" page="layout/projectLayout.jsp">
