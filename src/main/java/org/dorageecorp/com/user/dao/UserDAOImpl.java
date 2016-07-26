@@ -18,4 +18,14 @@ public class UserDAOImpl implements UserDAO {
 	public boolean isValidUser(User user) {
 		return sqlSession.selectOne(namespace + ".isValidUser", user);
 	}
+
+	@Override
+	public boolean isDuplicationID(String id) {
+		return sqlSession.selectOne(namespace + ".isDuplicationID", id);
+	}
+
+	@Override
+	public void insertUser(User user) {
+		sqlSession.insert(namespace + ".insertUser", user);
+	}
 }

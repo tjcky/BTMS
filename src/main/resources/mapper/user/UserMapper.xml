@@ -8,4 +8,25 @@
 		 WHERE user_id = #{id}
 		   AND pwd = #{password}
 	</select>
+	
+	<select id="isDuplicationID" resultType="java.lang.Boolean">
+		SELECT COUNT(1)
+		  FROM t_user
+		 WHERE user_id = #{id}
+	</select>
+	
+	<select id="insertUser" resultType="java.lang.Boolean">
+		INSERT INTO t_user
+		VALUES
+		(
+			  #{id}
+			, #{name}
+			, #{nick}
+			, #{password}
+			, #{id}
+			, now()
+			, #{id}
+			, now()
+		)
+	</select>	
 </mapper>

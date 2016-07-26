@@ -16,4 +16,14 @@ public class UserBOImpl implements UserBO {
 	public boolean isValidUser(User user) {		
 		return userDAO.isValidUser(user);
 	}
+
+	@Override
+	public boolean isDuplicationID(String id) {
+		return userDAO.isDuplicationID(id);
+	}
+
+	@Override
+	public void registerUser(User user) {
+		userDAO.insertUser(user);		
+	}
 }

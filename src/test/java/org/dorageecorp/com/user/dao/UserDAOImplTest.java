@@ -35,4 +35,14 @@ public class UserDAOImplTest {
 		
 		assertFalse(sut.isValidUser(user));
 	}
+	
+	@Test
+	public void testIsDuplicationID() {		
+		assertTrue(sut.isDuplicationID("NT10823"));
+	}
+	
+	@Test
+	public void testIsNotDuplicationID() {		
+		assertFalse(sut.isDuplicationID("nt10823123123"));
+	}
 }

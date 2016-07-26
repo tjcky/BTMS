@@ -23,15 +23,18 @@
                 <h1 class="logo-name">BT+</h1>
             </div>
             <h3>Register to BTMS</h3>
-            <form class="m-t" role="form" action="login.html">
+            <form class="m-t" role="form" action="/doregister" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ID" required="">
+                    <input type="text" name="id" class="form-control" placeholder="아이디(영문+숫자)" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Name" required="">
+                    <input type="text" name="name" class="form-control" placeholder="이름" required="">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
+                    <input type="text" name="nick" class="form-control" placeholder="별명" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="암호(5~50자이내)" required="">
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">등록</button>
                 
