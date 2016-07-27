@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.user.model.User;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,7 +18,8 @@ public class UserDAOImplTest {
 
 	@Inject
 	private UserDAO sut;
-	
+
+	@Ignore
 	@Test
 	public void testValidUser() {
 		User user = new User();

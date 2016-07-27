@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @Slf4j
 public class UserController {
-	
+
 	@Inject
 	private UserBO userBO;
-	
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 		return "user/login";
@@ -32,41 +32,41 @@ public class UserController {
 	@RequestMapping(value = "/trylogin", method = RequestMethod.POST)
 	public @ResponseBody String trylogin(HttpServletResponse response, @Valid User user, BindingResult result) {
 		user.setId(StringUtils.upperCase(user.getId()));
-		
-        if (result.hasErrors()) {
-            return ServiceConstant.FAIL;
-        }
 
-        if (userBO.isValidUser(user) == false) {
-        	return ServiceConstant.FAIL;
-        }
+		if (result.hasErrors()) {
+			return ServiceConstant.FAIL;
+		}
 
-        CookieUtil.setCookie(response, "LOGIN_KEY", String.valueOf(user.getId()), CookieUtil.COOKIE_DEFAULT_MAX_AGE, CookieUtil.COOKIE_DEFAULT_DOMAIN);
+		if (userBO.isValidUser(user) == false) {
+			return ServiceConstant.FAIL;
+		}
 
-        return ServiceConstant.SUCCESS;
+		CookieUtil.createCookie(response, user.getId());
+
+		return ServiceConstant.SUCCESS;
 	}
-	
+
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String register() {
 		return "user/register";
 	}
 
 	@RequestMapping(value = "/doregister", method = RequestMethod.POST)
-	public @ResponseBody String doregister(@Valid User user, BindingResult result) {		
-        if (result.hasErrors() || userBO.isDuplicationID(user.getId())) {
-            return ServiceConstant.FAIL;
-        }
+	public @ResponseBody String doregister(@Valid User user, BindingResult result) {
+		if (result.hasErrors() || userBO.isDuplicationID(user.getId())) {
+			return ServiceConstant.FAIL;
+		}
 
-        String message = null;
-    
-        try {
-        	userBO.registerUser(user);
-        	message = ServiceConstant.SUCCESS;
-        } catch (Exception e){
-        	log.error(String.valueOf(user), e);
-        	message = ServiceConstant.FAIL;
-        }        
-		
+		String message = null;
+
+		try {
+			userBO.registerUser(user);
+			message = ServiceConstant.SUCCESS;
+		} catch (Exception e) {
+			log.error(String.valueOf(user), e);
+			message = ServiceConstant.FAIL;
+		}
+
 		return message;
 	}
 }
