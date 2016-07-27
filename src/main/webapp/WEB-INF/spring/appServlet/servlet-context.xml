@@ -23,4 +23,13 @@
 	
 	<context:component-scan base-package="org.dorageecorp.com" />
 	
+	<beans:bean id="loginInterceptor" class="org.dorageecorp.com.interceptor.LoginInterceptor"></beans:bean>
+	
+	<interceptors>
+		<interceptor>
+			<mapping path="/main"/>
+			<beans:ref bean="loginInterceptor"></beans:ref>
+		</interceptor>
+	</interceptors> 
+	
 </beans:beans>

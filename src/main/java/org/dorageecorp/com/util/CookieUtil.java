@@ -19,12 +19,9 @@ public class CookieUtil {
 		cookieGenerator.addCookie(response, userId);
 	}
 
+	// Java 8로 바꿀 수 있다
 	public static Cookie getCookie(HttpServletRequest request, String name) {
 		Cookie cookies[] = request.getCookies();
-
-		if (cookies == null) {
-			return null;
-		}
 
 		for (Cookie cookie : cookies) {
 			if (StringUtils.equals(cookie.getName(), name)) {
