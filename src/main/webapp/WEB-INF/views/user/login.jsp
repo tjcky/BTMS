@@ -11,9 +11,13 @@
 
     <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/resources/bootstrap/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/resources/bootstrap/css/plugins/iCheck/custom.css" rel="stylesheet">
 
     <link href="/resources/bootstrap/css/animate.css" rel="stylesheet">
     <link href="/resources/bootstrap/css/style.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="/resources/bootstrap/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">
@@ -25,7 +29,7 @@
 
             </div>
             <h3>Welcome to BTMS</h3>
-            <form class="m-t" id="loginForm" role="form" action="/trylogin" method="post">
+            <form class="m-t" id="loginForm" role="form" id="loginForm" action="/trylogin" method="post">
                 <div class="form-group">
                     <input type="text" name="id" class="form-control" placeholder="ID" required="">
                 </div>
@@ -40,6 +44,37 @@
     </div>
     <!-- Mainly scripts -->
     <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script>
+    <script src="/resources/javascript/jquery.form.min.js"></script>
     <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="/resources/bootstrap/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+	    $(function(){
+			var options={
+             	async : true,
+             	dataType : 'text',
+             	success : function(data) {
+             		if (data == 'success') {
+             			window.location.href = '/main';
+             		} else {
+             			swal({
+         	                title: '로그인 오류',
+         	                text: '아이디나 비밀번호를 다시 확인해주세요.',
+         	                type: 'warning',
+         	               	confirmButtonColor: '#DD6B55',
+         					confirmButtonText: '확인'
+         	            });
+             			$('.form-control').val('');
+             		}
+             	}
+            };
+                
+            $('#loginForm').submit(function(){
+               	$(this).ajaxSubmit(options);
+               	return false;
+            });
+	    });
+    </script>
 </body>
 </html>

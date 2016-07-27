@@ -7,15 +7,15 @@ import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.dorageecorp.com.user.bo.UserBO;
 import org.dorageecorp.com.user.model.User;
 import org.dorageecorp.com.util.CookieUtil;
+import org.dorageecorp.com.util.ServiceConstant;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @Slf4j
@@ -30,20 +30,20 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/trylogin", method = RequestMethod.POST)
-	public String trylogin(HttpServletResponse response, @Valid User user, BindingResult result) {
+	public @ResponseBody String trylogin(HttpServletResponse response, @Valid User user, BindingResult result) {
 		user.setId(StringUtils.upperCase(user.getId()));
 		
         if (result.hasErrors()) {
-            return "user/login";
+            return ServiceConstant.FAIL;
         }
 
         if (userBO.isValidUser(user) == false) {
-        	return "user/login";
+        	return ServiceConstant.FAIL;
         }
 
         CookieUtil.setCookie(response, "LOGIN_KEY", String.valueOf(user.getId()), CookieUtil.COOKIE_DEFAULT_MAX_AGE, CookieUtil.COOKIE_DEFAULT_DOMAIN);
 
-        return "redirect:/main";
+        return ServiceConstant.SUCCESS;
 	}
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -52,17 +52,21 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/doregister", method = RequestMethod.POST)
-	public String doregister(@Valid User user, BindingResult result) {		
+	public @ResponseBody String doregister(@Valid User user, BindingResult result) {		
         if (result.hasErrors() || userBO.isDuplicationID(user.getId())) {
-            return "user/login";
-        }        
-        
+            return ServiceConstant.FAIL;
+        }
+
+        String message = null;
+    
         try {
         	userBO.registerUser(user);
+        	message = ServiceConstant.SUCCESS;
         } catch (Exception e){
-        	log.error(ToStringBuilder.reflectionToString(user, ToStringStyle.MULTI_LINE_STYLE));
+        	log.error(String.valueOf(user), e);
+        	message = ServiceConstant.FAIL;
         }        
 		
-		return "user/login";
+		return message;
 	}
 }

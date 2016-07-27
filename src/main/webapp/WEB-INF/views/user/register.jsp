@@ -13,6 +13,9 @@
     <link href="/resources/bootstrap/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/resources/bootstrap/css/animate.css" rel="stylesheet">
     <link href="/resources/bootstrap/css/style.css" rel="stylesheet">
+    
+    <!-- Sweet Alert -->
+    <link href="/resources/bootstrap/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">
@@ -23,7 +26,7 @@
                 <h1 class="logo-name">BT+</h1>
             </div>
             <h3>Register to BTMS</h3>
-            <form class="m-t" role="form" action="/doregister" method="post">
+            <form class="m-t" role="form" id="registerForm" action="/doregister" method="post">
                 <div class="form-group">
                     <input type="text" name="id" class="form-control" placeholder="아이디(영문+숫자)" required="">
                 </div>
@@ -44,15 +47,56 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script>
+    <script src="/resources/bootstrap/js/jquery-2.1.1.js"></script> 
+    <script src="/resources/javascript/jquery.form.min.js"></script> 
     <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/resources/bootstrap/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/resources/bootstrap/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <!-- iCheck -->
     <script src="/resources/bootstrap/js/plugins/iCheck/icheck.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="/resources/bootstrap/js/inspinia.js"></script>
+    <script src="/resources/bootstrap/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="/resources/bootstrap/js/plugins/sweetalert/sweetalert.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(function(){
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
+            });
+            
+            var options={
+            	async : true,
+            	dataType : 'text',
+            	success : function(data) {
+            		if (data == 'success') {
+            			swal({
+        	                title: '등록 완료',
+        	                text: '확인을 누르면 로그인 페이지로 이동됩니다.',
+        	                type: 'success',
+        	               	confirmButtonColor: '#DD6B55',
+        					confirmButtonText: '확인'
+        	            }, function () {
+        	            	window.location.href = '/login';
+        	            });
+            		} else {
+            			swal({
+        	                title: '등록 실패',
+        	                text: '아이디가 중복이거나 \n아이디 또는 암호를 형식에 맞게 입력해주세요.',
+        	                type: 'warning',
+        	               	confirmButtonColor: '#DD6B55',
+        					confirmButtonText: '확인'
+        	            });
+            			$('.form-control').val('');
+            		}
+            	}
+            };
+            
+            $("#registerForm").submit(function(){
+            	$(this).ajaxSubmit(options);
+            	return false;
             });
         });
     </script>
