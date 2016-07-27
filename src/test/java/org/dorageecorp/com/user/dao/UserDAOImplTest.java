@@ -3,7 +3,14 @@ package org.dorageecorp.com.user.dao;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
 import javax.inject.Inject;
+import javax.servlet.http.Cookie;
 
 import org.dorageecorp.com.user.model.User;
 import org.junit.Ignore;
@@ -46,5 +53,18 @@ public class UserDAOImplTest {
 	@Test
 	public void testIsNotDuplicationID() {		
 		assertFalse(sut.isDuplicationID("nt10823123123"));
+	}
+	
+	@Test
+	public void test(){
+		List<String> test = new ArrayList<String>();
+		
+		test.add("12342342342");
+		test.add("3456234");
+		test.add("1434");
+		
+		Optional<String> d = test.stream().filter(w -> w.length()>10).findFirst();
+		System.out.println(d.orElse(null));
+		
 	}
 }

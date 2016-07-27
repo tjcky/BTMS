@@ -28,6 +28,8 @@ public class MainController {
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public ModelAndView index() {
+		
+		
 		return null;
 	}
 

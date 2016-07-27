@@ -1,10 +1,12 @@
 package org.dorageecorp.com.util;
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.util.CookieGenerator;
 
 public class CookieUtil {
@@ -23,15 +25,10 @@ public class CookieUtil {
 	public static Cookie getCookie(HttpServletRequest request, String name) {
 		Cookie cookies[] = request.getCookies();
 
-		for (Cookie cookie : cookies) {
-			if (StringUtils.equals(cookie.getName(), name)) {
-				return cookie;
-			}
-		}
-
-		return null;
+		Stream<Cookie> cookieStream = Arrays.stream(cookies, 0, cookies.length);
+		return cookieStream.filter(w -> w.getName().equals(name)).findFirst().orElse(null);
 	}
-
+	
 	public static String getCookieValue(HttpServletRequest request, String name) {
 		Cookie cookie = getCookie(request, name);
 
