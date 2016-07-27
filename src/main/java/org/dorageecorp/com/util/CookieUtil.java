@@ -9,11 +9,11 @@ import org.springframework.web.util.CookieGenerator;
 
 public class CookieUtil {
 
-	public static void createCookie(HttpServletResponse response, String userId) {
+	public static void createCookie(HttpServletResponse response, String userId, int maxAge) {
 		CookieGenerator cookieGenerator = new CookieGenerator();
 
 		cookieGenerator.setCookieDomain("127.0.0.1"); 	// 도메인 설정
-		cookieGenerator.setCookieMaxAge(60 * 60 * 24); 	// 하루 설정, (음수로 하면 브라우저가 닫힐때 쿠키 삭제)
+		cookieGenerator.setCookieMaxAge(maxAge); 		// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초 단위로 설정
 		cookieGenerator.setCookieName("userId");
 		cookieGenerator.setCookiePath("/"); 			// 모든 경로에 지정
 
@@ -44,5 +44,9 @@ public class CookieUtil {
 		}
 
 		return null;
+	}
+	
+	public static void removeCookie(HttpServletResponse response, String userId) {
+		createCookie(response, userId, 0);
 	}
 }

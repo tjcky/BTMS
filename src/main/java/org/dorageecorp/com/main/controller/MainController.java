@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,9 +33,6 @@ public class MainController {
 
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView main(HttpServletRequest request) {
-		String userId = CookieUtil.getCookieValue(request, "userId");
-		System.out.println(userId);
-		
 		ModelAndView mav = new ModelAndView("main");
 
 		try {
@@ -48,5 +46,11 @@ public class MainController {
 		}
 
 		return mav;
+	}
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpServletResponse response, String userId){
+		CookieUtil.removeCookie(response, userId);
+		return "user/login";
 	}
 }

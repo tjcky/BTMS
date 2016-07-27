@@ -41,7 +41,7 @@ public class UserController {
 			return ServiceConstant.FAIL;
 		}
 
-		CookieUtil.createCookie(response, user.getId());
+		CookieUtil.createCookie(response, user.getId(), ServiceConstant.ONE_DAY);
 
 		return ServiceConstant.SUCCESS;
 	}
@@ -51,7 +51,7 @@ public class UserController {
 		return "user/register";
 	}
 
-	@RequestMapping(value = "/doregister", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public @ResponseBody String doregister(@Valid User user, BindingResult result) {
 		if (result.hasErrors() || userBO.isDuplicationID(user.getId())) {
 			return ServiceConstant.FAIL;

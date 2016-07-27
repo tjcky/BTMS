@@ -26,7 +26,7 @@
                 <h1 class="logo-name">BT+</h1>
             </div>
             <h3>Register to BTMS</h3>
-            <form class="m-t" role="form" id="registerForm" action="/doregister" method="post">
+            <form class="m-t" role="form" id="registerForm" action="/register" method="post">
                 <div class="form-group">
                     <input type="text" name="id" class="form-control" placeholder="아이디(영문+숫자)" required="">
                 </div>
