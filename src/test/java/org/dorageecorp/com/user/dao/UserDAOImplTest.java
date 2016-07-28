@@ -30,7 +30,7 @@ public class UserDAOImplTest {
 	@Test
 	public void testValidUser() {
 		User user = new User();
-		user.setId("NT10823");
+		user.setUserId("NT10823");
 		user.setPassword("1234");
 
 		assertTrue(sut.isValidUser(user));
@@ -39,7 +39,7 @@ public class UserDAOImplTest {
 	@Test
 	public void testInvalidUser() {
 		User user = new User();
-		user.setId("NT10823");
+		user.setUserId("NT10823");
 		user.setPassword("123");
 		
 		assertFalse(sut.isValidUser(user));

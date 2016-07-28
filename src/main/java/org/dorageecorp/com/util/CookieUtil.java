@@ -24,6 +24,10 @@ public class CookieUtil {
 	public static Cookie getCookie(HttpServletRequest request, String name) { 
 		Cookie cookies[] = request.getCookies();
 
+		if (cookies == null) {
+			return null;
+		}
+
 		Stream<Cookie> cookieStream = Arrays.stream(cookies);
 		return cookieStream.filter(w -> w.getName().equals(name)).findFirst().orElse(null);
 	}
