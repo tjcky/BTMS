@@ -14,21 +14,21 @@ public class CookieUtil {
 	public static void createCookie(HttpServletResponse response, String userId, int maxAge) {
 		CookieGenerator cookieGenerator = new CookieGenerator();
 
-		cookieGenerator.setCookieMaxAge(maxAge); 		// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초 단위로 설정
+		cookieGenerator.setCookieMaxAge(maxAge); 	// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초단위로 설정
 		cookieGenerator.setCookieName("userId");
-		cookieGenerator.setCookiePath("/"); 			// 모든 경로에 지정
+		cookieGenerator.setCookiePath("/"); 		// 모든 경로에 지정
 
 		cookieGenerator.addCookie(response, userId);
 	}
 
-	// Java 8로 바꿀 수 있다
-	public static Cookie getCookie(HttpServletRequest request, String name) {
+	public static Cookie getCookie(HttpServletRequest request, String name) { 
 		Cookie cookies[] = request.getCookies();
 
-		Stream<Cookie> cookieStream = Arrays.stream(cookies, 0, cookies.length);
-		return cookieStream.filter(w -> w.getName().equals(name)).findFirst().orElse(null);
+		Stream<Cookie> cookieStream = Arrays.stream(cookies);
+		return cookieStream.filter(w -> w.getName().equals(name)).findFirst()
+				.orElse(null);
 	}
-	
+
 	public static String getCookieValue(HttpServletRequest request, String name) {
 		Cookie cookie = getCookie(request, name);
 
@@ -38,7 +38,7 @@ public class CookieUtil {
 
 		return null;
 	}
-	
+
 	public static void removeCookie(HttpServletResponse response, String userId) {
 		createCookie(response, userId, 0);
 	}

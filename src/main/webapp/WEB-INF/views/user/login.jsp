@@ -31,10 +31,10 @@
             <h3>Welcome to BTMS</h3>
             <form class="m-t" id="loginForm" role="form" id="loginForm" action="/trylogin" method="post">
                 <div class="form-group">
-                    <input type="text" name="id" class="form-control" placeholder="ID" required="">
+                    <input type="text" name="userId" class="form-control" placeholder="ID" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="required">
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">로그인</button>
                 
@@ -52,7 +52,6 @@
     <script>
 	    $(function(){
 			var options={
-             	async : true,
              	dataType : 'text',
              	success : function(data) {
              		if (data == 'success') {

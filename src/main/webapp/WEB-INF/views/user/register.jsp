@@ -28,13 +28,13 @@
             <h3>Register to BTMS</h3>
             <form class="m-t" role="form" id="registerForm" action="/register" method="post">
                 <div class="form-group">
-                    <input type="text" name="id" class="form-control" placeholder="아이디(영문+숫자)" required="">
+                    <input type="text" name="userId" class="form-control" placeholder="아이디(영문+숫자)" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="이름" required="">
+                    <input type="text" name="userName" class="form-control" placeholder="이름" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="nick" class="form-control" placeholder="별명" required="">
+                    <input type="text" name="nickName" class="form-control" placeholder="별명" required="">
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="암호(5~50자이내)" required="">
@@ -68,7 +68,6 @@
             });
             
             var options={
-            	async : true,
             	dataType : 'text',
             	success : function(data) {
             		if (data == 'success') {
@@ -76,23 +75,29 @@
         	                title: '등록 완료',
         	                text: '확인을 누르면 로그인 페이지로 이동됩니다.',
         	                type: 'success',
-        	               	confirmButtonColor: '#DD6B55',
+        	               	confirmButtonColor: '#6b55dd',
         					confirmButtonText: '확인'
         	            }, function () {
         	            	window.location.href = '/login';
         	            });
+            		} else if (data == 'duplicationId') {
+            			notifyWarningAlert('아이디 중복', '다른 아이디를 입력해 주세요.');
             		} else {
-            			swal({
-        	                title: '등록 실패',
-        	                text: '아이디가 중복이거나 \n아이디 또는 암호를 형식에 맞게 입력해주세요.',
-        	                type: 'warning',
-        	               	confirmButtonColor: '#DD6B55',
-        					confirmButtonText: '확인'
-        	            });
+            			notifyWarningAlert('등록 실패', '항목 값을 올바르게 입력해 주세요.');
             			$('.form-control').val('');
             		}
             	}
             };
+            
+            function notifyWarningAlert(titleMessage, alertMessage){
+            	swal({
+	                title: titleMessage,
+	                text: alertMessage,
+	                type: 'warning',
+	               	confirmButtonColor: '#DD6B55',
+					confirmButtonText: '확인'
+	            });
+            }
             
             $("#registerForm").submit(function(){
             	$(this).ajaxSubmit(options);

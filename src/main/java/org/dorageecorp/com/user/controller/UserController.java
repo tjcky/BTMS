@@ -31,7 +31,7 @@ public class UserController {
 
 	@RequestMapping(value = "/trylogin", method = RequestMethod.POST)
 	public @ResponseBody String trylogin(HttpServletResponse response, @Valid User user, BindingResult result) {
-		user.setId(StringUtils.upperCase(user.getId()));
+		user.setUserId(StringUtils.upperCase(user.getUserId()));
 
 		if (result.hasErrors()) {
 			return ServiceConstant.FAIL;
@@ -41,7 +41,8 @@ public class UserController {
 			return ServiceConstant.FAIL;
 		}
 
-		CookieUtil.createCookie(response, user.getId(), ServiceConstant.ONE_DAY);
+		CookieUtil.createCookie(response, user.getUserId(),
+				ServiceConstant.ONE_DAY);
 
 		return ServiceConstant.SUCCESS;
 	}
@@ -53,8 +54,12 @@ public class UserController {
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public @ResponseBody String doregister(@Valid User user, BindingResult result) {
-		if (result.hasErrors() || userBO.isDuplicationID(user.getId())) {
+		if (result.hasErrors()) {
 			return ServiceConstant.FAIL;
+		}
+
+		if (userBO.isDuplicationID(user.getUserId())) {
+			return ServiceConstant.DUPLICATION_ID;
 		}
 
 		String message = null;

@@ -25,13 +25,6 @@ public class MainController {
 
 	@Inject
 	private MainBO mainBO;
-	
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public ModelAndView index() {
-		
-		
-		return null;
-	}
 
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView main(HttpServletRequest request) {
@@ -40,18 +33,18 @@ public class MainController {
 		try {
 			List<ProjectModel> totalProject = mainBO.getTotalProjects();
 			List<ProjectModel> myProject = mainBO.getMyProjects();
-			
+
 			mav.addObject("totalProject", totalProject);
 			mav.addObject("myProject", myProject);
 		} catch (Exception e) {
-			log.error("Main Error", e);			
+			log.error("Main Error", e);
 		}
 
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletResponse response, String userId){
+	public String logout(HttpServletResponse response, String userId) {
 		CookieUtil.removeCookie(response, userId);
 		return "user/login";
 	}
