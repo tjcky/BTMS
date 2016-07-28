@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class ProjectActivityModel {
+	private int sequence;					// 시퀀스
 	private String title;					// 제목
 	private String status;					// 상태
 	private String allotmentedQa;			// 담당 QA

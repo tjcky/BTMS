@@ -102,8 +102,8 @@
 				                    <c:forEach var="project" items="${totalProject}">
 					                    <tr>
 					                        <td>${project.sequence} </td>
-					                        <td>${project.addressId}</td>
-					                        <td>${project.name} </td>
+					                        <td><a href="/project/${project.addressId}"/>${project.addressId}</td>
+					                        <td><a href="/project/${project.addressId}"/>${project.name} </td>
 					                        <td>${project.managerName} </td>
 					                    </tr>
 				                	</c:forEach>

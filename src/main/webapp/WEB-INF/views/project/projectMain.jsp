@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 
@@ -54,49 +56,34 @@
 				                <table class="table table-striped">
 				                    <thead>
 				                    <tr>
-				                        <th>#</th>
-				                        <th>제목 </th>
-				                        <th>QA </th>
-				                        <th>상태 </th>
-				                        <th>환경 </th>
+				                        <th style="text-align: center">#</th>
+				                        <th style="text-align: center">제목 </th>
+				                        <th style="text-align: center">QA </th>
+				                        <th style="text-align: center">상태 </th>
+				                        <th style="text-align: center">환경 </th>
+				                        <th style="text-align: center">등록일 </th>
 				                    </tr>
 				                    </thead>
 				                    <tbody>
-				                    <tr>
-				                        <td>5</td>
-				                        <td>뮤직 정기배포 6월 1주차</td>
-				                        <td>권영</td>
-				                        <td>진행중</td>
-				                        <td>IE 10외 5개</td>
-				                    </tr>
-				                    <tr>
-				                        <td>4</td>
-				                        <td>뮤직 정기배포 5월 3주차</td>
-				                        <td>이동섭</td>
-				                        <td>완료</td>
-				                        <td>IE 9외 4개</td>
-				                    </tr>
-				                    <tr>
-				                        <td>3</td>
-				                        <td>뮤직 정기배포 5월 2주차</td>
-				                        <td>전평재</td>
-				                        <td>완료</td>
-				                        <td>Android 4.x외 5개</td>
-				                    </tr>
-				                    <tr>
-				                        <td>2</td>
-				                        <td>뮤직 정기배포 5월 1주차</td>
-				                        <td>이선영</td>
-				                        <td>진행중</td>
-				                        <td>iPhone 6.x외 3개</td>
-				                    </tr>
-				                    <tr>
-				                        <td>1</td>
-				                        <td>뮤직 정기배포 4월 2주차</td>
-				                        <td>조문기</td>
-				                        <td>진행전</td>
-				                        <td>Safari 9.x외 4개</td>
-				                    </tr>
+				                    	<c:choose>
+				                    		<c:when test="${fn:length(projectActivityList) < 1}">
+				                    			<tr>
+				                    				<td colspan="6" style="text-align: center"><span>진행중인 활동이 없습니다.</span></td>
+				                    			</tr>
+				                    		</c:when>
+				                    		<c:otherwise>
+						                    	<c:forEach var="projectActivity" items="${projectActivityList}">
+						                    		<tr>
+						                    			<td style="text-align: center">${projectActivity.sequence }</td>
+						                    			<td style="text-align: center">${projectActivity.title }</td>
+						                    			<td style="text-align: center">${projectActivity.allotmentedQa }</td>
+						                    			<td style="text-align: center">${projectActivity.status }</td>
+						                    			<td style="text-align: center">${projectActivity.representEnviromentName } 포함 ${projectActivity.enviromentCount }개</td>
+						                    			<td style="text-align: center">${projectActivity.createDate }</td>
+						                    		</tr>
+						                    	</c:forEach>
+					                    	</c:otherwise>
+				                    	</c:choose>
 				                    </tbody>
 				                </table>
 				            </div>

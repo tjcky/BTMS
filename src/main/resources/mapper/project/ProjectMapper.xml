@@ -29,7 +29,8 @@
 	</select>
 	
 	<select id="selectProjectActivity" resultType="org.dorageecorp.com.project.model.ProjectActivityModel">
-		SELECT tam.atvt_nm AS title
+		SELECT seq AS sequence
+			 , tam.atvt_nm AS title
 			 , (
 			 		SELECT user_nm
 			 		  FROM t_user
@@ -55,7 +56,9 @@
 					 WHERE tat.atvt_pk = tam.atvt_pk
 					 GROUP BY tat.atvt_pk
 			   ) AS representEnviromentName
+			 , DATE_FORMAT(tam.cre_ymdt, '%y-%m-%d %h:%i') AS createDate
 		  FROM t_atvt_mst tam
 		 WHERE tam.pjt_addr_id = #{projectId}
+		 ORDER BY cre_ymdt DESC
 	</select>
 </mapper>
