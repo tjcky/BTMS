@@ -22,7 +22,7 @@ public class MainDAOImpl implements MainDAO {
 	}
 
 	@Override
-	public List<ProjectModel> selectMyProjects() throws Exception {
-		return sqlSession.selectList(namespace + ".selectMyProjects"); 
+	public List<ProjectModel> selectMyProjects(String userId) throws Exception {
+		return sqlSession.selectList(namespace + ".selectMyProjects", userId); 
 	}
 }

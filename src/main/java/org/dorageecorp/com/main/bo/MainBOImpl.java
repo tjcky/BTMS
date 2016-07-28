@@ -20,7 +20,7 @@ public class MainBOImpl implements MainBO {
 	}
 
 	@Override
-	public List<ProjectModel> getMyProjects() throws Exception {
-		return mainDAO.selectMyProjects();
+	public List<ProjectModel> getMyProjects(String userId) throws Exception {
+		return mainDAO.selectMyProjects(userId);
 	}
 }

@@ -7,5 +7,5 @@ import org.dorageecorp.com.main.model.ProjectModel;;
 public interface MainBO {
 	public List<ProjectModel> getTotalProjects() throws Exception;
 
-	public List<ProjectModel> getMyProjects() throws Exception;
+	public List<ProjectModel> getMyProjects(String userId) throws Exception;
 }

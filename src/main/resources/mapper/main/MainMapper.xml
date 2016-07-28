@@ -16,42 +16,45 @@
 	</select>
 	
 	<select id="selectMyProjects" resultType="org.dorageecorp.com.main.model.ProjectModel">
-		SELECT
-			   (
-					SELECT pjt_seq
-				      FROM t_pjt
-					 WHERE pjt_addr_id = tpu.pjt_pk
-			   ) AS sequence
-			 , 
-			   (	
-					SELECT pjt_addr_id 
-				      FROM t_pjt
-					 WHERE pjt_addr_id = tpu.pjt_pk
-			   ) AS addressId
-			 ,
-			   (
-					SELECT pjt_nm
-				      FROM t_pjt
-					 WHERE pjt_addr_id = tpu.pjt_pk
-		       ) AS name
-			 ,
-			   (
-					SELECT (
-								SELECT user_nm
-				                  FROM t_user
-								 WHERE user_id = p.pjt_mgr
-						   )
-				      FROM t_pjt p
-					 WHERE p.pjt_addr_id = tpu.pjt_pk
-				) AS managerName
-			 ,
-			   (	
-					SELECT role_nm
-				      FROM t_role
-					 WHERE role_cd = tpu.user_role
-			   ) AS myRole
-		 FROM t_pjt_user tpu	
-		WHERE tpu.user_id = 'NT10003'
-		ORDER BY tpu.pjt_pk DESC
+		SELECT a.*
+		  FROM (
+					SELECT
+						   (
+								SELECT pjt_seq
+							      FROM t_pjt
+								 WHERE pjt_addr_id = tpu.pjt_addr_id
+						   ) AS sequence
+						 , 
+						   (	
+								SELECT pjt_addr_id 
+							      FROM t_pjt
+								 WHERE pjt_addr_id = tpu.pjt_addr_id
+						   ) AS addressId
+						 ,
+						   (
+								SELECT pjt_nm
+							      FROM t_pjt
+								 WHERE pjt_addr_id = tpu.pjt_addr_id
+					       ) AS name
+						 ,
+						   (
+								SELECT (
+											SELECT user_nm
+							                  FROM t_user
+											 WHERE user_id = p.pjt_mgr
+									   )
+							      FROM t_pjt p
+								 WHERE p.pjt_addr_id = tpu.pjt_addr_id
+							) AS managerName
+						 ,
+						   (	
+								SELECT role_nm
+							      FROM t_role
+								 WHERE role_cd = tpu.user_role
+						   ) AS myRole
+					 FROM t_pjt_user tpu	
+					WHERE tpu.user_id = #{userId}
+			    ) a
+		  ORDER BY a.sequence DESC
 	</select>
 </mapper>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 
@@ -92,7 +93,7 @@
 			                <table class="table table-striped">
 			                    <thead>
 			                    <tr>
-			                        <th>#</th>
+			                        <th style="text-align: center">#</th>
 			                        <th>프로젝트 ID </th>
 			                        <th>프로젝트명 </th>
 			                        <th>관리자</th>
@@ -101,9 +102,9 @@
 			                    <tbody>
 				                    <c:forEach var="project" items="${totalProject}">
 					                    <tr>
-					                        <td>${project.sequence} </td>
-					                        <td><a href="/project/${project.addressId}"/>${project.addressId}</td>
-					                        <td><a href="/project/${project.addressId}"/>${project.name} </td>
+					                        <td style="text-align: center">${project.sequence} </td>
+					                        <td><a href="/project/${project.addressId}">${project.addressId}</a></td>
+					                        <td><a href="/project/${project.addressId}">${project.name}</a> </td>
 					                        <td>${project.managerName} </td>
 					                    </tr>
 				                	</c:forEach>
@@ -133,7 +134,7 @@
 			                <table class="table table-striped">
 			                    <thead>
 			                    <tr>
-			                        <th>#</th>
+			                        <th style="text-align: center">#</th>
 			                        <th>프로젝트 ID </th>
 			                        <th>프로젝트명 </th>
 			                        <th>관리자</th>
@@ -141,15 +142,24 @@
 			                    </tr>
 			                    </thead>
 			                    <tbody>
-				                    <c:forEach var="project" items="${myProject}">
-					                    <tr>
-					                        <td>${project.sequence} </td>
-					                        <td>${project.addressId}</td>
-					                        <td>${project.name} </td>
-					                        <td>${project.managerName} </td>
-					                        <td>${project.myRole} </td>
-					                    </tr>
-				                	</c:forEach>
+			                    	<c:choose>
+			                    		<c:when test="${fn:length(myProject) < 1}">
+			        	                	<tr>
+				                    			<td colspan="5" style="text-align: center"><span>보유한 프로젝트가 없습니다.</span></td>
+				                    		</tr>
+			                    		</c:when>
+			                    		<c:otherwise>
+						                    <c:forEach var="project" items="${myProject}">
+							                    <tr>
+							                        <td style="text-align: center">${project.sequence} </td>
+							                        <td><a href="/project/${project.addressId}">${project.addressId}</a></td>
+							                        <td><a href="/project/${project.addressId}">${project.name}</a></td>
+							                        <td>${project.managerName} </td>
+							                        <td>${project.myRole} </td>
+							                    </tr>
+						                	</c:forEach>
+			                    		</c:otherwise>
+			                    	</c:choose>
 			                    </tbody>
 			                </table>
 			            </div>			
