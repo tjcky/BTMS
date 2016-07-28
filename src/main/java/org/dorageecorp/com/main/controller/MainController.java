@@ -4,13 +4,11 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
 import org.dorageecorp.com.main.bo.MainBO;
 import org.dorageecorp.com.main.model.ProjectModel;
-import org.dorageecorp.com.util.CookieUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,11 +39,5 @@ public class MainController {
 		}
 
 		return mav;
-	}
-
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletResponse response, String userId) {
-		CookieUtil.removeCookie(response, userId);
-		return "user/login";
 	}
 }

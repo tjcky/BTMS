@@ -74,4 +74,10 @@ public class UserController {
 
 		return message;
 	}
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpServletResponse response, String userId) {
+		CookieUtil.removeCookie(response, userId);
+		return "user/login";
+	}
 }
