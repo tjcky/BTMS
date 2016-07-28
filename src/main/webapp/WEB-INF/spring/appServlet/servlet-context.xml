@@ -28,7 +28,7 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/main"/>
-			<mapping path="/kcmsus"/>
+			<mapping path="/project/*"/>
 			<beans:ref bean="loginInterceptor"></beans:ref>
 		</interceptor>
 	</interceptors> 

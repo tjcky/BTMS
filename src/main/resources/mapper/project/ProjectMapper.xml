@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.dorageecorp.mapper.ProjectMapper">
+	<select id="isExistProject" resultType="boolean">
+		SELECT COUNT(1)
+		  FROM t_pjt
+		 WHERE pjt_addr_id = #{projectId}
+	</select>
+
+	<select id="selectProjectInfomation" resultType="org.dorageecorp.com.project.model.ProjectInfomationModel">
+		SELECT pjt_addr_id AS projectAddressId
+	 		 , pjt_nm AS projectName
+			 ,
+			   (
+					SELECT user_nm
+				      FROM t_user
+					 WHERE user_id = pjt_mgr
+			   ) AS managerName
+			 ,
+			   (
+					SELECT nick_name
+				      FROM t_user
+					 WHERE user_id = pjt_mgr
+			   ) AS managerNick
+			 , pjt_catg AS projectCategory
+		 FROM t_pjt
+		WHERE pjt_addr_id = #{projectId}
+	</select>
+	
+	<select id="selectProjectActivity" resultType="org.dorageecorp.com.project.model.ProjectActivityModel">
+		SELECT tam.atvt_nm AS title
+			 , (
+			 		SELECT user_nm
+			 		  FROM t_user
+			 		 WHERE user_id = tam.allt_qa
+			   ) AS allotmentedQa
+			 , (
+			 		SELECT comm_cd_nm
+			 		  FROM t_comm_cd
+			 		 WHERE comm_cd = tam.status
+			   ) AS status
+			 , (
+			 		SELECT COUNT(1)
+			 		  FROM t_atvt_tstenv
+			 		 WHERE atvt_pk = tam.atvt_pk
+			   ) AS enviromentCount
+			 , (
+			 		SELECT (
+			 					SELECT tstenv_nm
+             					  FROM t_tstenv_info
+								 WHERE tstenv_pk = tat.tstenv_pk
+			 			   ) AS representEnviromentName
+			 		  FROM t_atvt_tstenv tat
+					 WHERE tat.atvt_pk = tam.atvt_pk
+					 GROUP BY tat.atvt_pk
+			   ) AS representEnviromentName
+		  FROM t_atvt_mst tam
+		 WHERE tam.pjt_addr_id = #{projectId}
+	</select>
+</mapper>

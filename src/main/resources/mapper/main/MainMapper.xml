@@ -20,19 +20,19 @@
 			   (
 					SELECT pjt_seq
 				      FROM t_pjt
-					 WHERE pjt_pk = tpu.pjt_pk
+					 WHERE pjt_addr_id = tpu.pjt_pk
 			   ) AS sequence
 			 , 
 			   (	
 					SELECT pjt_addr_id 
 				      FROM t_pjt
-					 WHERE pjt_pk = tpu.pjt_pk
+					 WHERE pjt_addr_id = tpu.pjt_pk
 			   ) AS addressId
 			 ,
 			   (
 					SELECT pjt_nm
 				      FROM t_pjt
-					 WHERE pjt_pk = tpu.pjt_pk
+					 WHERE pjt_addr_id = tpu.pjt_pk
 		       ) AS name
 			 ,
 			   (
@@ -42,7 +42,7 @@
 								 WHERE user_id = p.pjt_mgr
 						   )
 				      FROM t_pjt p
-					 WHERE p.pjt_pk = tpu.pjt_pk
+					 WHERE p.pjt_addr_id = tpu.pjt_pk
 				) AS managerName
 			 ,
 			   (	
@@ -52,6 +52,6 @@
 			   ) AS myRole
 		 FROM t_pjt_user tpu	
 		WHERE tpu.user_id = 'NT10003'
-		ORDER BY pjt_pk DESC
+		ORDER BY tpu.pjt_pk DESC
 	</select>
 </mapper>

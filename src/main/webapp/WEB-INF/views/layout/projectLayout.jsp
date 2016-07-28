@@ -87,7 +87,7 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="javascript:goToService()"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
+	                    <a href="#" id="projectMain"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>

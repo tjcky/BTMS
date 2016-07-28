@@ -4,21 +4,27 @@
 
 <head>
     <title>project Layout Main</title>
+	<script type="text/javascript">
+		jQuery(function() {	
+ 			jQuery("#projectMain").attr("href", "/project/" + jQuery("#projectAddressId").val());
+		});
+	</script>
 </head>
 
 <body>
 	<div class="row wrapper border-bottom white-bg page-heading">
+		<input type="hidden" id="projectAddressId" value="${projectInfomation.projectAddressId }"/>
         <div class="col-lg-10">
-            <h2>네이버 뮤직 </h2>
+            <h2>${projectInfomation.projectName } </h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>키 : KCMSUS</span>
+                    <span>키 : ${projectInfomation.projectAddressId }</span>
                 </li>
                 <li>
-                    <span>담당 : 권영[도라지]</span>
+                    <span>담당 : ${projectInfomation.managerName} [${projectInfomation.managerNick }]</span>
                 </li>
                 <li>
-                    <span>분류 : WEB, Android, iOS</span>
+                    <span>분류 : ${projectInfomation.projectCategory }</span>
                 </li>
             </ol>
         </div>
