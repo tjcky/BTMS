@@ -25,8 +25,7 @@ public class CookieUtil {
 		Cookie cookies[] = request.getCookies();
 
 		Stream<Cookie> cookieStream = Arrays.stream(cookies);
-		return cookieStream.filter(w -> w.getName().equals(name)).findFirst()
-				.orElse(null);
+		return cookieStream.filter(w -> w.getName().equals(name)).findFirst().orElse(null);
 	}
 
 	public static String getCookieValue(HttpServletRequest request, String name) {
@@ -37,6 +36,10 @@ public class CookieUtil {
 		}
 
 		return null;
+	}
+	
+	public static boolean existCookieValue(HttpServletRequest request, String name) {
+		return CookieUtil.getCookie(request, name) == null ? false : true;
 	}
 
 	public static void removeCookie(HttpServletResponse response, String userId) {
