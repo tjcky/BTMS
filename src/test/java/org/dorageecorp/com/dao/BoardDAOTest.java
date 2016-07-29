@@ -3,7 +3,7 @@ package org.dorageecorp.com.dao;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.board.dao.BoardDAO;
-import org.dorageecorp.com.board.model.BoardModel;
+import org.dorageecorp.com.board.model.Board;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +20,7 @@ public class BoardDAOTest {
 
 	@Test
 	public void testCreate() throws Exception {
-		BoardModel model = new BoardModel();
+		Board model = new Board();
 		model.setTitle("���ο� ���� �ֽ��ϴ�");
 		model.setContent("���ο� ���� �ֽ��ϴ�");
 		model.setWriter("user00");
@@ -35,7 +35,7 @@ public class BoardDAOTest {
 
 	@Test
 	public void testUpdate() throws Exception {
-		BoardModel model = new BoardModel();
+		Board model = new Board();
 		model.setBno(1);
 		model.setTitle("asdfsdfsdf");
 		model.setContent("asdfsdfsdf");

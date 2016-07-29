@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.dorageecorp.com.activity.model.ActivityModel;
+import org.dorageecorp.com.activity.model.Activity;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,14 +23,14 @@ public class ActivityDAOImplTest {
 	
 	@Test
 	public void testSelectActivityList() throws Exception {
-		List<ActivityModel> list = activityDAO.selectActivityList();
+		List<Activity> list = activityDAO.selectActivityList();
 		
 		assertFalse(CollectionUtils.isEmpty(list));
 	}
 	
 	@Test
 	public void testSelectActivityDetail() throws Exception {
-		ActivityModel model = activityDAO.selectActivityDetail(3);
+		Activity model = activityDAO.selectActivityDetail(3);
 		
 		assertNotNull(model);
 	}

@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.dorageecorp.com.main.model.ProjectModel;
+import org.dorageecorp.com.main.model.Project;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,15 +21,9 @@ public class MainDAOImplTest {
 
 	@Test
 	public void testSelectTotalProjects() throws Exception {
-		List<ProjectModel> list = sut.selectTotalProjects();
+		List<Project> list = sut.selectTotalProjects();
 		
 		assertNotNull(list);
-	}
-	
-	@Test
-	public void testSelectMyProjects() throws Exception {
-		List<ProjectModel> list = sut.selectMyProjects();
-		
-		assertNotNull(list);
-	}
+	}	
+
 }

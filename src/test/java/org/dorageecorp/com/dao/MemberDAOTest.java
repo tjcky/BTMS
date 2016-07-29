@@ -3,7 +3,7 @@ package org.dorageecorp.com.dao;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.board.dao.MemberDAO;
-import org.dorageecorp.com.board.model.MemberModel;
+import org.dorageecorp.com.board.model.Member;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ public class MemberDAOTest {
 	
 	@Test
 	public void testInsertMember() throws Exception {
-		MemberModel model = new MemberModel();
+		Member model = new Member();
 		
 		model.setUserid("user00");
 		model.setUserpw("user00");
