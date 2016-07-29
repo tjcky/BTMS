@@ -21,14 +21,14 @@
 						<th style="width: 40px">VIEWCNT</th>
 					</tr>
 
-					<c:forEach items="${list}" var="boardModel">
+					<c:forEach items="${list}" var="board">
 
 						<tr>
-							<td>${boardModel.bno}</td>
-							<td><a href="javascript:readBoard('${boardModel.bno}')">${boardModel.title} </a></td>
-							<td>${boardModel.writer}</td>
-							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardModel.regdate}" /></td>
-							<td><span class="badge bg-red">${boardModel.viewcnt }</span></td>
+							<td>${board.bno}</td>
+							<td><a href="javascript:readBoard('${board.bno}')">${board.title} </a></td>
+							<td>${board.writer}</td>
+							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${board.regdate}" /></td>
+							<td><span class="badge bg-red">${board.viewcnt }</span></td>
 						</tr>
 
 					</c:forEach>

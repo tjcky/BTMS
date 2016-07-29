@@ -56,12 +56,12 @@
 				                <table class="table table-striped">
 				                    <thead>
 				                    <tr>
-				                        <th style="text-align: center">#</th>
-				                        <th style="text-align: center">제목 </th>
-				                        <th style="text-align: center">QA </th>
-				                        <th style="text-align: center">상태 </th>
-				                        <th style="text-align: center">환경 </th>
-				                        <th style="text-align: center">등록일 </th>
+				                        <th class="text-center">#</th>
+				                        <th class="text-center">제목 </th>
+				                        <th class="text-center">QA </th>
+				                        <th class="text-center"">상태 </th>
+				                        <th class="text-center">환경 </th>
+				                        <th class="text-center">등록일 </th>
 				                    </tr>
 				                    </thead>
 				                    <tbody>
@@ -74,12 +74,12 @@
 				                    		<c:otherwise>
 						                    	<c:forEach var="projectActivity" items="${projectActivityList}">
 						                    		<tr>
-						                    			<td style="text-align: center">${projectActivity.sequence }</td>
-						                    			<td style="text-align: center">${projectActivity.title }</td>
-						                    			<td style="text-align: center">${projectActivity.allotmentedQa }</td>
-						                    			<td style="text-align: center">${projectActivity.status }</td>
-						                    			<td style="text-align: center">${projectActivity.representEnviromentName } 포함 ${projectActivity.enviromentCount }개</td>
-						                    			<td style="text-align: center">${projectActivity.createDate }</td>
+						                    			<td class="text-center">${projectActivity.sequence }</td>
+						                    			<td class="text-center">${projectActivity.title }</td>
+						                    			<td class="text-center">${projectActivity.allotmentedQa }</td>
+						                    			<td class="text-center">${projectActivity.status }</td>
+						                    			<td class="text-center">${projectActivity.representEnviromentName } 포함 ${projectActivity.enviromentCount }개</td>
+						                    			<td class="text-center">${projectActivity.createDate }</td>
 						                    		</tr>
 						                    	</c:forEach>
 					                    	</c:otherwise>
@@ -112,60 +112,60 @@
 				                <table class="table table-striped">
 				                    <thead>
 				                    <tr>
-				                        <th>#</th>
-				                        <th>템플릿 명 </th>
-				                        <th>버전 명 </th>
-				                        <th>작성자</th>
+				                        <th class="text-center">#</th>
+				                        <th class="text-center">템플릿 명 </th>
+				                        <th class="text-center">버전 명 </th>
+				                        <th class="text-center">작성자</th>
 				                    </tr>
 				                    </thead>
 				                    <tbody>
 				                    <tr>
-				                        <td>8</td>
+				                        <td class="text-center">8</td>
 				                        <td>뮤직플레이어</td>
-				                        <td>2016년 6월 2주</td>
-				                        <td>조문기</td>
+				                        <td class="text-center">2016년 6월 2주</td>
+				                        <td class="text-center">조문기</td>
 				                    </tr>
 				                    <tr>
-				                        <td>7</td>
+				                        <td class="text-center">7</td>
 				                        <td>뮤직플레이어</td>
-				                        <td>2016년 6월 1주</td>
-				                        <td>김경연</td>
+				                        <td class="text-center">2016년 6월 1주</td>
+				                        <td class="text-center">김경연</td>
 				                    </tr>
 				                    <tr>
-				                        <td>6</td>
+				                        <td class="text-center">6</td>
 				                        <td>마이뮤직</td>
-				                        <td>2016년 6월 2주</td>
-				                        <td>박성훈</td>
+				                        <td class="text-center">2016년 6월 2주</td>
+				                        <td class="text-center">박성훈</td>
 				                    </tr>
 				                    <tr>
-				                        <td>5</td>
+				                        <td class="text-center">5</td>
 				                        <td>마이뮤직</td>
-				                        <td>2016년 6월 1주</td>
-				                        <td>권영</td>
+				                        <td class="text-center">2016년 6월 1주</td>
+				                        <td class="text-center">권영</td>
 				                    </tr>
 				                    <tr>
-				                        <td>4</td>
+				                        <td class="text-center">4</td>
 				                        <td>뮤직플레이어</td>
-				                        <td>2016년 5월 3주</td>
-				                        <td>이동섭</td>
+				                        <td class="text-center">2016년 5월 3주</td>
+				                        <td class="text-center">이동섭</td>
 				                    </tr>
 				                    <tr>
-				                        <td>3</td>
+				                        <td class="text-center">3</td>
 				                        <td>뮤직플레이어</td>
-				                        <td>2016년 5월 2주</td>
-				                        <td>이선영</td>
+				                        <td class="text-center">2016년 5월 2주</td>
+				                        <td class="text-center">이선영</td>
 				                    </tr>
 				                    <tr>
-				                        <td>2</td>
+				                        <td class="text-center">2</td>
 				                        <td>뮤지션 리그</td>
-				                        <td>2016년 5월 1주</td>
-				                        <td>전평재</td>
+				                        <td class="text-center">2016년 5월 1주</td>
+				                        <td class="text-center">전평재</td>
 				                    </tr>
 				                    <tr>
-				                        <td>1</td>
+				                        <td class="text-center">1</td>
 				                        <td>뮤지션 리그</td>
-				                        <td>2016년 4월 1주</td>
-				                        <td>권영</td>
+				                        <td class="text-center">2016년 4월 1주</td>
+				                        <td class="text-center">권영</td>
 				                    </tr>
 				                    </tbody>
 				                </table>
@@ -195,34 +195,34 @@
 			                <table class="table table-striped">
 			                    <thead>
 			                    <tr>
-			                        <th>#</th>
-			                        <th>이름 </th>
-			                        <th>역할 </th>
-			                        <th>등록자</th>					                        
-			                        <th>진행중 활동 수 </th>
+			                        <th class="text-center">#</th>
+			                        <th class="text-center">이름 </th>
+			                        <th class="text-center">역할 </th>
+			                        <th class="text-center">등록자</th>					                        
+			                        <th class="text-center">진행중 활동 수 </th>
 			                    </tr>
 			                    </thead>
 			                    <tbody>
 			                    <tr>
-			                        <td>3</td>
-			                        <td>권영</td>
-			                        <td>QA</td>
-			                        <td>권영</td>					                        
-			                        <td>5</td>
+			                        <td class="text-center">3</td>
+			                        <td class="text-center">권영</td>
+			                        <td class="text-center">QA</td>
+			                        <td class="text-center">권영</td>					                        
+			                        <td class="text-center">5</td>
 			                    </tr>
 			                    <tr>
-			                        <td>2</td>
-			                        <td>이동섭</td>
-			                        <td>TE</td>
-			                        <td>권영</td>
-			                        <td>2</td>
+			                        <td class="text-center">2</td>
+			                        <td class="text-center">이동섭</td>
+			                        <td class="text-center">TE</td>
+			                        <td class="text-center">권영</td>
+			                        <td class="text-center">2</td>
 			                    </tr>
 			                    <tr>
-			                        <td>1</td>
-			                        <td>전평재</td>
-			                        <td>TE</td>
-			                        <td>권영</td>
-			                        <td>10</td>
+			                        <td class="text-center">1</td>
+			                        <td class="text-center">전평재</td>
+			                        <td class="text-center">TE</td>
+			                        <td class="text-center">권영</td>
+			                        <td class="text-center">10</td>
 			                    </tr>
 			                    </tbody>
 			                </table>

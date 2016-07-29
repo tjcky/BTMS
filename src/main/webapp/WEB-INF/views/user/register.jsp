@@ -28,16 +28,16 @@
             <h3>Register to BTMS</h3>
             <form class="m-t" role="form" id="registerForm" action="/register" method="post">
                 <div class="form-group">
-                    <input type="text" name="userId" class="form-control" placeholder="아이디(영문+숫자)" required="">
+                    <input type="text" name="userId" class="form-control" placeholder="아이디(영문+숫자)" required/>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="userName" class="form-control" placeholder="이름" required="">
+                    <input type="text" name="userName" class="form-control" placeholder="이름" required/>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="nickName" class="form-control" placeholder="별명" required="">
+                    <input type="text" name="nickName" class="form-control" placeholder="별명" required/>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="암호(5~50자이내)" required="">
+                    <input type="password" name="password" class="form-control" placeholder="암호(5~50자이내)" required/>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">등록</button>
                 

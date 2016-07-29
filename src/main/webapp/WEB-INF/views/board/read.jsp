@@ -14,28 +14,28 @@
 				<!-- /.box-header -->
 
 				<form role="form" method="post">
-					<input type='hidden' name='bno' value="${boardModel.bno}">
+					<input type='hidden' name='bno' value="${board.bno}">
 				</form>
 
 				<div class="box-body">
 					<div class="form-group">
 						<label for="exampleInputEmail1">제목</label> 
-						<input type="text" name='title' class="form-control" value="${boardModel.title}" readonly="readonly">
+						<input type="text" name='title' class="form-control" value="${board.title}" readonly="readonly">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">내용</label>
-						<textarea class="form-control" name="content" rows="3" readonly="readonly">${boardModel.content}</textarea>
+						<textarea class="form-control" name="content" rows="3" readonly="readonly">${board.content}</textarea>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputEmail1">작성자</label> 
-						<input type="text" name="writer" class="form-control" value="${boardModel.writer}" readonly="readonly">
+						<input type="text" name="writer" class="form-control" value="${board.writer}" readonly="readonly">
 					</div>
 				</div>
 				<!-- /.box-body -->
 
 			  <div class="box-footer">
-			    <button class="btn btn-warning" id="modifyBtn" onclick="modifyBoard(${boardModel.bno})">수정</button>
-			    <button class="btn btn-danger" id="removeBtn" onclick="removeBoard(${boardModel.bno})">삭제</button>
+			    <button class="btn btn-warning" id="modifyBtn" onclick="modifyBoard(${board.bno})">수정</button>
+			    <button class="btn btn-danger" id="removeBtn" onclick="removeBoard(${board.bno})">삭제</button>
 			    <button class="btn btn-primary" id="goListBtn" onclick="showBoardList()">목록으로</button>
 			  </div>
 			</div>

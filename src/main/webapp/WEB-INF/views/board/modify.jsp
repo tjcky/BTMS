@@ -17,20 +17,20 @@
 
 						<div class="form-group">
 							<label for="exampleInputEmail1">BNO</label> 
-							<input type="text" name='bno' class="form-control" value="${boardModel.bno}" readonly="readonly">
+							<input type="text" name='bno' class="form-control" value="${board.bno}" readonly="readonly">
 						</div>
 
 						<div class="form-group">
 							<label for="exampleInputEmail1">Title</label> 
-							<input type="text" name='title' class="form-control" value="${boardModel.title}">
+							<input type="text" name='title' class="form-control" value="${board.title}">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Content</label>
-							<textarea class="form-control" name="content" rows="3">${boardModel.content}</textarea>
+							<textarea class="form-control" name="content" rows="3">${board.content}</textarea>
 						</div>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Writer</label> 
-							<input type="text" name="writer" class="form-control" value="${boardModel.writer}">
+							<input type="text" name="writer" class="form-control" value="${board.writer}">
 						</div>
 					</div>
 					<!-- /.box-body -->
