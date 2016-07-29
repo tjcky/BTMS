@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Test
- */
 @Controller
 @Slf4j
 public class HomeController {
@@ -55,13 +52,6 @@ public class HomeController {
         log.info("활동 상세 페이지 진입", locale);
         
         return "activity/activityDetail";
-    }
-	
-	@RequestMapping(value = "/kcmsus/jobTemplateList", method = RequestMethod.GET)
-    public String jobTemplateList(Locale locale, Model model) {
-        log.info("Job 템플릿 목록 진입", locale);
-        
-        return "job/jobTemplateList";
     }
 	
 	@RequestMapping(value = "/kcmsus/jobVersionList", method = RequestMethod.GET)
