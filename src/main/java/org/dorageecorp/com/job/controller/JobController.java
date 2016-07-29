@@ -24,8 +24,8 @@ public class JobController {
 	/**
 	 * 전체 작업 템플릿
 	 */
-	@RequestMapping(value = "/{projectId}/jobTemplateAllList", method = RequestMethod.GET)
-	public ModelAndView getJobTemplateAllList(@PathVariable String projectId, int page) {
+	@RequestMapping(value = "/project/{projectId}/jobTemplateAllList", method = RequestMethod.GET)
+	public ModelAndView getJobTemplateAllList(@PathVariable String projectId) {
 		ModelAndView mav = new ModelAndView("/job/jobTemplateAllList");
 
 		List<JobTemplate> jobTemplateList = jobBO.getJobTemplateAllList(projectId);
@@ -38,7 +38,7 @@ public class JobController {
 	/**
 	 * 특정 버전의 전체 목록
 	 */
-	@RequestMapping(value = "/{projectId}/jobVersionList", method = RequestMethod.GET)
+	@RequestMapping(value = "/project/{projectId}/jobVersionList", method = RequestMethod.GET)
 	public ModelAndView getJobVersionList(int page) {
 		return null;
 	}

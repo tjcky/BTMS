@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>project Layout Main</title>
+    <title>BTMS</title>
 	<script type="text/javascript">
 		jQuery(function() {	
  			jQuery("#projectMain").attr("href", "/project/" + jQuery("#projectAddressId").val());

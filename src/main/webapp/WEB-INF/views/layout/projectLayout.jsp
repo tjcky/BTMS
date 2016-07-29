@@ -60,7 +60,9 @@
 	
 	    <!-- ChartJS-->
 	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
-	    <script src="/resources/javascript/main.js"></script>
+	    <!-- 아래 js는 삭제 예정 -->
+	    <script src="/resources/javascript/main.js"></script>	    
+	    <script src="/resources/javascript/job/job.js"></script>
 	    <decorator:head /> 
 	</head> 
 
@@ -108,8 +110,8 @@
 	                <li>
 	                    <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">작업 템플릿</span><span class="fa arrow"></span></a>
 	                    <ul class="nav nav-second-level collapse">
-	                        <li><a href="javascript:goToJobTemplateList()">작업 템플릿 목록</a></li>
-	                        <li><a href="#">작업 템플릿 추가</a></li>
+	                        <li><a href="javascript:getJobTemplateAllList()">작업 템플릿 목록</a></li>
+	                        <li><a href="#">내 작업 목록</a></li>
 	                    </ul>
 	                </li>
 	                <li>
