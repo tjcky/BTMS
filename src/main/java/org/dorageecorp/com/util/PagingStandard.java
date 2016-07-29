@@ -11,7 +11,7 @@ public class PagingStandard {
 	
 	public PagingStandard() {
 		this.page = 1;
-		this.perPageNumber = 10;			// 데이터는 3개씩 보여주겠다
+		this.perPageNumber = 3;			// 데이터는 3개씩 보여주겠다
 	}
 
 	public void setPage(int page) {

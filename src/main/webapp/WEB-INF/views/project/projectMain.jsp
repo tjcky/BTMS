@@ -13,22 +13,52 @@
 		
 		function getProjectActivityByPage(page) {
 			jQuery("#activityTable tbody tr").remove();
+			jQuery("#pageMaker").empty();
 			
 			jQuery.ajax({
 				url		: "/project/activityList?projectId=" + jQuery("#projectAddressId").val() + "&page=" + page,
 				type	: "GET",
 				dataType: "text",
-				success	: function(req){
-/* 					var obj = req.activityList; */
-					var obj = JSON.parse(req);
-					
-					for(var index = 0; index < obj.length; index++){
-						var data = "<tr><td>"+ obj[index].sequence +"</td><td>"+ obj[index].title +"</td><td>"+ obj[index].allotmentedQa +"</td><td>"+ obj[index].status +"</td><td>"+ obj[index].representEnviromentName +"</td><td>"+ obj[index].createDate +"</td></tr>";
-						
-						jQuery("#activityTable tbody:last").append(data);
-					}					
+				success	: function(req) {
+					drawActivityList(req);
+					drawActivityPageMaker(req);
 				}
 			});
+		}
+		
+		function drawActivityList(req) {
+			var obj = JSON.parse(req);
+			var activity = obj.activityList;
+			
+			for(var index = 0; index < activity.length; index++) {	
+				var data = "<tr><td class='text-center'>"+ activity[index].sequence +"</td><td class='text-center'>"+ activity[index].title +"</td><td class='text-center'>"+ activity[index].allotmentedQa +"</td><td class='text-center'>"+ activity[index].status +"</td><td class='text-center'>"+ activity[index].representEnviromentName +"</td><td class='text-center'>"+ activity[index].createDate +"</td></tr>";
+				
+				jQuery("#activityTable tbody:last").append(data);
+			}	
+		}
+		
+		function drawActivityPageMaker(req) {
+			var obj = JSON.parse(req);
+			var pageMaker = obj.pageMaker;
+			
+			var data = "<ul class='pagination pull-right'>";
+			
+			if (pageMaker.previous == true) {
+				data += "<li><a onclick='getProjectActivityByPage(" + (pageMaker.startPage - 1) + ")'><span class='glyphicon-chevron-left'>PREV</span></a></li>";
+			}
+			
+			for (var index = pageMaker.startPage; index <= pageMaker.endPage; index++) {
+				data += "<li><a onclick='getProjectActivityByPage(" + index + ")'>" + index + "</a></li>";
+			}
+			
+			if (pageMaker.next == true) {
+				data += "<li><a onclick='getProjectActivityByPage(" + (pageMaker.endPage +1) + ")'><span class='glyphicon-chevron-right'>NEXT</span></a></li>";
+			}
+			
+			data += "</ul>";
+			
+			jQuery("#pageMaker").append(data);
+			
 		}
 	</script>
 </head>
@@ -79,7 +109,7 @@
 					                        <th class="text-center">#</th>
 					                        <th class="text-center">제목 </th>
 					                        <th class="text-center">QA </th>
-					                        <th class="text-center"">상태 </th>
+					                        <th class="text-center">상태 </th>
 					                        <th class="text-center">환경 </th>
 					                        <th class="text-center">등록일 </th>
 					                    </tr>
@@ -106,17 +136,17 @@
 				                    	</c:choose>
 				                    </tbody>
 				                </table>
-								<div id="test">
+								<div id="pageMaker">
 									<ul class="pagination pull-right">
-									<c:if test="${pageMaker.previous }">
-										<li><a onclick="getProjectActivityByPage(${pageMaker.startPage-1 })"><span class="glyphicon-chevron-left">PREV</span></a></li>											  
-									</c:if>
-									<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="index">
-										<li><a onclick="getProjectActivityByPage(${index})">${index}</a></li>
-									</c:forEach>
-									<c:if test="${pageMaker.next }">
-									  	<li><a onclick="getProjectActivityByPage(${pageMaker.endPage+1 })"><span class="glyphicon-chevron-right">NEXT</span></a></li>											  
-									</c:if>  	
+										<c:if test="${pageMaker.previous }">
+											<li><a onclick="getProjectActivityByPage(${pageMaker.startPage-1 })"><span class="glyphicon-chevron-left">PREV</span></a></li>											  
+										</c:if>
+										<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="index">
+											<li><a onclick="getProjectActivityByPage(${index})">${index}</a></li>
+										</c:forEach>
+										<c:if test="${pageMaker.next }">
+										  	<li><a onclick="getProjectActivityByPage(${pageMaker.endPage+1 })"><span class="glyphicon-chevron-right">NEXT</span></a></li>											  
+										</c:if>  	
 									</ul>
 								</div>
 				            </div>

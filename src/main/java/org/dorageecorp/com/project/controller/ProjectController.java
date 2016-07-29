@@ -56,8 +56,8 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(value = "/project/activityList", method = RequestMethod.GET)
-//	public @ResponseBody Map<String, Object> getProjectActivityByPage(String projectId, int page) {
-	public @ResponseBody List<ProjectActivity> getProjectActivityByPage(String projectId, int page) {
+	public @ResponseBody Map<String, Object> getProjectActivityByPage(String projectId, int page) {
+
 		PagingStandard pagingStandard = new PagingStandard();
 		pagingStandard.setPage(page);
 		
@@ -69,9 +69,10 @@ public class ProjectController {
 		project.setAddressId(projectId);
 		project.setPagingStandard(pagingStandard);
 		
-/*		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("activityList", projectBO.getProjectActivity(project));*/
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("activityList", projectBO.getProjectActivity(project));
+		map.put("pageMaker", pageMaker);
 		
-		return projectBO.getProjectActivity(project);
+		return map;
 	}
 }
