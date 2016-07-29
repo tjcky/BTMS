@@ -3,7 +3,7 @@ package org.dorageecorp.com.project.model;
 import lombok.Data;
 
 @Data
-public class ProjectInfomationModel {
+public class ProjectInfomation {
 	private String projectAddressId;
 	private String projectName;
 	private String managerName;

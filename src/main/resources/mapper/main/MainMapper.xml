@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.dorageecorp.mapper.MainMapper">
-	<select id="selectTotalProjects" resultType="org.dorageecorp.com.main.model.ProjectModel">
+	<select id="selectTotalProjects" resultType="org.dorageecorp.com.main.model.Project">
 		SELECT pjt_seq 		AS sequence
 			 , pjt_addr_id 	AS addressId
 			 , pjt_nm 		AS name
@@ -15,7 +15,7 @@
 		 ORDER BY p.pjt_seq DESC		
 	</select>
 	
-	<select id="selectMyProjects" resultType="org.dorageecorp.com.main.model.ProjectModel">
+	<select id="selectMyProjects" resultType="org.dorageecorp.com.main.model.Project">
 		SELECT a.*
 		  FROM (
 					SELECT

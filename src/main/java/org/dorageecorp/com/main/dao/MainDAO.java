@@ -2,11 +2,11 @@ package org.dorageecorp.com.main.dao;
 
 import java.util.List;
 
-import org.dorageecorp.com.main.model.ProjectModel;
+import org.dorageecorp.com.main.model.Project;
 
 public interface MainDAO {
 
-	public List<ProjectModel> selectTotalProjects() throws Exception;
+	public List<Project> selectTotalProjects();
 	
-	public List<ProjectModel> selectMyProjects(String userId) throws Exception;
+	public List<Project> selectMyProjects(String userId);
 }

@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.dorageecorp.com.activity.bo.ActivityBO;
-import org.dorageecorp.com.activity.model.ActivityModel;
+import org.dorageecorp.com.activity.model.Activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -29,7 +29,7 @@ public class ActivityController {
 	public ModelAndView activityList() {
 		ModelAndView mav = new ModelAndView("/activity/activityList");
 
-		List<ActivityModel> activityList = null;
+		List<Activity> activityList = null;
 
 		try {
 			activityList = activityBO.getActivityList();
@@ -45,13 +45,13 @@ public class ActivityController {
 	public ModelAndView openActivityDetail(@RequestParam("no") int no) {
 		ModelAndView mav = new ModelAndView("/activity/activityDetail");
 
-		ActivityModel activityModel = null;
+		Activity activity = null;
 
 		try {
-			activityModel = activityBO.getActivityDetail(no);
-			mav.addObject("activityModel", activityModel);
+			activity = activityBO.getActivityDetail(no);
+			mav.addObject("activity", activity);
 		} catch (Exception e) {
-			logger.error(ReflectionToStringBuilder.toString(activityModel), e);
+			logger.error(ReflectionToStringBuilder.toString(activity), e);
 		}
 
 		return mav;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.dorageecorp.mapper.ActivityMapper">
-	<select id="selectActivityList" resultType="org.dorageecorp.com.activity.model.ActivityModel">
+	<select id="selectActivityList" resultType="org.dorageecorp.com.activity.model.Activity">
 		SELECT atvt_pk									AS activityPk
 			 , no										AS activityNo
 			 , title									AS activityTitle
@@ -26,7 +26,7 @@
 		 LIMIT 10		
 	</select>
 	
-	<select id="selectActivityDetail" resultType="org.dorageecorp.com.activity.model.ActivityModel">
+	<select id="selectActivityDetail" resultType="org.dorageecorp.com.activity.model.Activity">
 		SELECT atvt_pk									AS activityPk
 			 , no										AS activityNo
 			 , title									AS activityTitle

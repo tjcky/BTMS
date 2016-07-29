@@ -8,8 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.dorageecorp.com.exception.NoneProjectException;
 import org.dorageecorp.com.project.bo.ProjectBO;
-import org.dorageecorp.com.project.model.ProjectActivityModel;
-import org.dorageecorp.com.project.model.ProjectInfomationModel;
+import org.dorageecorp.com.project.model.ProjectActivity;
+import org.dorageecorp.com.project.model.ProjectInfomation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +30,8 @@ public class ProjectController {
 			throw new NoneProjectException(projectId);
 		}
 
-		ProjectInfomationModel projectInfomation = projectBO.getProjectInfomation(projectId);
-		List<ProjectActivityModel> projectActivityList = projectBO.getProjectActivity(projectId);
+		ProjectInfomation projectInfomation = projectBO.getProjectInfomation(projectId);
+		List<ProjectActivity> projectActivityList = projectBO.getProjectActivity(projectId);
 
 		mav.addObject("projectInfomation", projectInfomation);
 		mav.addObject("projectActivityList", projectActivityList);

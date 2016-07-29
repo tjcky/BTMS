@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
-import org.dorageecorp.com.activity.model.ActivityModel;
+import org.dorageecorp.com.activity.model.Activity;
 import org.springframework.stereotype.Repository;
 @Repository
 public class ActivityDAOImpl implements ActivityDAO {
@@ -13,15 +13,15 @@ public class ActivityDAOImpl implements ActivityDAO {
 	@Inject
 	private SqlSession session;
 
-	private static String namespace = "org.dorageecorp.mapper.ActivityMapper";
+	private static final String namespace = "org.dorageecorp.mapper.ActivityMapper";
 	
 	@Override
-	public List<ActivityModel> selectActivityList() throws Exception {
+	public List<Activity> selectActivityList() {
 		return session.selectList(namespace + ".selectActivityList");
 	}
 
 	@Override
-	public ActivityModel selectActivityDetail(int no) {
+	public Activity selectActivityDetail(int no) {
 		return session.selectOne(namespace + ".selectActivityDetail", no);
 	}
 

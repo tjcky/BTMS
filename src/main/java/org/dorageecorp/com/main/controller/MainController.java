@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import org.dorageecorp.com.main.bo.MainBO;
-import org.dorageecorp.com.main.model.ProjectModel;
+import org.dorageecorp.com.main.model.Project;
 import org.dorageecorp.com.util.CookieUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,8 +32,8 @@ public class MainController {
 		String userId = CookieUtil.getCookieValue(request, "userId");
 
 		try {
-			List<ProjectModel> totalProject = mainBO.getTotalProjects();
-			List<ProjectModel> myProject = mainBO.getMyProjects(userId);
+			List<Project> totalProject = mainBO.getTotalProjects();
+			List<Project> myProject = mainBO.getMyProjects(userId);
 
 			mav.addObject("totalProject", totalProject);
 			mav.addObject("myProject", myProject);

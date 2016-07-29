@@ -2,10 +2,10 @@ package org.dorageecorp.com.main.bo;
 
 import java.util.List;
 
-import org.dorageecorp.com.main.model.ProjectModel;;
+import org.dorageecorp.com.main.model.Project;;
 
 public interface MainBO {
-	public List<ProjectModel> getTotalProjects() throws Exception;
+	public List<Project> getTotalProjects();
 
-	public List<ProjectModel> getMyProjects(String userId) throws Exception;
+	public List<Project> getMyProjects(String userId);
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class MemberModel {
+public class Member {
 	private String userid;
 	private String userpw;
 	private String username;

@@ -8,7 +8,7 @@
 		 WHERE pjt_addr_id = #{projectId}
 	</select>
 
-	<select id="selectProjectInfomation" resultType="org.dorageecorp.com.project.model.ProjectInfomationModel">
+	<select id="selectProjectInfomation" resultType="org.dorageecorp.com.project.model.ProjectInfomation">
 		SELECT pjt_addr_id AS projectAddressId
 	 		 , pjt_nm AS projectName
 			 ,
@@ -19,7 +19,7 @@
 			   ) AS managerName
 			 ,
 			   (
-					SELECT nick_name
+					SELECT nick_nm
 				      FROM t_user
 					 WHERE user_id = pjt_mgr
 			   ) AS managerNick
@@ -28,7 +28,7 @@
 		WHERE pjt_addr_id = #{projectId}
 	</select>
 	
-	<select id="selectProjectActivity" resultType="org.dorageecorp.com.project.model.ProjectActivityModel">
+	<select id="selectProjectActivity" resultType="org.dorageecorp.com.project.model.ProjectActivity">
 		SELECT seq AS sequence
 			 , tam.atvt_nm AS title
 			 , (

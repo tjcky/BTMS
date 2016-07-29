@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.board.dao.BoardDAO;
-import org.dorageecorp.com.board.model.BoardModel;
+import org.dorageecorp.com.board.model.Board;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,17 +15,17 @@ public class BoardBOImpl implements BoardBO {
 	private BoardDAO dao;
 
 	@Override
-	public void regist(BoardModel model) throws Exception {
+	public void regist(Board model) throws Exception {
 		dao.create(model);
 	}
 
 	@Override
-	public BoardModel read(Integer bno) throws Exception {
+	public Board read(Integer bno) throws Exception {
 		return dao.read(bno);
 	}
 
 	@Override
-	public void modify(BoardModel board) throws Exception {
+	public void modify(Board board) throws Exception {
 		dao.update(board);
 	}
 
@@ -35,7 +35,7 @@ public class BoardBOImpl implements BoardBO {
 	}
 
 	@Override
-	public List<BoardModel> listAll() throws Exception {
+	public List<Board> listAll() throws Exception {
 		return dao.listAll();
 	}
 }

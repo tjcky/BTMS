@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="org.dorageecorp.mapper.BoardMapper">
+<mapper namespace="org.dorageecorp.mapper.Board">
 
 	<insert id="create">
 		INSERT INTO tbl_board 
@@ -20,7 +20,7 @@
 		)
 	</insert>
 	
-	<select id="read" resultType="org.dorageecorp.com.board.model.BoardModel">
+	<select id="read" resultType="org.dorageecorp.com.board.model.Board">
 		SELECT bno
 			 , title
 			 , content
@@ -44,7 +44,7 @@
 		 WHERE bno = #{bno}
 	</delete>
 	
-	<select id="listAll" resultType="org.dorageecorp.com.board.model.BoardModel">
+	<select id="listAll" resultType="org.dorageecorp.com.board.model.Board">
 		SELECT bno
 		     , title
 		     , content
@@ -57,7 +57,7 @@
 		     , regdate DESC		
 	</select>
 	
-	<select id="listPage" resultType="org.dorageecorp.com.board.model.BoardModel">
+	<select id="listPage" resultType="org.dorageecorp.com.board.model.Board">
 		SELECT bno
 		 	 , title
 		 	 , content

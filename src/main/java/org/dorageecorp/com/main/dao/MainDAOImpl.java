@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
-import org.dorageecorp.com.main.model.ProjectModel;
+import org.dorageecorp.com.main.model.Project;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -17,12 +17,12 @@ public class MainDAOImpl implements MainDAO {
 	private static final String namespace = "org.dorageecorp.mapper.MainMapper";
 
 	@Override
-	public List<ProjectModel> selectTotalProjects() throws Exception {		
+	public List<Project> selectTotalProjects() {		
 		return sqlSession.selectList(namespace + ".selectTotalProjects");
 	}
 
 	@Override
-	public List<ProjectModel> selectMyProjects(String userId) throws Exception {
+	public List<Project> selectMyProjects(String userId) {
 		return sqlSession.selectList(namespace + ".selectMyProjects", userId); 
 	}
 }

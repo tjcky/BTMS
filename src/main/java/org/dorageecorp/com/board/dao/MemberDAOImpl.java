@@ -3,7 +3,7 @@ package org.dorageecorp.com.board.dao;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
-import org.dorageecorp.com.board.model.MemberModel;
+import org.dorageecorp.com.board.model.Member;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -20,7 +20,7 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public void insertMember(MemberModel memberModel) {
-		sqlSession.insert(namespace + ".insertMember", memberModel);
+	public void insertMember(Member member) {
+		sqlSession.insert(namespace + ".insertMember", member);
 	}
 }

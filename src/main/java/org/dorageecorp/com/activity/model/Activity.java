@@ -3,7 +3,7 @@ package org.dorageecorp.com.activity.model;
 import lombok.Data;
 
 @Data
-public class ActivityModel {
+public class Activity {
 	private String activityPk;
 	private int activityNo;
 	private String activityTitle;

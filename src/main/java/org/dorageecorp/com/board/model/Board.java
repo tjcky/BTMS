@@ -5,7 +5,7 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class BoardModel {
+public class Board {
 	private Integer bno;
 	private String title;
 	private String content;

@@ -7,7 +7,7 @@ import java.util.Map;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.activity.dao.ActivityDAO;
-import org.dorageecorp.com.activity.model.ActivityModel;
+import org.dorageecorp.com.activity.model.Activity;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
@@ -19,12 +19,12 @@ public class ActivityBOImpl implements ActivityBO {
 	private ActivityDAO activityDAO;
 
 	@Override
-	public List<ActivityModel> getActivityList() throws Exception {
+	public List<Activity> getActivityList() throws Exception {
 		return activityDAO.selectActivityList();
 	}
 
 	@Override
-	public ActivityModel getActivityDetail(int no) {
+	public Activity getActivityDetail(int no) {
 		return activityDAO.selectActivityDetail(no);
 	}
 
