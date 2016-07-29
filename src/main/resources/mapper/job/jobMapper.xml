@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.dorageecorp.mapper.jobMapper">
+	<select id="selectJobTemplateAllList" resultType="org.dorageecorp.com.job.model.JobTemplate">
+		SELECT tmpl.pjt_addr_id 		AS projectAddressId
+			 , tmpl.seq 				AS sequence
+			 , tmpl.job_mst_cd 			AS jobMasterCode
+			 , tmpl.job_mst_uprcd 		AS jobMasterUppderCode
+			 , tmpl.job_mst_nm 			AS masterTemplateName
+			 , tmpl.job_ver_nm 			AS versionTemplateName
+			 , (
+					SELECT comm_cd_nm
+			      	  FROM t_comm_cd
+				 	 WHERE comm_cd = tmpl.job_status
+			   ) 						AS jobStatus
+			 , tmpl.job_tc_cnt 			AS testCaseCount
+			 , (
+					SELECT user_nm
+			      	  FROM t_user
+				 	 WHERE user_id = tmpl.crer_id
+			   ) 						AS creatorName
+			 , tmpl.cre_ymdt 			AS createDate
+	 	  FROM (
+	 	  			(
+	 	  				SELECT pjt_addr_id
+							 , seq
+				             , job_mst_cd
+				             , job_mst_uprcd
+				             , job_mst_nm
+				             , job_ver_nm
+				             , job_status
+				             , job_tc_cnt
+				             , crer_id
+				             , cre_ymdt
+							 , 0 as rnum
+				             , tmpl_group
+						 FROM t_job_mst
+						WHERE job_mst_uprcd = ""
+				          AND pjt_addr_id = #{projectId}
+						ORDER BY tmpl_group DESC
+	 	  			)
+	 	  			UNION ALL
+	 	  			(
+	 	  			   SELECT job.pjt_addr_id
+							, job.seq
+				            , job.job_mst_cd
+				            , job.job_mst_uprcd
+				            , job.job_mst_nm
+				            , job.job_ver_nm
+				            , job.job_status
+				            , job.job_tc_cnt
+				            , job.crer_id
+				            , job.cre_ymdt
+				            , job.rnum
+				            , job.tmpl_group
+						 FROM (
+									SELECT tjs.*
+										 , (CASE @jobnm WHEN tjs.job_mst_uprcd THEN @rownum:=@rownum+1 ELSE @rownum:=1 END) rnum
+										 , (@jobnm:=tjs.job_mst_uprcd) vnm
+									  FROM t_job_mst tjs
+									  	 , (SELECT @jobnm:='', @rownum:=0 FROM DUAL) b
+									 WHERE tjs.job_mst_uprcd != ""
+                    				   AND tjs.pjt_addr_id = #{projectId}
+									 ORDER BY tmpl_group DESC
+									 	 , cre_ymdt DESC						 
+						 	  )	job
+						WHERE job.rnum <![CDATA[<=]]>3
+	 	  			)
+	 	  	   ) tmpl
+	 	 ORDER BY tmpl.tmpl_group DESC, tmpl.rnum ASC;
+	</select>
+</mapper>
