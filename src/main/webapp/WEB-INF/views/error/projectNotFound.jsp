@@ -16,14 +16,13 @@
 </head>
 
 <body class="gray-bg">
-
-
     <div class="middle-box text-center animated fadeInDown">
         <h2>존재하지 않는 프로젝트</h2>
         <h3 class="font-bold">${projectId}</h3>
 
         <div class="error-desc">
 			존재하지 않는 프로젝트 ID 입니다. <br>신규 프로젝트 신청은 운영자 <strong>홍길동[nt20003@nhnc.com]</strong>, <br>개발자 <strong>권영[doragee@nhn.com]</strong>으로 문의주시기 바랍니다.
+        	<a href="/main" class="btn btn-primary">BTMS 홈으로 가기</a>
         </div>
     </div>
 

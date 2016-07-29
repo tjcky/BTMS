@@ -7,6 +7,7 @@
     <excludes>
     	<pattern>/login</pattern>
     	<pattern>/login</pattern>
+    	<pattern>/noneProject</pattern>
     <!-- exclude 패턴은 아래와 같이 -->
 <!--	
         <pattern>**/json/**</pattern>
