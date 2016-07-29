@@ -1,5 +1,7 @@
 package org.dorageecorp.com.main.model;
 
+import org.dorageecorp.com.util.PagingStandard;
+
 import lombok.Data;
 
 @Data
@@ -17,4 +19,5 @@ public class Project {
 	private String modifierName;
 	private String modifyDate;
 	private String myRole;
+	private PagingStandard pagingStandard;
 }

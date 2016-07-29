@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
+import org.dorageecorp.com.main.model.Project;
 import org.dorageecorp.com.project.model.ProjectActivity;
 import org.dorageecorp.com.project.model.ProjectInfomation;
 import org.springframework.stereotype.Repository;
@@ -28,7 +29,12 @@ public class ProjectDAOImpl implements ProjectDAO {
 	}
 
 	@Override
-	public List<ProjectActivity> selectProjectActivity(String projectId) {
-		return session.selectList(namespace + ".selectProjectActivity", projectId);
+	public List<ProjectActivity> selectProjectActivity(Project project) {
+		return session.selectList(namespace + ".selectProjectActivity", project);
+	}
+
+	@Override
+	public int selectProjectActivityTotalCount(String projectId) {
+		return session.selectOne(namespace + ".selectProjectActivityTotalCount", projectId);
 	}
 }

@@ -10,6 +10,26 @@
 		jQuery(function() {	
  			jQuery("#projectMain").attr("href", "/project/" + jQuery("#projectAddressId").val());
 		});
+		
+		function getProjectActivityByPage(page) {
+			jQuery("#activityTable tbody tr").remove();
+			
+			jQuery.ajax({
+				url		: "/project/activityList?projectId=" + jQuery("#projectAddressId").val() + "&page=" + page,
+				type	: "GET",
+				dataType: "text",
+				success	: function(req){
+/* 					var obj = req.activityList; */
+					var obj = JSON.parse(req);
+					
+					for(var index = 0; index < obj.length; index++){
+						var data = "<tr><td>"+ obj[index].sequence +"</td><td>"+ obj[index].title +"</td><td>"+ obj[index].allotmentedQa +"</td><td>"+ obj[index].status +"</td><td>"+ obj[index].representEnviromentName +"</td><td>"+ obj[index].createDate +"</td></tr>";
+						
+						jQuery("#activityTable tbody:last").append(data);
+					}					
+				}
+			});
+		}
 	</script>
 </head>
 
@@ -52,17 +72,17 @@
 				            </div>
 				        </div>
 				        <div class="ibox-content">			
-				            <div class="table-responsive">
-				                <table class="table table-striped">
+				            <div class="table-responsive" id="pageTest">
+				                <table class="table table-striped" id="activityTable">
 				                    <thead>
-				                    <tr>
-				                        <th class="text-center">#</th>
-				                        <th class="text-center">제목 </th>
-				                        <th class="text-center">QA </th>
-				                        <th class="text-center"">상태 </th>
-				                        <th class="text-center">환경 </th>
-				                        <th class="text-center">등록일 </th>
-				                    </tr>
+					                    <tr>
+					                        <th class="text-center">#</th>
+					                        <th class="text-center">제목 </th>
+					                        <th class="text-center">QA </th>
+					                        <th class="text-center"">상태 </th>
+					                        <th class="text-center">환경 </th>
+					                        <th class="text-center">등록일 </th>
+					                    </tr>
 				                    </thead>
 				                    <tbody>
 				                    	<c:choose>
@@ -86,6 +106,19 @@
 				                    	</c:choose>
 				                    </tbody>
 				                </table>
+								<div id="test">
+									<ul class="pagination pull-right">
+									<c:if test="${pageMaker.previous }">
+										<li><a onclick="getProjectActivityByPage(${pageMaker.startPage-1 })"><span class="glyphicon-chevron-left">PREV</span></a></li>											  
+									</c:if>
+									<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="index">
+										<li><a onclick="getProjectActivityByPage(${index})">${index}</a></li>
+									</c:forEach>
+									<c:if test="${pageMaker.next }">
+									  	<li><a onclick="getProjectActivityByPage(${pageMaker.endPage+1 })"><span class="glyphicon-chevron-right">NEXT</span></a></li>											  
+									</c:if>  	
+									</ul>
+								</div>
 				            </div>
 				
 				        </div>

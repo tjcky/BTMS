@@ -58,7 +58,14 @@
 			   ) AS representEnviromentName
 			 , DATE_FORMAT(tam.cre_ymdt, '%y-%m-%d %h:%i') AS createDate
 		  FROM t_atvt_mst tam
-		 WHERE tam.pjt_addr_id = #{projectId}
+		 WHERE tam.pjt_addr_id = #{addressId}
 		 ORDER BY cre_ymdt DESC
+		 LIMIT #{pagingStandard.pageStart}, #{pagingStandard.perPageNumber}
+	</select>
+	
+	<select id="selectProjectActivityTotalCount" resultType="int">
+		SELECT COUNT(1)
+		  FROM t_atvt_mst
+		 WHERE pjt_addr_id = #{projectId}
 	</select>
 </mapper>

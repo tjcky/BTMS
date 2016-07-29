@@ -13,7 +13,7 @@ function readActivity(no) {
 
 function openJobDetail() {
 	jQuery.ajax({
-	    url			: "/activity/openJobDetail?",
+	    url			: "/activity/openJobTemplateDetail?",
 	    type		: 'GET',
 	    async		: 'false',
 	    dataType	: 'html',

@@ -57,9 +57,9 @@ public class ActivityController {
 		return mav;
 	}
 
-	@RequestMapping(value = "/openJobDetail", method = RequestMethod.GET)
-	public ModelAndView openJobDetail() {
-		ModelAndView mav = new ModelAndView("/activity/jobDetail");
+	@RequestMapping(value = "/openJobTemplateDetail", method = RequestMethod.GET)
+	public ModelAndView openJobTemplateDetail() {
+		ModelAndView mav = new ModelAndView("/activity/jobTemplateDetail");
 
 		String columnNames = null;
 		String columnData = null;

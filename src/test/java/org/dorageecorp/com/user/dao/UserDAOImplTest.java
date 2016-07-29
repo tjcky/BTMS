@@ -4,13 +4,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 import javax.inject.Inject;
-import javax.servlet.http.Cookie;
 
 import org.dorageecorp.com.user.model.User;
 import org.junit.Ignore;

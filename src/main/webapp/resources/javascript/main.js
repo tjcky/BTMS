@@ -23,7 +23,7 @@ function goToJobTemplateList() {
 }
 
 function goToJobDetail() {
-	window.location.href = "/kcmsus/jobDetail";
+	window.location.href = "/kcmsus/openJobTemplateDetail";
 }
 
 function goToJobVersionList() {

@@ -71,9 +71,9 @@ public class HomeController {
         return "job/jobVersionList";
     }
 	
-	@RequestMapping(value = "/kcmsus/jobDetail", method = RequestMethod.GET)
-	public ModelAndView openJobDetail() {
-		ModelAndView mav = new ModelAndView("/job/jobDetail");
+	@RequestMapping(value = "/kcmsus/openJobTemplateDetail", method = RequestMethod.GET)
+	public ModelAndView openJobTemplateDetail() {
+		ModelAndView mav = new ModelAndView("/job/jobTemplateDetail");
 
 /*		String columnNames = null;
 		String columnData = null;
