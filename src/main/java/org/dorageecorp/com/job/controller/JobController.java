@@ -1,13 +1,14 @@
 package org.dorageecorp.com.job.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import lombok.extern.slf4j.Slf4j;
 
 import org.dorageecorp.com.job.bo.JobBO;
-import org.dorageecorp.com.job.model.JobTemplate;
+import org.dorageecorp.com.job.model.JobVersionTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,15 +29,15 @@ public class JobController {
 	public ModelAndView getJobTemplateAllList(@PathVariable String projectId) {
 		ModelAndView mav = new ModelAndView("/job/jobTemplateAllList");
 
-		List<JobTemplate> jobTemplateList = jobBO.getJobTemplateAllList(projectId);
+		List<JobVersionTemplate> jobTemplateAllList = jobBO.getJobTemplateAllList(projectId);
 
-		mav.addObject("jobTemplateList", jobTemplateList);
+		mav.addObject("jobTemplateAllList", jobTemplateAllList);
 
 		return mav;
 	}
 
 	/**
-	 * 특정 버전의 전체 목록
+	 * TODO : 구현 예정
 	 */
 	@RequestMapping(value = "/project/{projectId}/jobVersionList", method = RequestMethod.GET)
 	public ModelAndView getJobVersionList(int page) {

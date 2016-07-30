@@ -2,72 +2,66 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.dorageecorp.mapper.jobMapper">
-	<select id="selectJobTemplateAllList" resultType="org.dorageecorp.com.job.model.JobTemplate">
-		SELECT tmpl.pjt_addr_id 		AS projectAddressId
-			 , tmpl.seq 				AS sequence
-			 , tmpl.job_mst_cd 			AS jobMasterCode
-			 , tmpl.job_mst_uprcd 		AS jobMasterUppderCode
-			 , tmpl.job_mst_nm 			AS masterTemplateName
-			 , tmpl.job_ver_nm 			AS versionTemplateName
-			 , (
+
+	<resultMap id="selectJobMaster" type="org.dorageecorp.com.job.model.JobVersionTemplate" >
+		<result property="projectAddressId" 	column="pjt_addr_id"/>
+		<result property="templateGroup" 		column="tmpl_group"/>
+		<result property="jobMasterCode" 		column="job_mst_cd"/>
+		<result property="masterTemplateName" 	column="job_mst_nm"/>
+		<result property="creatorName" 			column="crer_user_name"/>
+		<result property="createdDate" 			column="cre_ymdt"/>		
+		<collection property="jobVersionList" 	column="{projectAddressId=pjt_addr_id,jobMasterUppderCode=job_mst_cd}" javaType="java.util.ArrayList" ofType="org.dorageecorp.com.job.model.JobVersionTemplate" select="selectJobTemplateVersionList"/>
+	</resultMap>
+
+	<select id="selectJobTemplateAllList" resultMap="selectJobMaster">
+		SELECT tjm.pjt_addr_id
+			 , tjm.tmpl_group
+	         , tjm.job_mst_cd				             
+	         , tjm.job_mst_nm				             				             
+	         , (
+					SELECT user_nm
+					  FROM t_user
+					 WHERE user_id = tjm.crer_id
+			    ) AS crer_user_name
+	         , DATE_FORMAT(tjm.cre_ymdt, '%y-%m-%d %h:%i') AS cre_ymdt
+		 FROM t_job_mst tjm
+		WHERE tjm.job_mst_uprcd = ""
+	      AND tjm.pjt_addr_id = #{projectId}
+		ORDER BY tjm.tmpl_group DESC
+	</select>
+	
+	<select id="selectJobTemplateVersionList" parameterType="java.util.Map" resultType="org.dorageecorp.com.job.model.JobVersionTemplate">
+		SELECT job.pjt_addr_id		AS projectAddressId
+			 , job.seq				AS sequence
+             , job.job_mst_cd		AS jobMasterCode
+             , job.job_mst_uprcd	AS jobMasterUppderCode
+             , job.job_mst_nm		AS masterTemplateName
+             , job.job_ver_nm		AS versionTemplateName
+             , (
 					SELECT comm_cd_nm
 			      	  FROM t_comm_cd
-				 	 WHERE comm_cd = tmpl.job_status
-			   ) 						AS jobStatus
-			 , tmpl.job_tc_cnt 			AS testCaseCount
-			 , (
+				 	 WHERE comm_cd = job.job_status
+			   ) 					AS jobStatus
+             , job.job_tc_cnt		AS testCaseCount
+             , (
 					SELECT user_nm
 			      	  FROM t_user
-				 	 WHERE user_id = tmpl.crer_id
-			   ) 						AS creatorName
-			 , tmpl.cre_ymdt 			AS createDate
-	 	  FROM (
-	 	  			(
-	 	  				SELECT pjt_addr_id
-							 , seq
-				             , job_mst_cd
-				             , job_mst_uprcd
-				             , job_mst_nm
-				             , job_ver_nm
-				             , job_status
-				             , job_tc_cnt
-				             , crer_id
-				             , cre_ymdt
-							 , 0 as rnum
-				             , tmpl_group
-						 FROM t_job_mst
-						WHERE job_mst_uprcd = ""
-				          AND pjt_addr_id = #{projectId}
-						ORDER BY tmpl_group DESC
-	 	  			)
-	 	  			UNION ALL
-	 	  			(
-	 	  			   SELECT job.pjt_addr_id
-							, job.seq
-				            , job.job_mst_cd
-				            , job.job_mst_uprcd
-				            , job.job_mst_nm
-				            , job.job_ver_nm
-				            , job.job_status
-				            , job.job_tc_cnt
-				            , job.crer_id
-				            , job.cre_ymdt
-				            , job.rnum
-				            , job.tmpl_group
-						 FROM (
-									SELECT tjs.*
-										 , (CASE @jobnm WHEN tjs.job_mst_uprcd THEN @rownum:=@rownum+1 ELSE @rownum:=1 END) rnum
-										 , (@jobnm:=tjs.job_mst_uprcd) vnm
-									  FROM t_job_mst tjs
-									  	 , (SELECT @jobnm:='', @rownum:=0 FROM DUAL) b
-									 WHERE tjs.job_mst_uprcd != ""
-                    				   AND tjs.pjt_addr_id = #{projectId}
-									 ORDER BY tmpl_group DESC
-									 	 , cre_ymdt DESC						 
-						 	  )	job
-						WHERE job.rnum <![CDATA[<=]]>3
-	 	  			)
-	 	  	   ) tmpl
-	 	 ORDER BY tmpl.tmpl_group DESC, tmpl.rnum ASC;
+				 	 WHERE user_id = job.crer_id
+			   ) 					AS creatorName
+             , DATE_FORMAT(job.cre_ymdt,'%y-%m-%d %h:%i')	AS createdDate
+		  FROM
+				(
+					SELECT tjs.*
+						 , (CASE @jobnm WHEN tjs.job_mst_uprcd THEN @rownum:=@rownum+1 ELSE @rownum:=1 END) rnum
+						 , (@jobnm:=tjs.job_mst_uprcd) vnm
+					  FROM t_job_mst tjs
+					  	 , (SELECT @jobnm:='', @rownum:=0 FROM DUAL) b
+					 WHERE tjs.job_mst_uprcd != ""
+                       AND tjs.pjt_addr_id = #{projectAddressId}
+                       AND job_mst_uprcd = #{jobMasterUppderCode}
+					 ORDER BY tmpl_group DESC
+					 	 , cre_ymdt DESC
+				) job
+			WHERE job.rnum <![CDATA[<=]]>3
 	</select>
 </mapper>

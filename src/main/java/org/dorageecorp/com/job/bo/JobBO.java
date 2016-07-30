@@ -2,10 +2,10 @@ package org.dorageecorp.com.job.bo;
 
 import java.util.List;
 
-import org.dorageecorp.com.job.model.JobTemplate;
+import org.dorageecorp.com.job.model.JobVersionTemplate;
 
 public interface JobBO {
 
-	List<JobTemplate> getJobTemplateAllList(String projectId);
+	List<JobVersionTemplate> getJobTemplateAllList(String projectId);
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.dorageecorp.com.job.dao.JobDAO;
-import org.dorageecorp.com.job.model.JobTemplate;
+import org.dorageecorp.com.job.model.JobVersionTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,7 +15,7 @@ public class JobBOImpl implements JobBO {
 	private JobDAO jobDAO;
 
 	@Override
-	public List<JobTemplate> getJobTemplateAllList(String projectId) {		
+	public List<JobVersionTemplate> getJobTemplateAllList(String projectId) {		
 		return jobDAO.selectJobTemplateAllList(projectId);
 	}
 }

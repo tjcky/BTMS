@@ -60,7 +60,7 @@
 	
 	    <!-- ChartJS-->
 	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
-	    <!-- 아래 js는 삭제 예정 -->
+	    <!-- 아래 main.js는 삭제 예정 -->
 	    <script src="/resources/javascript/main.js"></script>	    
 	    <script src="/resources/javascript/job/job.js"></script>
 	    <decorator:head /> 

@@ -1,10 +1,12 @@
 package org.dorageecorp.com.project.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
+import org.dorageecorp.com.job.model.JobVersionTemplate;
 import org.dorageecorp.com.main.model.Project;
 import org.dorageecorp.com.project.model.ProjectActivity;
 import org.dorageecorp.com.project.model.ProjectInfomation;
