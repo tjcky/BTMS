@@ -41,8 +41,7 @@ public class UserController {
 			return ServiceConstant.FAIL;
 		}
 
-		CookieUtil.createCookie(response, user.getUserId(),
-				ServiceConstant.ONE_DAY);
+		CookieUtil.createCookie(response, "userId", user.getUserId(), ServiceConstant.ONE_DAY);
 
 		return ServiceConstant.SUCCESS;
 	}
@@ -77,7 +76,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletResponse response, String userId) {
-		CookieUtil.removeCookie(response, userId);
+		CookieUtil.removeCookie(response, "userId", userId);
 		return "user/login";
 	}
 }

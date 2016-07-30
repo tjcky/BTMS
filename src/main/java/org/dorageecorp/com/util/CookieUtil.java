@@ -11,14 +11,14 @@ import org.springframework.web.util.CookieGenerator;
 
 public class CookieUtil {
 
-	public static void createCookie(HttpServletResponse response, String userId, int maxAge) {
+	public static void createCookie(HttpServletResponse response, String name, String value, int maxAge) {		
 		CookieGenerator cookieGenerator = new CookieGenerator();
 
-		cookieGenerator.setCookieMaxAge(maxAge); 	// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초단위로 설정
-		cookieGenerator.setCookieName("userId");
+		cookieGenerator.setCookieMaxAge(-1); 	// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초단위로 설정
+		cookieGenerator.setCookieName(name);
 		cookieGenerator.setCookiePath("/"); 		// 모든 경로에 지정
 
-		cookieGenerator.addCookie(response, userId);
+		cookieGenerator.addCookie(response, value);
 	}
 
 	public static Cookie getCookie(HttpServletRequest request, String name) { 
@@ -46,7 +46,7 @@ public class CookieUtil {
 		return CookieUtil.getCookie(request, name) == null ? false : true;
 	}
 
-	public static void removeCookie(HttpServletResponse response, String userId) {
-		createCookie(response, userId, 0);
+	public static void removeCookie(HttpServletResponse response, String name, String value) {
+		createCookie(response, name, value, 0);
 	}
 }
