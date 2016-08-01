@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.dorageecorp.com.exception.NoneProjectException;
 import org.dorageecorp.com.main.model.Project;
 import org.dorageecorp.com.project.bo.ProjectBO;
 import org.dorageecorp.com.project.model.ProjectActivity;
@@ -53,6 +52,10 @@ public class ProjectController {
 
 		ProjectInfomation projectInfomation = projectBO.getProjectInfomation(projectId);
 		List<ProjectActivity> projectActivityList = projectBO.getProjectActivity(project);
+		
+		//CookieUtil.createCookie(response, "projectId", projectInfomation.getProjectAddressId(), -1);
+		// TODO : 쿠키 구울때 한글 인코딩 문제 발생(UTF-8 세팅 필요), 프로젝트 ID가 한박자씩 늦게 세팅되는 이슈가 있음 
+		/*CookieUtil.createCookie(response, "projectName", projectInfomation.getProjectName(), -1);*/
 
 		mav.addObject("projectInfomation", projectInfomation);
 		mav.addObject("projectActivityList", projectActivityList);
@@ -80,5 +83,10 @@ public class ProjectController {
 		map.put("pageMaker", pageMaker);
 		
 		return map;
+	}
+	
+	@RequestMapping(value = "/project/test", method = RequestMethod.PUT)
+	public @ResponseBody String test() {
+		return "doragee";
 	}
 }

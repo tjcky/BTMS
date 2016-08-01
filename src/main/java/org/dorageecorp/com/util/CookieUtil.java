@@ -14,10 +14,10 @@ public class CookieUtil {
 	public static void createCookie(HttpServletResponse response, String name, String value, int maxAge) {		
 		CookieGenerator cookieGenerator = new CookieGenerator();
 
-		cookieGenerator.setCookieMaxAge(-1); 	// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초단위로 설정
+		cookieGenerator.setCookieMaxAge(maxAge); 	// 음수로 하면 브라우저가 닫힐때 쿠키 삭제, 초단위로 설정
 		cookieGenerator.setCookieName(name);
 		cookieGenerator.setCookiePath("/"); 		// 모든 경로에 지정
-
+		
 		cookieGenerator.addCookie(response, value);
 	}
 

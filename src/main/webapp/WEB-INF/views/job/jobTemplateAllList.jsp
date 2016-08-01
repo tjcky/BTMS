@@ -32,10 +32,13 @@
 <body>
 	<div class="row wrapper border-bottom white-bg page-heading">	
         <div class="col-lg-10">
-            <h2>네이버 뮤직 :: 전체 작업 템플릿</h2>
+            <h2>네이버 뮤직의 전체 작업 템플릿</h2>
             <ol class="breadcrumb">
                 <li>
                     <span>네이버 뮤직</span>
+                </li>
+                <li>
+                    <span>작업 템플릿 목록</span>
                 </li>
                 <li class="active">
                     <strong>전체 작업 템플릿</strong>

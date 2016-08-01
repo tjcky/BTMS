@@ -24,13 +24,13 @@
 					 WHERE user_id = tjm.crer_id
 			    ) AS crer_user_name
 	         , DATE_FORMAT(tjm.cre_ymdt, '%y-%m-%d %h:%i') AS cre_ymdt
-		 FROM t_job_mst tjm
-		WHERE tjm.job_mst_uprcd = ""
-	      AND tjm.pjt_addr_id = #{projectId}
-		ORDER BY tjm.tmpl_group DESC
+		  FROM t_job_mst tjm
+		 WHERE tjm.job_mst_uprcd is null
+	       AND tjm.pjt_addr_id = #{projectId}
+		 ORDER BY tjm.tmpl_group DESC
 	</select>
 	
-	<select id="selectJobTemplateVersionList" parameterType="java.util.Map" resultType="org.dorageecorp.com.job.model.JobVersionTemplate">
+	<select id="selectJobTemplateVersionList" parameterType="map" resultType="org.dorageecorp.com.job.model.JobVersionTemplate">
 		SELECT job.pjt_addr_id		AS projectAddressId
 			 , job.seq				AS sequence
              , job.job_mst_cd		AS jobMasterCode
@@ -50,7 +50,7 @@
 			   ) 					AS creatorName
              , DATE_FORMAT(job.cre_ymdt,'%y-%m-%d %h:%i')	AS createdDate
 		  FROM
-				(
+			   (
 					SELECT tjs.*
 						 , (CASE @jobnm WHEN tjs.job_mst_uprcd THEN @rownum:=@rownum+1 ELSE @rownum:=1 END) rnum
 						 , (@jobnm:=tjs.job_mst_uprcd) vnm
@@ -62,6 +62,6 @@
 					 ORDER BY tmpl_group DESC
 					 	 , cre_ymdt DESC
 				) job
-			WHERE job.rnum <![CDATA[<=]]>3
+		  WHERE job.rnum <![CDATA[<=]]>3
 	</select>
 </mapper>
