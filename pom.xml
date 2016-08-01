@@ -115,6 +115,20 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+	
+		<!-- spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>1.9.5</version>
+		    <scope>test</scope>
+		</dependency>
 		
 		<!-- My SQL -->
 		<dependency>
@@ -141,13 +155,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		
-		<!-- spring-test -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
 		

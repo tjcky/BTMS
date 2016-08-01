@@ -84,9 +84,4 @@ public class ProjectController {
 		
 		return map;
 	}
-	
-	@RequestMapping(value = "/project/test", method = RequestMethod.PUT)
-	public @ResponseBody String test() {
-		return "doragee";
-	}
 }
