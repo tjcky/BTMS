@@ -51,4 +51,20 @@ public class JobController {
 
 		return mav;
 	}
+	
+	@RequestMapping(value = "/project/{projectId}/jobTemplateAllList/{jobMasterUppderCode}/{jobMasterCode}", method = RequestMethod.GET)
+	public ModelAndView getJobTemplateDetail(@PathVariable String projectId, @PathVariable String jobMasterUppderCode, @PathVariable String jobMasterCode) {
+		ModelAndView mav = new ModelAndView("/job/jobTemplateDetail");
+
+		JobVersionTemplate jobVersion = new JobVersionTemplate();
+		jobVersion.setProjectAddressId(projectId);
+		jobVersion.setJobMasterCode(jobMasterCode);
+		jobVersion.setJobMasterUppderCode(jobMasterUppderCode);
+
+		Map<String, Object> result = jobBO.getJobTemplateDetail(jobVersion);
+
+		mav.addObject("result", result);
+
+		return mav;
+	}
 }

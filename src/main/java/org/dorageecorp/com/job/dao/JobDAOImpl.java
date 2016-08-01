@@ -16,21 +16,21 @@ public class JobDAOImpl implements JobDAO {
 	@Inject
 	private SqlSession session;
 
-	private static final String namespace = "org.dorageecorp.mapper.jobMapper";
+	private static final String NAMESPACE = "org.dorageecorp.mapper.jobMapper";
 
 	@Override
 	public List<JobVersionTemplate> selectJobTemplateAllList(String projectId) {
-		return session.selectList(namespace + ".selectJobTemplateAllList", projectId);
+		return session.selectList(NAMESPACE + ".selectJobTemplateAllList", projectId);
 	}
 
 	@Override
 	public List<JobVersionTemplate> selectJobTemplateVersionList(Map<String, String> projectAndJob) {
-		return session.selectList(namespace + ".selectJobTemplateVersionList", projectAndJob);
+		return session.selectList(NAMESPACE + ".selectJobTemplateVersionList", projectAndJob);
 	}
 
 	@Override
 	public List<JobVersionTemplate> selectJobVersionList(Map<String, String> projectAndJob) {
-		return session.selectList(namespace + ".selectJobVersionList", projectAndJob);
+		return session.selectList(NAMESPACE + ".selectJobVersionList", projectAndJob);
 	}
 
 	@Override
@@ -40,11 +40,11 @@ public class JobDAOImpl implements JobDAO {
 		map.put("projectAddressId", projectId);
 		map.put("jobMasterUppderCode", jobMasterCode);
 
-		return session.selectList(namespace + ".selectJobVersionList", map);
+		return session.selectList(NAMESPACE + ".selectJobVersionList", map);
 	}
 
 	@Override
 	public JobVersionTemplate selectJobDetail(JobVersionTemplate jobVersion) {
-		return session.selectOne(namespace + ".selectJobDetail", jobVersion);
+		return session.selectOne(NAMESPACE + ".selectJobDetail", jobVersion);
 	}
 }

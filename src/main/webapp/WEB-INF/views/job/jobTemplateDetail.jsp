@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,89 +9,85 @@
 	<!-- <script type="text/javascript" src="/resources/json2.js"></script> -->
 	<link rel="stylesheet" media="screen" href="/resources/hansonTable/dist/handsontable.full.css" />
 	<script type="text/javascript">
-	jQuery(function() {		
-		var data1 = [	
-						['1', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['2', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['3', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['4', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['5', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출'],
-						['6', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['7', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['8', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['9', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['10', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출'],
-						['11', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['12', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['13', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['14', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['15', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출'],
-						['16', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['17', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['18', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['19', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['20', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출'],
-						['21', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['22', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['23', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['24', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['25', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출'],
-						['26', '', '', '매거진', '인터랙션', '로그인', '매거진 확인', '타이틀의 매거진 / 더보기 버튼\n 이미지 / 서브타이틀 및 설명'],
-						['27', '', '', '', '', '', '더보기 클릭', '매거진 더보기 화면으로 이동'],
-						['28', '', '', '', '', '', '서브타이틀 클릭', '해당 매거진의 랜딩페이지로 이동'],
-						['29', '', '', '쇼핑몰 리뷰 요약', '인터랙션', '', '쇼핑몰 리뷰 확인', '총 평점/가장 많은 평점/전체 리뷰수/더보기 버튼 노출'],
-						['30', '', '', '', '', '', '쇼핑몰 리뷰 확인', '쇼핑몰 리뷰 미노출']
-		    		],
-			container1 = document.getElementById('example'),
-			settings1 = {
-				data: data1,
-				colHeaders: ['번호', '대분류', '중분류', '소분류', '기능', '조건', '액션', '기대결과'],
-				width:1500,
-				height:1200,
-				fixedRowsTop:1,
-				stretchH: 'all',
-				manualColumnMove: true,
-				manualRowMove: true
-		    },
-		    hot1;
-		  
-			hot1 = new Handsontable(container1, settings1);				
-			hot1.render();
-		  
-			function bindDumpButton() {
-				if (typeof Handsontable === "undefined") {
-					return;
-				}
-		  
-				Handsontable.Dom.addEvent(document.body, 'click', function (e) {
-		  
+		jQuery(function() {		
+			afterDomloaded();
+	
+			bindDumpButton();
+		});
+		
+		var header = getJobHeader('${result.headerJson}');
+		var content = JSON.parse('${result.contentJson}');
+		var bindData = new Array(header.length);	// 1. Header의 컬럼 개수만큼 배열을 생성한다.
+		initialGrid();
+		showContent(content);
+				
+		function afterDomloaded() {
+			var container = document.getElementById('example');
+			var hot = new Handsontable(container, {
+				data 		: bindData,
+				colHeaders  : header,
+				width		:1500,
+				height		:1200,
+				fixedRowsTop:content.length,
+				stretchH	: 'all',
+			});		
+		}
+		
+		function initialGrid() {
+	    	for(var index = 0; index < content.length; index++){
+	    		bindData[index] = new Array(bindData.length);	// 2. 각 배열에 Row의 수만큼 배열을 생성하는데, 각 배열에는 컬럼의 수 만큼 생성 [ 2 x 2 배열 ]
+	      	}
+	    }
+		
+		function bindDumpButton() {
+			if (typeof Handsontable === "undefined") {
+				return;
+			}
+			Handsontable.Dom.addEvent(document.body, 'click', function(e) {
 				var element = e.target || e.srcElement;
-		  
 				if (element.nodeName == "BUTTON" && element.name == 'dump') {
 					var name = element.getAttribute('data-dump');
 					var instance = element.getAttribute('data-instance');
-					var hot = window[instance];						
-		        }
-				});
-		    }
-		  	bindDumpButton();
-	});		
+					var hot = window[instance];
+				}
+			});
+		}		
+		
+		function getJobHeader(req) {
+			var obj = JSON.parse(req);
+			var header = obj[0].content;
+			
+			return header.split("┞");
+		}
+		
+		function showContent(req) {
+			for (var row = 0; row < req.length; row++) {
+				 var splited = req[row].content.split("┞");
+				 for (var col = 0; col < bindData[row].length; col++) {
+					bindData[row][col] = splited[col];
+				 }
+			}
+		}
 	</script>
 </head>
 
 <body>
 	<div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>네이버 뮤직 :: {마이 뮤직} :: 2016년 7월 2주</h2>
+        	<c:set var="jobTemplate" value="${result.jobTemplate }"/>
+            <h2>${jobTemplate.projectName } :: ${jobTemplate.versionTemplateName }</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>네이버 뮤직</span>
+                    <span>${jobTemplate.projectName }</span>
                 </li>
                 <li>
-                    <span>전체 작업 템플릿</span>
+                    <span>작업 템플릿 목록</span>
                 </li>
                 <li>
-                    <span>템플릿 버전 목록</span>
+                    <a href="/project/${jobTemplate.projectAddressId}/jobTemplateAllList"><span>전체 작업 템플릿</span></a>
+                </li>
+                <li>
+                    <a href="/project/${jobTemplate.projectAddressId}/jobTemplateAllList/${jobTemplate.jobMasterUppderCode }"><span>${jobTemplate.masterTemplateName} </span></a>
                 </li>
                 <li class="active">
                     <strong>템플릿 상세</strong>
@@ -116,16 +113,16 @@
                     <div class="ibox-content">
                     	<form method="get" class="form-horizontal">
 							<div class="form-group"><label class="col-lg-2 control-label">템플릿 명</label>
-								<div class="col-lg-10"><p class="form-control-static">뮤직플레이어</p></div>
+								<div class="col-lg-10"><p class="form-control-static">${jobTemplate.masterTemplateName}</p></div>
                             </div>
 							<div class="form-group"><label class="col-lg-2 control-label">버전 명</label>
-								<div class="col-lg-10"><p class="form-control-static">2016년 7월 1주</p></div>
+								<div class="col-lg-10"><p class="form-control-static">${jobTemplate.versionTemplateName }</p></div>
                             </div>
 							<div class="form-group"><label class="col-lg-2 control-label">작성자</label>
-								<div class="col-lg-10"><p class="form-control-static">권영</p></div>
+								<div class="col-lg-10"><p class="form-control-static">${jobTemplate.creatorName }</p></div>
                             </div>
 							<div class="form-group"><label class="col-lg-2 control-label">작성일</label>
-								<div class="col-lg-10"><p class="form-control-static">2016년 7월 3일</p></div>
+								<div class="col-lg-10"><p class="form-control-static">${jobTemplate.createdDate }</p></div>
                             </div>
                     	</form>
                     </div>

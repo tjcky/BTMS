@@ -72,34 +72,35 @@
 	</select>
 	
 	<select id="selectJobVersionList" parameterType="map" resultType="org.dorageecorp.com.job.model.JobVersionTemplate">
-		SELECT tjm.pjt_addr_id 	AS projectAddressId
+		SELECT tjm.pjt_addr_id 		AS projectAddressId
 			 , (
 			 		SELECT pjt_nm
 			 		  FROM t_pjt
 			 		 WHERE pjt_addr_id = tjm.pjt_addr_id
-			   ) 				AS projectName
-			 , tjm.seq 			AS sequence
-			 , tjm.job_mst_cd 	AS jobMasterCode
-			 , tjm.tmpl_group 	AS templateGroup
-			 , tjm.job_mst_nm 	AS masterTemplateName
-			 , tjm.job_ver_nm 	AS versionTemplateName
-			 , tjm.job_tc_cnt 	AS testCaseCount
+			   ) 					AS projectName
+			 , tjm.seq 				AS sequence
+			 , tjm.job_mst_cd 		AS jobMasterCode
+			 , tjm.job_mst_uprcd 	AS jobMasterUppderCode
+			 , tjm.tmpl_group 		AS templateGroup
+			 , tjm.job_mst_nm 		AS masterTemplateName
+			 , tjm.job_ver_nm 		AS versionTemplateName
+			 , tjm.job_tc_cnt 		AS testCaseCount
 			 , (
 					SELECT comm_cd_nm
 			          FROM t_comm_cd
 					 WHERE comm_cd = tjm.job_status
-			   ) 				AS jobStatus
+			   ) 					AS jobStatus
 			 , (
 					SELECT user_nm
 			          FROM t_user
 				 	 WHERE user_id = tjm.crer_id
-			   ) 				AS creatorName
+			   ) 					AS creatorName
 			 , DATE_FORMAT(tjm.cre_ymdt, '%y-%m-%d %h:%i') AS createdDate
 			 , (
 					SELECT user_nm
 			          FROM t_user
 					 WHERE user_id = tjm.modr_id
-			 ) 					AS modifyerName
+			 ) 						AS modifyerName
 			 , DATE_FORMAT(tjm.mod_ymdt, '%y-%m-%d %h:%i') AS modifyedDate
 		 FROM t_job_mst tjm
 		WHERE tjm.pjt_addr_id =  #{projectAddressId}

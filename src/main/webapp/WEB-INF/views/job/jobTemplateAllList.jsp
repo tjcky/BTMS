@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Job 템플릿 목록</title>
+    <title>작업 템플릿 목록</title>
 
     <script>
 		jQuery(function() {	
@@ -26,7 +26,7 @@
 			}
 		});
 		
-		function goToJobVersionList(projectAddressId, jobMasterCode){			
+		function getJobVersionList(projectAddressId, jobMasterCode){			
 			window.location.href = "/project/" + projectAddressId + "/jobTemplateAllList/" + jobMasterCode;
 		}
 
@@ -100,7 +100,7 @@
 																<span class="pull-right clickable">
 																	<i class="glyphicon glyphicon-chevron-up"></i>
 																</span>	
-																<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList('${masterTemplate.projectAddressId}','${masterTemplate.jobMasterCode }');" style="margin-left:200px;">전체보기</button>
+																<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:getJobVersionList('${masterTemplate.projectAddressId}','${masterTemplate.jobMasterCode }');" style="margin-left:200px;">전체보기</button>
 																<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 															</div>
 														</div>
@@ -128,7 +128,7 @@
 																		<c:forEach var="versionTemplate" items="${masterTemplate.jobVersionList }">
 																			<tr>
 											                     				<td class="text-center" style="width:50px">${versionTemplate.sequence }</td>
-											                     				<td style="width:300px">${versionTemplate.versionTemplateName }</td>
+											                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">${versionTemplate.versionTemplateName }</a></td>
 											                     				<td class="text-center" style="width:100px">${versionTemplate.testCaseCount }</td>
 											                     				<td class="text-center" style="width:100px">${versionTemplate.jobStatus }</td>
 											                     				<td class="text-center" style="width:100px">${versionTemplate.creatorName }</td>

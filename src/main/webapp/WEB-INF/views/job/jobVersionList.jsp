@@ -5,11 +5,11 @@
 <html>
 
 <head>
-    <title>Job 버전 템플릿 목록</title>
+    <title>작업 템플릿 버전별 목록</title>
 	<script>
 		jQuery(function() {	
 			jQuery("#mainProjectAddressId").val(jQuery("#projectAddressId").val());
-		});
+		});		
 	</script>
 </head>
 
@@ -80,8 +80,8 @@
 											    	<c:otherwise>
 											    		<c:forEach var="jobVersion" items="${jobVersionList }">
 											    			<tr>
-											    				<td class="text-center">${jobVersion.sequence }</td>
-											    				<td>${jobVersion.versionTemplateName }</td>
+											    				<td class="text-center">${jobVersion.sequence }</td>			
+											    				<td><a href="/project/${jobVersion.projectAddressId}/jobTemplateAllList/${jobVersion.jobMasterUppderCode}/${jobVersion.jobMasterCode}">${jobVersion.versionTemplateName }</a></td>
 											    				<td class="text-center">${jobVersion.testCaseCount }</td>
 											    				<td class="text-center">${jobVersion.jobStatus }</td>
 											    				<td class="text-center">${jobVersion.creatorName }</td>

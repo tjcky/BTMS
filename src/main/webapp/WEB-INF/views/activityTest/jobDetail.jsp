@@ -24,7 +24,9 @@
 		var container = document.getElementById('example');
 		var hot = new Handsontable(container, {
 			data : bindData,
-			colHeaders : getColumnHeaders('${columnNames}'), 
+			colHeaders : getColumnHeaders('${columnNames}'),
+			width:1500,
+			height:1200,
 			minSpareRows : 1
 		});		
 	}
