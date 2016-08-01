@@ -40,4 +40,16 @@ public class JobDAOImplTest {
 		
 		list.forEach(a -> System.out.println(a));
 	}
+	
+	@Test
+	public void testSelectJobVersionList() {
+		Map<String, String> map = new HashMap<String, String>();
+		
+		map.put("projectAddressId", "MUSIC");
+		map.put("jobMasterUppderCode", "MUSIC_MSTJOB_201609");
+		
+		List<JobVersionTemplate> list = sut.selectJobVersionList(map);
+		
+		list.forEach(a -> System.out.println(a));
+	}
 }

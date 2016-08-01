@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class JobVersionTemplate {
 	private String projectAddressId;
+	private String projectName;
 	private int sequence;
 	private String jobMasterCode;
 	private String jobMasterUppderCode;

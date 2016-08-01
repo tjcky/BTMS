@@ -18,4 +18,9 @@ public class JobBOImpl implements JobBO {
 	public List<JobVersionTemplate> getJobTemplateAllList(String projectId) {		
 		return jobDAO.selectJobTemplateAllList(projectId);
 	}
+
+	@Override
+	public List<JobVersionTemplate> getJobVersionList(String projectId, String jobMasterCode) {
+		return jobDAO.selectJobVersionList(projectId, jobMasterCode);
+	}
 }

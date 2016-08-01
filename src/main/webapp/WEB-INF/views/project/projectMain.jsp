@@ -8,7 +8,7 @@
     <title>BTMS</title>
 	<script type="text/javascript">
 		jQuery(function() {	
- 			jQuery("#projectMain").attr("href", "/project/" + jQuery("#projectAddressId").val());
+ 			jQuery("#mainProjectAddressId").val(jQuery("#projectAddressId").val());
 		});
 		
 		function getProjectActivityByPage(page) {
@@ -66,8 +66,10 @@
 </head>
 
 <body>
-	<div class="row wrapper border-bottom white-bg page-heading">
+	<div id="hiddenArea">
 		<input type="hidden" id="projectAddressId" value="${projectInfomation.projectAddressId }"/>
+	</div>
+	<div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
             <h2>${projectInfomation.projectName } </h2>
             <ol class="breadcrumb">

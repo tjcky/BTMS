@@ -62,11 +62,14 @@
 	    <script src="/resources/bootstrap/js/plugins/chartJs/Chart.min.js"></script>
 	    <!-- 아래 main.js는 삭제 예정 -->
 	    <script src="/resources/javascript/main.js"></script>	    
-	    <script src="/resources/javascript/job/job.js"></script>
+	    
 	    <decorator:head /> 
 	</head> 
 
 	<body>
+		<div id="hiddenArea">
+			<input type="hidden" id="mainProjectAddressId" value=""/>		
+		</div>
 	    <div id="wrapper">
 	    <nav class="navbar-default navbar-static-side" role="navigation">
 	        <!-- <div class="sidebar-collapse"> -->
@@ -77,7 +80,7 @@
 	                    	<span>
 	                            <img alt="image" class="img-circle" src="/resources/bootstrap/img/profile_small.jpg" />
 	                        </span>
-	                        <a href="javascript:goToMain()">
+	                        <a href="/main">
 	                            <span class="clear"> 
 	                            	<span class="block m-t-xs"> <strong class="font-bold">BTMS HOME</strong></span>
  
@@ -89,7 +92,7 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="#" id="projectMain"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
+	                    <a href="javascript:goToService()" id="projectMain"><i class="fa fa-th-large"></i> <span class="nav-label">프로젝트 홈</span></a>                    
 	                </li>
 	                <li>
 	                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">테스트 일정</span><span class="fa arrow"></span></a>

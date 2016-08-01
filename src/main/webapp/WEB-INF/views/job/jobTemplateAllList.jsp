@@ -8,8 +8,13 @@
     <title>Job 템플릿 목록</title>
 
     <script>
-		$(document).on('click', '.panel-heading span.clickable', function(e){
-		    var $this = $(this);
+		jQuery(function() {	
+			jQuery("#mainProjectAddressId").val(jQuery("#projectAddressId").val());
+		});
+    
+    
+		jQuery(document).on('click', '.panel-heading span.clickable', function(e){
+		    var $this = jQuery(this);
 			if(!$this.hasClass('panel-collapsed')) {
 				$this.parents('.panel').find('.panel-body').slideUp();
 				$this.addClass('panel-collapsed');
@@ -19,7 +24,11 @@
 				$this.removeClass('panel-collapsed');
 				$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 			}
-		})
+		});
+		
+		function goToJobVersionList(projectAddressId, jobMasterCode){			
+			window.location.href = "/project/" + projectAddressId + "/jobTemplateAllList/" + jobMasterCode;
+		}
 
     </script>
     <style type="text/css">
@@ -30,12 +39,15 @@
 </head>
 
 <body>
+	<div id="hiddenArea">
+		<input type="hidden" id="projectAddressId" value="${jobTemplateAllList[0].projectAddressId }"/>		
+	</div>
 	<div class="row wrapper border-bottom white-bg page-heading">	
         <div class="col-lg-10">
-            <h2>네이버 뮤직의 전체 작업 템플릿</h2>
+            <h2>${jobTemplateAllList[0].projectName}의 전체 작업 템플릿</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>네이버 뮤직</span>
+                    <span>${jobTemplateAllList[0].projectName}</span>
                 </li>
                 <li>
                     <span>작업 템플릿 목록</span>
@@ -88,7 +100,7 @@
 																<span class="pull-right clickable">
 																	<i class="glyphicon glyphicon-chevron-up"></i>
 																</span>	
-																<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList();" style="margin-left:200px;">전체보기</button>
+																<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:goToJobVersionList('${masterTemplate.projectAddressId}','${masterTemplate.jobMasterCode }');" style="margin-left:200px;">전체보기</button>
 																<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
 															</div>
 														</div>

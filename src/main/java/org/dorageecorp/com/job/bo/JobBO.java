@@ -8,4 +8,6 @@ public interface JobBO {
 
 	List<JobVersionTemplate> getJobTemplateAllList(String projectId);
 
+	List<JobVersionTemplate> getJobVersionList(String projectId, String jobMasterCode);
+
 }

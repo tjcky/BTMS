@@ -1,25 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn"  uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Job 버전 템플릿 목록</title>
-
+	<script>
+		jQuery(function() {	
+			jQuery("#mainProjectAddressId").val(jQuery("#projectAddressId").val());
+		});
+	</script>
 </head>
 
 <body>
+	<div id="hiddenArea">
+		<input type="hidden" id="projectAddressId" value="${jobVersionList[0].projectAddressId }"/>		
+	</div>
 	<div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>네이버 뮤직 :: {마이 뮤직} 버전 목록</h2>
+            <h2>${jobVersionList[0].projectName} :: ${jobVersionList[0].masterTemplateName} 버전 목록</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>네이버 뮤직</span>
+                    <span>${jobVersionList[0].projectName}</span>
                 </li>
                 <li>
-                    <span>전체 작업 템플릿</span>
+                    <span>작업 템플릿 목록</span>
+                </li>
+                <li>
+                    <a href="/project/${jobVersionList[0].projectAddressId }/jobTemplateAllList"><span>전체 작업 템플릿</span></a>
                 </li>
                 <li class="active">
-                    <strong>템플릿 버전 목록</strong>
+                    <strong>${jobVersionList[0].masterTemplateName }</strong>
                 </li>
             </ol>
         </div>
@@ -39,7 +51,7 @@
                     <div class="ibox-content">
                     	<div class="m-b-lg">
                             <div class="m-t-md">
-                                <strong>총 4개의 뮤직플레이어 템플릿</strong>
+                                <strong>총 ${fn:length(jobVersionList)} 개의 ${jobVersionList[0].masterTemplateName } 작업 템플릿 </strong>
                             </div>
                         </div>
                         
@@ -49,92 +61,41 @@
 						        	<div class="table-responsive">						                
 						            	<table id="mytable" class="table table-bordred table-striped">
 						                	<thead>
-							                   <th>#</th>
-							                   <th>버전명</th>
-							                   <th>단위 TC</th>
-							                   <th>상태</th>
-							                   <th>작성자</th>
-							                   <th>작성일</th>
-							                   <th>수정자</th>
-							                   <th>수정일</th>
-							                   <th>EDIT</th>
-							                   <th>DELETE</th>
+							                   <th class="text-center">#</th>
+							                   <th class="text-center">버전명</th>
+							                   <th class="text-center">단위 TC</th>
+							                   <th class="text-center">상태</th>
+							                   <th class="text-center">작성자</th>
+							                   <th class="text-center">작성일</th>
+							                   <th class="text-center">수정자</th>
+							                   <th class="text-center">수정일</th>
+							                   <th class="text-center">EDIT</th>
+							                   <th class="text-center">DELETE</th>
 						                    </thead>
 										    <tbody>									    
-											    <tr>
-												    <td>5</td>
-												    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
-												    <td>152</td>
-												    <td>진행중</td>
-												    <td>권영</td>
-												    <td>2016.06.29</td>
-												    <td>권영</td>
-												    <td>2016.06.29</td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-											    </tr>
-											    <tr>
-												    <td>4</td>
-												    <td><a href="javascript:goToJobDetail()">2016년 6월 5주</a></td>
-												    <td>252</td>
-												    <td>진행중</td>
-												    <td>이동섭</td>
-												    <td>2016.06.29</td>
-												    <td>권영</td>
-												    <td>2016.06.29</td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-											    </tr>
-											    <tr>
-												    <td>3</td>
-												    <td><a href="javascript:goToJobDetail()">2016년 6월 3주</a></td>
-												    <td>112</td>
-												    <td>완료</td>
-												    <td>이선영</td>
-												    <td>2016.06.29</td>
-												    <td>전평재</td>
-												    <td>2016.06.29</td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-											    </tr>
-											    <tr>
-												    <td>2</td>
-												    <td><a href="javascript:goToJobDetail()">2016년 6월 2주</a></td>
-												    <td>232</td>
-												    <td>완료</td>
-												    <td>김정희</td>
-												    <td>2016.06.29</td>
-												    <td>조문기</td>
-												    <td>2016.06.29</td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-											    </tr>
-											    <tr>
-												    <td>1</td>
-												    <td><a href="javascript:goToJobDetail()">2016년 7월 1주</a></td>
-												    <td>152</td>
-												    <td>진행중</td>
-												    <td>권영</td>
-												    <td>2016.06.29</td>
-												    <td>권영</td>
-												    <td>2016.06.29</td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-												    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-											    </tr>										    
+											    <c:choose>
+											    	<c:when test="${fn:length(jobVersionList) < 1 }">
+											    		<td colspan="10" style="text-align: center"><span>작성한 상세 템플릿이 없습니다.</span></td>
+											    	</c:when>
+											    	<c:otherwise>
+											    		<c:forEach var="jobVersion" items="${jobVersionList }">
+											    			<tr>
+											    				<td class="text-center">${jobVersion.sequence }</td>
+											    				<td>${jobVersion.versionTemplateName }</td>
+											    				<td class="text-center">${jobVersion.testCaseCount }</td>
+											    				<td class="text-center">${jobVersion.jobStatus }</td>
+											    				<td class="text-center">${jobVersion.creatorName }</td>
+											    				<td class="text-center">${jobVersion.createdDate }</td>
+											    				<td class="text-center">${jobVersion.modifyerName }</td>
+											    				<td class="text-center">${jobVersion.modifyedDate }</td>
+															    <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+															    <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>										    				
+											    			</tr>
+											    		</c:forEach>
+											    	</c:otherwise>
+											    </c:choose>											    									    
 										    </tbody>
-										</table>						
-										<div class="box-body">
-											<div class="clearfix"></div>
-											<ul class="pagination pull-right">
-											  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-											  <li class="active"><a href="#">1</a></li>
-											  <li><a href="#">2</a></li>
-											  <li><a href="#">3</a></li>
-											  <li><a href="#">4</a></li>
-											  <li><a href="#">5</a></li>
-											  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-											</ul>
-										</div>
+										</table>
 						            </div>						            
 						        </div>
 							</div>

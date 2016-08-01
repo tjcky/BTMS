@@ -1,5 +1,6 @@
 package org.dorageecorp.com.job.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -25,5 +26,20 @@ public class JobDAOImpl implements JobDAO {
 	@Override
 	public List<JobVersionTemplate> selectJobTemplateVersionList(Map<String, String> projectAndJob) {
 		return session.selectList(namespace + ".selectJobTemplateVersionList", projectAndJob);
+	}
+
+	@Override
+	public List<JobVersionTemplate> selectJobVersionList(Map<String, String> projectAndJob) {
+		return session.selectList(namespace + ".selectJobVersionList", projectAndJob);
+	}
+
+	@Override
+	public List<JobVersionTemplate> selectJobVersionList(String projectId, String jobMasterCode) {
+		Map<String, String> map = new HashMap<String, String>();
+		
+		map.put("projectAddressId", projectId);
+		map.put("jobMasterUppderCode", jobMasterCode);		
+		
+		return session.selectList(namespace + ".selectJobVersionList", map);
 	}
 }

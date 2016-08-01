@@ -1,9 +1,7 @@
-function goToMain() {
-	window.location.href = "/main";
-}
-
 function goToService() {
-	window.location.href = "/kcmsus";
+	var projectId = jQuery("#mainProjectAddressId").val();
+	
+	window.location.href = "/project/" + projectId;
 }
 
 function goToActivitySchedule() {
@@ -26,14 +24,16 @@ function goToJobDetail() {
 	window.location.href = "/kcmsus/openJobTemplateDetail";
 }
 
-function goToJobVersionList() {
-	window.location.href = "/kcmsus/jobVersionList";
-}
-
 function goToJobExecutionDetail() {
 	window.location.href = "/kcmsus/jobExecutionDetail";
 }
 
 function goToJobExecutionResult() {
 	window.location.href = "/kcmsus/jobExecutionResult";
+}
+
+function getJobTemplateAllList() {
+	var projectId = jQuery("#mainProjectAddressId").val();
+	
+	window.location.href = "/project/" + projectId + "/jobTemplateAllList";
 }

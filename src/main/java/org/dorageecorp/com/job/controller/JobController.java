@@ -37,10 +37,18 @@ public class JobController {
 	}
 
 	/**
-	 * TODO : 구현 예정
+	 * 일부 작업 버전 템플릿
 	 */
-	@RequestMapping(value = "/project/{projectId}/jobVersionList", method = RequestMethod.GET)
-	public ModelAndView getJobVersionList(int page) {
-		return null;
+	@RequestMapping(value = "/project/{projectId}/jobTemplateAllList/{jobMasterCode}", method = RequestMethod.GET)
+	public ModelAndView getJobVersionList(@PathVariable String projectId, @PathVariable String jobMasterCode) {
+		// TODO : jobMasterCode 가 DB에 없는 값이 넘어온다면? -> Redirect 처리 필요
+		
+		ModelAndView mav = new ModelAndView("/job/jobVersionList");
+
+		List<JobVersionTemplate> jobVersionList = jobBO.getJobVersionList(projectId, jobMasterCode);
+
+		mav.addObject("jobVersionList", jobVersionList);
+
+		return mav;
 	}
 }
