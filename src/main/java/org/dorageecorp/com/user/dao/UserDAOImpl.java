@@ -12,20 +12,20 @@ public class UserDAOImpl implements UserDAO {
 	@Inject
 	private SqlSession sqlSession;
 
-	private static final String namespace = "org.dorageecorp.mapper.UserMapper";
+	private static final String NAMESPACE = "org.dorageecorp.mapper.UserMapper";
 	
 	@Override
 	public boolean isValidUser(User user) {
-		return sqlSession.selectOne(namespace + ".isValidUser", user);
+		return sqlSession.selectOne(NAMESPACE + ".isValidUser", user);
 	}
 
 	@Override
 	public boolean isDuplicationID(String id) {
-		return sqlSession.selectOne(namespace + ".isDuplicationID", id);
+		return sqlSession.selectOne(NAMESPACE + ".isDuplicationID", id);
 	}
 
 	@Override
 	public void insertUser(User user) {
-		sqlSession.insert(namespace + ".insertUser", user);
+		sqlSession.insert(NAMESPACE + ".insertUser", user);
 	}
 }

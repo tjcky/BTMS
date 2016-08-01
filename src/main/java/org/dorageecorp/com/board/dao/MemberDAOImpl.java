@@ -12,15 +12,15 @@ public class MemberDAOImpl implements MemberDAO {
 	@Inject
 	private SqlSession sqlSession;
 
-	private static final String namespace = "org.dorageecorp.mapper.MemberMapper";
+	private static final String NAMESPACE = "org.dorageecorp.mapper.MemberMapper";
 
 	@Override
 	public String getTime() {
-		return sqlSession.selectOne(namespace + ".getTime");
+		return sqlSession.selectOne(NAMESPACE + ".getTime");
 	}
 
 	@Override
 	public void insertMember(Member member) {
-		sqlSession.insert(namespace + ".insertMember", member);
+		sqlSession.insert(NAMESPACE + ".insertMember", member);
 	}
 }

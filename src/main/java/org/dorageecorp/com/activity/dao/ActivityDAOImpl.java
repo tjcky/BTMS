@@ -13,25 +13,25 @@ public class ActivityDAOImpl implements ActivityDAO {
 	@Inject
 	private SqlSession session;
 
-	private static final String namespace = "org.dorageecorp.mapper.ActivityMapper";
+	private static final String NAMESPACE = "org.dorageecorp.mapper.ActivityMapper";
 	
 	@Override
 	public List<Activity> selectActivityList() {
-		return session.selectList(namespace + ".selectActivityList");
+		return session.selectList(NAMESPACE + ".selectActivityList");
 	}
 
 	@Override
 	public Activity selectActivityDetail(int no) {
-		return session.selectOne(namespace + ".selectActivityDetail", no);
+		return session.selectOne(NAMESPACE + ".selectActivityDetail", no);
 	}
 
 	@Override
 	public List<String> selectColumnNames() {
-		return session.selectList(namespace + ".selectColumnNames");
+		return session.selectList(NAMESPACE + ".selectColumnNames");
 	}
 
 	@Override
 	public List<String> selectColumnData() {
-		return session.selectList(namespace + ".selectColumnData");
+		return session.selectList(NAMESPACE + ".selectColumnData");
 	}
 }

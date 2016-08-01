@@ -18,25 +18,25 @@ public class ProjectDAOImpl implements ProjectDAO {
 	@Inject
 	private SqlSession session;
 	
-	private static final String namespace = "org.dorageecorp.mapper.ProjectMapper";
+	private static final String NAMESPACE = "org.dorageecorp.mapper.ProjectMapper";
 
 	@Override
 	public boolean isExistProject(String projectId) {
-		return session.selectOne(namespace + ".isExistProject", projectId);
+		return session.selectOne(NAMESPACE + ".isExistProject", projectId);
 	}
 
 	@Override
 	public ProjectInfomation selectProjectInfomation(String projectId) {		
-		return session.selectOne(namespace + ".selectProjectInfomation", projectId);
+		return session.selectOne(NAMESPACE + ".selectProjectInfomation", projectId);
 	}
 
 	@Override
 	public List<ProjectActivity> selectProjectActivity(Project project) {
-		return session.selectList(namespace + ".selectProjectActivity", project);
+		return session.selectList(NAMESPACE + ".selectProjectActivity", project);
 	}
 
 	@Override
 	public int selectProjectActivityTotalCount(String projectId) {
-		return session.selectOne(namespace + ".selectProjectActivityTotalCount", projectId);
+		return session.selectOne(NAMESPACE + ".selectProjectActivityTotalCount", projectId);
 	}
 }
