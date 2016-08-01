@@ -14,4 +14,6 @@ public interface JobDAO {
 	List<JobVersionTemplate> selectJobVersionList(Map<String, String> projectAndJob);
 
 	List<JobVersionTemplate> selectJobVersionList(String projectId, String jobMasterCode);
+	
+	JobVersionTemplate selectJobDetail(JobVersionTemplate jobVersion);
 }

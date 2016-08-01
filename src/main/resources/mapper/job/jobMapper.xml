@@ -106,4 +106,76 @@
 		  AND tjm.job_mst_uprcd = #{jobMasterUppderCode}
 		ORDER BY tjm.seq DESC;
 	</select>
+
+	<resultMap id="selectJobDetailAndContent" type="org.dorageecorp.com.job.model.JobVersionTemplate" >
+		<result property="projectAddressId" 	column="pjt_addr_id"/>
+		<result property="projectName" 			column="pjt_nm"/>
+		<result property="masterTemplateName" 	column="job_mst_nm"/>
+		<result property="versionTemplateName" 	column="job_ver_nm"/>
+		<result property="jobMasterCode" 		column="job_mst_cd"/>
+		<result property="jobMasterUppderCode" 	column="job_mst_uprcd"/>
+		<result property="creatorName" 			column="crer_nm"/>
+		<result property="createdDate" 			column="cre_ymdt"/>
+		<result property="modifyerName" 		column="modr_nm"/>
+		<result property="modifyedDate" 		column="mod_ymdt"/>
+		<result property="jobStatus" 			column="job_status"/>	
+		<collection property="header" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" javaType="java.util.ArrayList" ofType="org.dorageecorp.com.job.model.JobContent" select="selectJobDetailHeader"/>
+		<collection property="content" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" javaType="java.util.ArrayList" ofType="org.dorageecorp.com.job.model.JobContent" select="selectJobDetailContent"/>
+	</resultMap>
+	
+	<select id="selectJobDetail" resultMap="selectJobDetailAndContent">
+		SELECT tjm.pjt_addr_id
+			 , (	
+					SELECT pjt_nm
+					  FROM t_pjt
+					 WHERE pjt_addr_id = tjm.pjt_addr_id
+			   ) AS pjt_nm
+			 , tjm.job_mst_nm
+			 , tjm.job_ver_nm
+			 , tjm.job_mst_cd
+			 , tjm.job_mst_uprcd
+			 , ( 	
+			 		SELECT user_nm
+					  FROM t_user
+					 WHERE user_id = tjm.crer_id
+			   ) AS crer_nm
+			 , tjm.cre_ymdt
+			 , (
+			 		SELECT user_nm
+					  FROM t_user
+					 WHERE user_id = tjm.modr_id
+			   ) AS modr_nm
+			 , tjm.mod_ymdt
+			 , (
+			 		SELECT comm_cd_nm
+				 	  FROM t_comm_cd
+				     WHERE comm_cd = tjm.job_status
+			   ) AS job_status
+		  FROM t_job_mst tjm
+		 WHERE tjm.pjt_addr_id = #{projectAddressId}
+		   AND tjm.job_mst_cd = #{jobMasterCode}
+		   AND tjm.job_mst_uprcd = #{jobMasterUppderCode}
+	</select>
+	
+	<select id="selectJobDetailHeader" parameterType="map" resultType="org.dorageecorp.com.job.model.JobContent">
+		SELECT tjd.row_num AS rowNumber
+			 , tjd.content AS content
+		  FROM t_job_dtl tjd
+		 WHERE tjd.pjt_addr_id = #{projectAddressId}
+		   AND tjd.job_mst_cd = #{jobMasterCode}
+		   AND tjd.job_mst_uprcd = #{jobMasterUppderCode}
+		   AND tjd.header_yn = 'Y'
+		 ORDER BY tjd.row_num
+	</select>
+	
+	<select id="selectJobDetailContent" parameterType="map" resultType="org.dorageecorp.com.job.model.JobContent">
+		SELECT tjd.row_num AS rowNumber
+			 , tjd.content AS content
+		  FROM t_job_dtl tjd
+		 WHERE tjd.pjt_addr_id = #{projectAddressId}
+		   AND tjd.job_mst_cd = #{jobMasterCode}
+		   AND tjd.job_mst_uprcd = #{jobMasterUppderCode}
+		   AND tjd.header_yn = 'N'
+		 ORDER BY tjd.row_num
+	</select>
 </mapper>

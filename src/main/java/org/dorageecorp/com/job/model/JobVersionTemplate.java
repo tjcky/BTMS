@@ -22,5 +22,7 @@ public class JobVersionTemplate {
 	private String modifyerId;
 	private String modifyerName;
 	private String modifyedDate;
+	private List<JobContent> header;
+	private List<JobContent> content;
 	private List<JobVersionTemplate> jobVersionList;
 }

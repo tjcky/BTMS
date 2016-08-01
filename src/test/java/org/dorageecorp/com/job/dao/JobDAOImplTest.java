@@ -52,4 +52,17 @@ public class JobDAOImplTest {
 		
 		list.forEach(a -> System.out.println(a));
 	}
+	
+	@Test
+	public void testSelectJobDetail() {
+		JobVersionTemplate jobVersionTemplate = new JobVersionTemplate();
+		
+		jobVersionTemplate.setProjectAddressId("MUSIC");
+		jobVersionTemplate.setJobMasterCode("MUSIC_DTLJOB_201602");
+		jobVersionTemplate.setJobMasterUppderCode("MUSIC_MSTJOB_201601");
+		
+		JobVersionTemplate result = sut.selectJobDetail(jobVersionTemplate);
+		
+		System.out.println(result);
+	}
 }

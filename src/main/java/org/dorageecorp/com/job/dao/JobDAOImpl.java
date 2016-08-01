@@ -12,14 +12,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class JobDAOImpl implements JobDAO {
-	
+
 	@Inject
 	private SqlSession session;
-	
+
 	private static final String namespace = "org.dorageecorp.mapper.jobMapper";
 
 	@Override
-	public List<JobVersionTemplate> selectJobTemplateAllList(String projectId) {		
+	public List<JobVersionTemplate> selectJobTemplateAllList(String projectId) {
 		return session.selectList(namespace + ".selectJobTemplateAllList", projectId);
 	}
 
@@ -36,10 +36,15 @@ public class JobDAOImpl implements JobDAO {
 	@Override
 	public List<JobVersionTemplate> selectJobVersionList(String projectId, String jobMasterCode) {
 		Map<String, String> map = new HashMap<String, String>();
-		
+
 		map.put("projectAddressId", projectId);
-		map.put("jobMasterUppderCode", jobMasterCode);		
-		
+		map.put("jobMasterUppderCode", jobMasterCode);
+
 		return session.selectList(namespace + ".selectJobVersionList", map);
+	}
+
+	@Override
+	public JobVersionTemplate selectJobDetail(JobVersionTemplate jobVersion) {
+		return session.selectOne(namespace + ".selectJobDetail", jobVersion);
 	}
 }
