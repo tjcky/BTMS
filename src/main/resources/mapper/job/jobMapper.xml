@@ -120,8 +120,8 @@
 		<result property="modifyerName" 		column="modr_nm"/>
 		<result property="modifyedDate" 		column="mod_ymdt"/>
 		<result property="jobStatus" 			column="job_status"/>	
-		<collection property="header" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" javaType="java.util.ArrayList" ofType="org.dorageecorp.com.job.model.JobContent" select="selectJobDetailHeader"/>
-		<collection property="content" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" javaType="java.util.ArrayList" ofType="org.dorageecorp.com.job.model.JobContent" select="selectJobDetailContent"/>
+		<collection property="header" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" select="selectJobDetailHeader"/>
+		<collection property="content" 	column="{projectAddressId=pjt_addr_id, jobMasterCode=job_mst_cd, jobMasterUppderCode=job_mst_uprcd}" select="selectJobDetailContent"/>
 	</resultMap>
 	
 	<select id="selectJobDetail" resultMap="selectJobDetailAndContent">
