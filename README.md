@@ -17,13 +17,13 @@ http://10.113.182.210:8080/main
 
 ■ 기존 시스템과의 비교
 - QC (Quaility Control)
-└ 예시 URL 없음 / 성능 및 동기화 문제가 빈번하여 실무자들 사용하지 않음
+-- 예시 URL 없음 / 성능 및 동기화 문제가 빈번하여 실무자들 사용하지 않음
 - TestRail 
-└ http://test.navercorp.com 
-└ NBP 에서 구입 / jira 에서 만든 블랙박스 테스팅 관리도구 시스템 
-└ NBP QA 및 네이버테스트 3팀에서만 사용중 
-└ 성능 이슈 없고 자동화 연동, BTS 연동 기능 제공 
-└ 매니저급과 같이 보고를 받는 입장에선 좋은 UX 이나 실제 테스트 업무를 담당하는 실무자에게 불편한 UX 
+- http://test.navercorp.com 
+-- NBP 에서 구입 / jira 에서 만든 블랙박스 테스팅 관리도구 시스템 
+-- NBP QA 및 네이버테스트 3팀에서만 사용중 
+-- 성능 이슈 없고 자동화 연동, BTS 연동 기능 제공 
+-- 매니저급과 같이 보고를 받는 입장에선 좋은 UX 이나 실제 테스트 업무를 담당하는 실무자에게 불편한 UX 
  
 ■ 목표 
 - 글로벌테스트실 최적화 / TRS 대체
@@ -32,4 +32,4 @@ http://10.113.182.210:8080/main
  
 ■ 기타
 - https://docs.handsontable.com/0.26.0/tutorial-introduction.html
-└ 엑셀 UI, UX 소스를 제공하는 Hansdsontable 가이드
+-- 엑셀 UI, UX 소스를 제공하는 Hansdsontable 가이드
