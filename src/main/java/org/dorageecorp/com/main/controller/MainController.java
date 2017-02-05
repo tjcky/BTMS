@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@Slf4j
+//@Slf4j
 public class MainController {
 
 	@Inject
@@ -35,7 +35,7 @@ public class MainController {
 			mav.addObject("totalProject", totalProject);
 			mav.addObject("myProject", myProject);
 		} catch (Exception e) {
-			log.error("Main Error", e);
+//			log.error("Main Error", e);
 		}
 
 		return mav;

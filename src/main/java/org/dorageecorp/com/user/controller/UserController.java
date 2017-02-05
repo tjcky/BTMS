@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@Slf4j
+//@Slf4j
 public class UserController {
 
 	@Inject
@@ -67,7 +67,7 @@ public class UserController {
 			userBO.registerUser(user);
 			message = ServiceConstant.SUCCESS;
 		} catch (Exception e) {
-			log.error(String.valueOf(user), e);
+//			log.error(String.valueOf(user), e);
 			message = ServiceConstant.FAIL;
 		}
 
