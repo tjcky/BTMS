@@ -84,13 +84,13 @@
             <h2>{템플릿명} :: {템플릿 버전명}</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>네이버 뮤직</span>
+                    <span>음악중심</span>
                 </li>
                 <li>
                     <span>테스트 활동</span>
                 </li>
                 <li>
-                    <span>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건</span>
+                    <span>음악중심 2016년 7월 2주차 정기배포 테스트건</span>
                 </li>
                 <li class="active">
                     <strong>작업 수행</strong>

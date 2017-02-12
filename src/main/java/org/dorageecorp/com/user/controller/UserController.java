@@ -33,15 +33,15 @@ public class UserController {
 	public @ResponseBody String trylogin(HttpServletResponse response, @Valid User user, BindingResult result) {
 		user.setUserId(StringUtils.upperCase(user.getUserId()));
 
-		if (result.hasErrors()) {
-			return ServiceConstant.FAIL;
-		}
-
-		if (userBO.isValidUser(user) == false) {
-			return ServiceConstant.FAIL;
-		}
-
-		CookieUtil.createCookie(response, "userId", user.getUserId(), ServiceConstant.ONE_DAY);
+//		if (result.hasErrors()) {
+//			return ServiceConstant.FAIL;
+//		}
+//
+//		if (userBO.isValidUser(user) == false) {
+//			return ServiceConstant.FAIL;
+//		}
+//
+//		CookieUtil.createCookie(response, "userId", user.getUserId(), ServiceConstant.ONE_DAY);
 
 		return ServiceConstant.SUCCESS;
 	}

@@ -19,12 +19,12 @@ public class HomeController {
 	@Inject
 	private ActivityBO activityBO;
 	
-/*	@RequestMapping(value = "/kcmsus", method = RequestMethod.GET)
+	@RequestMapping(value = "/kcmsus", method = RequestMethod.GET)
 	public String kcmsus(Locale locale, Model model) {
-		log.info("프로젝트 home 진입");
+//		log.info("프로젝트 home 진입");
 		
-		return "projectMain";
-	}*/
+		return "project/projectMain";
+	}
 	
 	@RequestMapping(value = "/kcmsus/activitySchedule", method = RequestMethod.GET)
 	public String activitySchedule(Locale locale, Model model) {

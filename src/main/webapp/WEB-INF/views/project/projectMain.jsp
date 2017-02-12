@@ -74,13 +74,16 @@
             <h2>${projectInfomation.projectName } </h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>키 : ${projectInfomation.projectAddressId }</span>
+                    <%-- <span>키 : ${projectInfomation.projectAddressId }</span> --%>
+                    <span>키 : MUSIC</span>
                 </li>
                 <li>
-                    <span>담당 : ${projectInfomation.managerName} [${projectInfomation.managerNick }]</span>
+                    <%-- <span>담당 : ${projectInfomation.managerName} [${projectInfomation.managerNick }]</span> --%>
+                    <span>담당 : 권영 </span>
                 </li>
                 <li>
-                    <span>분류 : ${projectInfomation.projectCategory }</span>
+                    <%-- <span>분류 : ${projectInfomation.projectCategory }</span> --%>
+                    <span>분류 : WEB</span>
                 </li>
             </ol>
         </div>
@@ -203,50 +206,26 @@
 				                    </thead>
 				                    <tbody>
 				                    <tr>
-				                        <td class="text-center">8</td>
-				                        <td>뮤직플레이어</td>
-				                        <td class="text-center">2016년 6월 2주</td>
-				                        <td class="text-center">조문기</td>
-				                    </tr>
-				                    <tr>
-				                        <td class="text-center">7</td>
-				                        <td>뮤직플레이어</td>
-				                        <td class="text-center">2016년 6월 1주</td>
-				                        <td class="text-center">김경연</td>
-				                    </tr>
-				                    <tr>
-				                        <td class="text-center">6</td>
-				                        <td>마이뮤직</td>
-				                        <td class="text-center">2016년 6월 2주</td>
-				                        <td class="text-center">박성훈</td>
-				                    </tr>
-				                    <tr>
-				                        <td class="text-center">5</td>
-				                        <td>마이뮤직</td>
-				                        <td class="text-center">2016년 6월 1주</td>
-				                        <td class="text-center">권영</td>
-				                    </tr>
-				                    <tr>
 				                        <td class="text-center">4</td>
-				                        <td>뮤직플레이어</td>
+				                        <td>인기 음악</td>
 				                        <td class="text-center">2016년 5월 3주</td>
-				                        <td class="text-center">이동섭</td>
+				                        <td class="text-center">이명</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-center">3</td>
-				                        <td>뮤직플레이어</td>
+				                        <td>인기 음악</td>
 				                        <td class="text-center">2016년 5월 2주</td>
-				                        <td class="text-center">이선영</td>
+				                        <td class="text-center">장길</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-center">2</td>
-				                        <td>뮤지션 리그</td>
+				                        <td>마이 뮤직</td>
 				                        <td class="text-center">2016년 5월 1주</td>
-				                        <td class="text-center">전평재</td>
+				                        <td class="text-center">홍길</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-center">1</td>
-				                        <td>뮤지션 리그</td>
+				                        <td>마이 뮤직 </td>
 				                        <td class="text-center">2016년 4월 1주</td>
 				                        <td class="text-center">권영</td>
 				                    </tr>
@@ -295,14 +274,14 @@
 			                    </tr>
 			                    <tr>
 			                        <td class="text-center">2</td>
-			                        <td class="text-center">이동섭</td>
+			                        <td class="text-center">이명박</td>
 			                        <td class="text-center">TE</td>
 			                        <td class="text-center">권영</td>
 			                        <td class="text-center">2</td>
 			                    </tr>
 			                    <tr>
 			                        <td class="text-center">1</td>
-			                        <td class="text-center">전평재</td>
+			                        <td class="text-center">클린턴</td>
 			                        <td class="text-center">TE</td>
 			                        <td class="text-center">권영</td>
 			                        <td class="text-center">10</td>
@@ -343,7 +322,7 @@
 	                                 </div>
 	                                 <div class="col-xs-7 content no-top-border">
 	                                     <p class="m-b-xs"><strong>권영</strong></p>
-	                                     <p>뮤직플레이어 > 2016년 7월 1주차 > 24개 수행</p>
+	                                     <p>마이뮤직 > 2016년 7월 1주차 > 24개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome</p>
 	                                 </div>
 	                             </div>
@@ -357,8 +336,8 @@
 	                                     <small class="text-navy">3 hour ago</small>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>이동섭</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 2주차 > 132개 수행</p>
+	                                     <p class="m-b-xs"><strong>이명박</strong></p>
+	                                     <p>인기음악 > 2016년 7월 2주차 > 132개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome</p>
 	                                 </div>
 	                             </div>
@@ -371,8 +350,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>
@@ -386,8 +365,8 @@
 	                                     <small class="text-navy">21 hour ago</small>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>이선영</strong></p>
-	                                     <p>뮤직플레이어 > 2016년 7월 1주차 > 124개 수행</p>
+	                                     <p class="m-b-xs"><strong>이순신</strong></p>
+	                                     <p>마이뮤직 > 2016년 7월 1주차 > 124개 수행</p>
 	                                     <p>환경 : iPhone 5.x</p>
 	                                 </div>
 	                             </div>
@@ -403,7 +382,7 @@
 	                                 </div>
 	                                 <div class="col-xs-7 content no-top-border">
 	                                     <p class="m-b-xs"><strong>권영</strong></p>
-	                                     <p>뮤직플레이어 > 2016년 7월 1주차 > 24개 수행</p>
+	                                     <p>마이뮤직 > 2016년 7월 1주차 > 24개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome</p>
 	                                 </div>
 	                             </div>
@@ -417,8 +396,8 @@
 	                                     <small class="text-navy">3 hour ago</small>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>이동섭</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 2주차 > 132개 수행</p>
+	                                     <p class="m-b-xs"><strong>이명박</strong></p>
+	                                     <p>인기음악 > 2016년 7월 2주차 > 132개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome</p>
 	                                 </div>
 	                             </div>
@@ -431,8 +410,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>
@@ -445,8 +424,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>
@@ -459,8 +438,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>
@@ -473,8 +452,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>
@@ -487,8 +466,8 @@
 	                                     <br/>
 	                                 </div>
 	                                 <div class="col-xs-7 content">
-	                                     <p class="m-b-xs"><strong>전평재</strong></p>
-	                                     <p>마이뮤직 > 2016년 7월 1주차 > 422개 수행</p>
+	                                     <p class="m-b-xs"><strong>클린턴</strong></p>
+	                                     <p>인기음악 > 2016년 7월 1주차 > 422개 수행</p>
 	                                     <p>환경 : IE 9, IE 10, Chrome, Android 4.x</p>
 	                                 </div>
 	                             </div>

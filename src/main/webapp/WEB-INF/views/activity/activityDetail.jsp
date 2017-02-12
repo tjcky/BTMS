@@ -53,10 +53,10 @@
     </script>
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>네이버 뮤직 2016년 7월 2주차 정기배포 테스트건 </h2>
+            <h2>음악중심 2016년 7월 2주차 정기배포 테스트건 </h2>
             <ol class="breadcrumb">
                 <li>
-                    <a href="index.html">네이버 뮤직</a>
+                    <a href="index.html">음악중심</a>
                 </li>
                 <li>
                     <a>테스트 활동</a>
@@ -198,7 +198,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
-			                                	<td>이동섭</td>
+			                                	<td>클린턴</td>
 			                                	<td>Chrome</td>				                                    
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -222,7 +222,7 @@
 			                                    <td>95%</td>
 			                                </tr>
 			                                <tr>
-			                                	<td>전평재</td>
+			                                	<td>이명박</td>
 			                                	<td>FireFox</td>				                                    
 			                                    <td>193</td>
 			                                    <td>23</td>
@@ -263,7 +263,7 @@
 				                            <br/>
 				                            <ul>
 				                                <li>[MUSICOP-1423] 마이뮤직에서 곡 저장 오류</li>
-				                                <li>[MUSICOP-1431] 뮤직플레이어에서 재생 오류</li>
+				                                <li>[MUSICOP-1431] 마이뮤직에서 재생 오류</li>
 				                            </ul>
 				                        </div>				
 				                    </div>
@@ -289,7 +289,7 @@
 	                    <div class="ibox-content">
 	                    	<div class="ibox">
 			                	<div class="ibox-title">
-			                        <h5>뮤직플레이어</h5>			                        
+			                        <h5>마이뮤직</h5>			                        
 					                <div class="ibox-tools">
 			                            <a href="javascript:goToJobExecutionResult()" class="btn btn-primary btn-xs">해당작업 전체결과</a>
 			                            <a href="" class="btn btn-primary btn-xs">+환경추가</a>
@@ -305,7 +305,7 @@
 				                                <tbody>
 					                                <tr>
 					                                    <td>IE 11, IE 10, Chrome</td>
-					                                    <td>이선영</td>
+					                                    <td>이순신</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -355,7 +355,7 @@
 				                                <tbody>
 					                                <tr>
 					                                    <td>IE 11, IE 10, Chrome</td>
-					                                    <td>이선영</td>
+					                                    <td>이순신</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -367,7 +367,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
-					                                    <td>전평재</td>
+					                                    <td>이명박</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -379,7 +379,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>Android 4.x, Android 6.x</td>
-					                                    <td>전평재</td>
+					                                    <td>이명박</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -391,7 +391,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>iPhone 6S, iPhone 5S</td>
-					                                    <td>조문기</td>
+					                                    <td>조철왕</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -440,7 +440,7 @@
 					                                </tr>
 					                                <tr>
 					                                    <td>Safari, FireFox</td>
-					                                    <td>이동섭</td>
+					                                    <td>클린턴</td>
 					                                    <td>P:213</td>
 					                                    <td>F:132</td>
 					                                    <td>B:13</td>
@@ -488,7 +488,7 @@
 											등록자
 										</label>
 										<div class="col-lg-9">
-											<p class="form-control-static">이동섭</p>
+											<p class="form-control-static">클린턴</p>
 										</div>
 		                            </div>
 									<div class="form-group">
@@ -496,7 +496,7 @@
 											TESTER
 										</label>
 										<div class="col-lg-9">
-											<p class="form-control-static">이동섭, 권영, 이선영</p>
+											<p class="form-control-static">클린턴, 권영, 이순신</p>
 										</div>
 		                            </div>
 	                            </div>
@@ -600,7 +600,7 @@
 					                                        <div class="feed-element">
 					                                            <div class="media-body ">
 					                                                <small class="pull-right">3h ago</small>
-					                                                <strong>이동섭</strong> 님이 댓글을 수정하였습니다. <br>
+					                                                <strong>클린턴</strong> 님이 댓글을 수정하였습니다. <br>
 					                                                <small class="text-muted">2 days ago at 8:30am</small>
 					                                                <div class="well">
 					                                                	뮤직 플레이어에서 TC 몇 개가 누락된 부분이 있어서 수정해 뒀어요.
@@ -620,7 +620,7 @@
 					                                        <div class="feed-element">
 					                                            <div class="media-body ">
 					                                                <small class="pull-right">26h ago</small>
-					                                                <strong>이선영</strong> 님이 댓글을 수정하였습니다. <br>
+					                                                <strong>이순신</strong> 님이 댓글을 수정하였습니다. <br>
 					                                                <small class="text-muted">2 days ago at 8:30am</small>
 					                                                <div class="well">
 					                                                	안해
@@ -653,13 +653,13 @@
 						                                            </td>
 						                                            <td>
 							                                            <p class="small">
-							                                                [뮤직플레이어] 템플릿 142 개
+							                                                [마이뮤직] 템플릿 142 개
 							                                            </p>
 						                                            </td>			
 						                                        </tr>
 						                                        <tr>
 						                                            <td>
-																		이동섭
+																		클린턴
 						                                            </td>
 						                                            <td>
 																		TC 수행
@@ -675,7 +675,7 @@
 						                                        </tr>
 						                                        <tr>
 						                                            <td>
-																		이선영
+																		이순신
 						                                            </td>
 						                                            <td>
 																		TC 수행
@@ -685,7 +685,7 @@
 						                                            </td>
 						                                            <td>
 							                                            <p class="small">
-							                                                [뮤직플레이어] 2 개 
+							                                                [마이뮤직] 2 개 
 							                                            </p>
 						                                            </td>		
 						                                        </tr>

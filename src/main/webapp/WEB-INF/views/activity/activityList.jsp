@@ -3,16 +3,16 @@
 <html>
 
 <head>
-    <title>네이버 뮤직 전체 활동 목록</title>
+    <title>음악 중심 전체 활동 목록</title>
 </head>
 
 <body>
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>네이버 뮤직 :: 전체 활동 목록</h2>
+            <h2>음악 중심 :: 전체 활동 목록</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>네이버 뮤직</span>
+                    <span>음악 중심</span>
                 </li>
                 <li class="active">
                     <strong>테스트 활동</strong>
@@ -49,7 +49,7 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-23 / 네이버 뮤직 7월 3주차 정기배포 테스트 
+                                        musicbank-act-23 / 음악 중심 7월 3주차 정기배포 테스트 
                                     </a>
                                 </td>
                                 <td>
@@ -70,11 +70,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-22 / 네이버 뮤직 7월 2주차 정기배포 테스트 
+                                        musicbank-act-22 / 음악 중심 7월 2주차 정기배포 테스트 
                                     </a>
                                 </td>
                                 <td>
-                                    	이동섭
+                                    	클린턴
                                 </td>
                                 <td>
                                     12.02.2015 10:00 am
@@ -93,11 +93,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-21 / 네이버 뮤직 7월 1주차 정기배포 테스트 
+                                        musicbank-act-21 / 음악 중심 7월 1주차 정기배포 테스트 
                                     </a>
                                 </td>
                                 <td>
-                                    	김경연
+                                    	이순신
                                 </td>
                                 <td>
                                     12.02.2015 10:00 am
@@ -115,11 +115,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-20 / 네이버 뮤직 6월 4주차 정기배포 테스트 
+                                        musicbank-act-20 / 음악 중심 6월 4주차 정기배포 테스트 
                                     </a>
                                 </td>
                                 <td>
-                                    	전평재
+                                    	이명박
                                 </td>
                                 <td>
                                     12.02.2015 10:00 am
@@ -137,11 +137,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-19 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        musicbank-act-19 / 음악 중심 안드로이드 5월 3주차 정기배포 테스트
                                     </a>
                                 </td>
                                 <td>
-                                    	김정희
+                                    	이황
                                 </td>
                                 <td>
                                     28.11.2015 05:10 pm
@@ -159,11 +159,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-18 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        musicbank-act-18 / 음악 중심 안드로이드 5월 3주차 정기배포 테스트
                                     </a>
                                 </td>
                                 <td>
-                                    	조문기
+                                    	조철왕
                                 </td>
                                 <td>
                                     28.11.2015 05:10 pm
@@ -182,11 +182,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-17 / 네이버 뮤직 안드로이드 5월 3주차 정기배포 테스트
+                                        musicbank-act-17 / 음악 중심 안드로이드 5월 3주차 정기배포 테스트
                                     </a>
                                 </td>
                                 <td>
-                                    	이선영
+                                    	이성계
                                 </td>
                                 <td>
                                     28.11.2015 05:10 pm
@@ -202,7 +202,7 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-16 / 네이버 뮤직 아이폰 5월 3주차 긴급배포
+                                        musicbank-act-16 / 음악 중심 아이폰 5월 3주차 긴급배포
                                     </a>
                                 </td>
                                 <td>
@@ -223,11 +223,11 @@
                                 </td>
                                 <td class="issue-info">
                                     <a href="javascript:goToActivityDetail()">
-                                        kcmsus-act-15 / 네이버 뮤직 아이폰 5월 2주차 긴급배포
+                                        musicbank-act-15 / 음악 중심 아이폰 5월 2주차 긴급배포
                                     </a>
                                 </td>
                                 <td>
-						이동섭
+						클린턴
                                 </td>
                                 <td>
                                     12.02.2015 10:00 am
