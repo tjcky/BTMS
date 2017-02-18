@@ -10,10 +10,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object Handler) throws Exception {
-		if (CookieUtil.existCookieValue(request, "userId") == false) {
-			response.sendRedirect("/login");
-			return false;
-		}
+//		if (CookieUtil.existCookieValue(request, "userId") == false) {
+//			response.sendRedirect("/login");
+//			return false;
+//		}
 
 		return true;
 	}

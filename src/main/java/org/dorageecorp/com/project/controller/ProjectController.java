@@ -32,27 +32,27 @@ public class ProjectController {
 
 	@RequestMapping(value = "/project/{projectId}", method = RequestMethod.GET)
 	public ModelAndView projectHome(HttpServletResponse response, @PathVariable String projectId, @ModelAttribute PagingStandard pagingStandard) throws IOException {
-		ModelAndView mav = new ModelAndView("/project/projectMain");
+		ModelAndView mav = new ModelAndView("/job/jobTemplateAllList");
 
-		if (projectBO.isExistProject(projectId) == false) {			
-			mav.setViewName("redirect:/noneProject");
-			return mav;
-		}
+//		if (projectBO.isExistProject(projectId) == false) {			
+//			mav.setViewName("redirect:/noneProject");
+//			return mav;
+//		}
 
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setPagingStandard(pagingStandard);
-		pageMaker.setTotalCount(projectBO.getProjectActivityTotalCount(projectId));
+//		pageMaker.setTotalCount(projectBO.getProjectActivityTotalCount(projectId));
 
 		Project project = new Project();
 		project.setAddressId(projectId);
 		project.setPagingStandard(pagingStandard);
 
-		ProjectInfomation projectInfomation = projectBO.getProjectInfomation(projectId);
-		List<ProjectActivity> projectActivityList = projectBO.getProjectActivity(project);
-
-		mav.addObject("projectInfomation", projectInfomation);
-		mav.addObject("projectActivityList", projectActivityList);
-		mav.addObject("pageMaker", pageMaker);
+//		ProjectInfomation projectInfomation = projectBO.getProjectInfomation(projectId);
+//		List<ProjectActivity> projectActivityList = projectBO.getProjectActivity(project);
+//
+//		mav.addObject("projectInfomation", projectInfomation);
+//		mav.addObject("projectActivityList", projectActivityList);
+//		mav.addObject("pageMaker", pageMaker);
 
 		return mav;
 	}

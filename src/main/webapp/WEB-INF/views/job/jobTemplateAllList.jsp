@@ -44,10 +44,10 @@
 	</div>
 	<div class="row wrapper border-bottom white-bg page-heading">	
         <div class="col-lg-10">
-            <h2>${jobTemplateAllList[0].projectName}의 전체 작업 템플릿</h2>
+            <h2>음악 중심의 전체 작업 템플릿</h2>
             <ol class="breadcrumb">
                 <li>
-                    <span>${jobTemplateAllList[0].projectName}</span>
+                    <span>음악 중심</span>
                 </li>
                 <li>
                     <span>작업 템플릿 목록</span>
@@ -77,8 +77,137 @@
                             </div>
 
                         </div>
+                        
+                         <div class="container">
+                         	<div class="row">
+                         		<div class="col-md-12">
+                         			<div class="panel panel-success">
+										<div class="panel-heading" style="height:50px;">
+											<div class="row">
+												<div class="col-md-3">													
+													<h3 class="pull-left panel-title">마이뮤직</h3>
+												</div>
+												<div class="col-md-3">													
+													<h3 class="pull-left panel-title">등록자 - 클린턴</h3>
+												</div>
+												<div class="col-md-6">
+													<span class="pull-right clickable">
+														<i class="glyphicon glyphicon-chevron-up"></i>
+													</span>	
+													<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:getJobVersionList('${masterTemplate.projectAddressId}','${masterTemplate.jobMasterCode }');" style="margin-left:200px;">전체보기</button>
+													<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
+												</div>
+											</div>
+										</div>
+										<div class="panel-body">
+											<table class="table table-bordered">
+				                                <thead>
+					                                <tr>
+					                                    <th class="text-center" style="width:50px">#</th>
+					                                    <th class="text-center" style="width:300px">버전명</th>
+					                                    <th class="text-center" style="width:100px">단위TC</th>
+					                                    <th class="text-center" style="width:100px">상태</th>
+					                                    <th class="text-center" style="width:100px">작성자</th>
+					                                    <th class="text-center" style="width:150px">작성일</th>
+					                                </tr>
+				                                </thead>		
+												<tbody>
+													<tr>
+					                     				<td class="text-center" style="width:50px">3</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 3주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>
+													<tr>
+					                     				<td class="text-center" style="width:50px">2</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 2주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>
+													<tr>
+					                     				<td class="text-center" style="width:50px">1</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 1주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>          
+			                                	</tbody>
+			                                </table>
+										</div>
+									</div>
+                         		</div>
+                         	</div>
+                         	<div class="row">
+                         		<div class="col-md-12">
+                         			<div class="panel panel-success">
+										<div class="panel-heading" style="height:50px;">
+											<div class="row">
+												<div class="col-md-3">													
+													<h3 class="pull-left panel-title">뮤직 플레이어</h3>
+												</div>
+												<div class="col-md-3">													
+													<h3 class="pull-left panel-title">등록자 - 클린턴</h3>
+												</div>
+												<div class="col-md-6">
+													<span class="pull-right clickable">
+														<i class="glyphicon glyphicon-chevron-up"></i>
+													</span>	
+													<button type="button" class="btn btn-w-m btn-sm btn-warning" onclick="javascript:getJobVersionList('${masterTemplate.projectAddressId}','${masterTemplate.jobMasterCode }');" style="margin-left:200px;">전체보기</button>
+													<button type="button" class="btn btn-w-m btn-sm btn-danger" style="margin-left:10px;">+버전추가</button>
+												</div>
+											</div>
+										</div>
+										<div class="panel-body">
+											<table class="table table-bordered">
+				                                <thead>
+					                                <tr>
+					                                    <th class="text-center" style="width:50px">#</th>
+					                                    <th class="text-center" style="width:300px">버전명</th>
+					                                    <th class="text-center" style="width:100px">단위TC</th>
+					                                    <th class="text-center" style="width:100px">상태</th>
+					                                    <th class="text-center" style="width:100px">작성자</th>
+					                                    <th class="text-center" style="width:150px">작성일</th>
+					                                </tr>
+				                                </thead>		
+												<tbody>
+													<tr>
+					                     				<td class="text-center" style="width:50px">3</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 3주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>
+													<tr>
+					                     				<td class="text-center" style="width:50px">2</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 2주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>
+													<tr>
+					                     				<td class="text-center" style="width:50px">1</td>
+					                     				<td style="width:300px"><a href="/project/${versionTemplate.projectAddressId }/jobTemplateAllList/${versionTemplate.jobMasterUppderCode }/${versionTemplate.jobMasterCode}">2017년 1월 1주차 배포관련 </a></td>
+					                     				<td class="text-center" style="width:100px">98</td>
+					                     				<td class="text-center" style="width:100px">진행중</td>
+					                     				<td class="text-center" style="width:100px">권영</td>
+					                     				<td class="text-center" style="width:150px">2017.01.11</td>
+					                     			</tr>          
+			                                	</tbody>
+			                                </table>
+										</div>
+									</div>
+                         		</div>
+                         	</div>
+                         </div>
 
-						<div class="container">
+						<%-- <div class="container">
 							<c:choose>
 								<c:when test="${fn:length(jobTemplateAllList) < 1 }">
 									<!-- TODO : 템플릿 자체가 없는 경우일때 UI 적용 필요 -->
@@ -146,7 +275,7 @@
 									</c:forEach>
 								</c:otherwise>								
 							</c:choose>
-						</div>
+						</div> --%>
                     </div>
                 </div>
             </div>
